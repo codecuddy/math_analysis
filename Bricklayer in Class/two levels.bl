@@ -14,10 +14,11 @@ fun westRoom(xStart, yStart    , zStart) = (
     put (wallWidth , wallHeight, wallLength) RED     (xStart,              yStart, zStart);
     put (wallWidth , wallHeight, wallLength) GREEN   (xStart+wallLength-1, yStart, zStart);
     (* Hallway *)
-    put (wallLength, foot, hallway) BLACK    (xStart,yStart,zStart+wallLength);
+    put (wallLength, 2*foot, hallway) BLACK    (xStart,yStart-foot,zStart+wallLength);
     (* Floor *)
-    put (wallLength, foot, wallLength) CLEAR (xStart,yStart-foot,zStart);
+    put (wallLength,   foot, wallLength) CLEAR (xStart,yStart-foot,zStart);
     (* DOOR *)
+    put (3*foot    , 2*foot    , wallWidth ) CLEAR   (xStart + 3*foot,     yStart + 6*foot, zStart+wallLength - foot);
     put (3*foot    , 6*foot    , wallWidth ) EMPTY   (xStart + 3*foot,     yStart, zStart+wallLength-foot)
 
 );
@@ -31,7 +32,8 @@ fun eastRoom(xStart, yStart, zStart) = (
     (* Floor *)
     put (wallLength, foot, wallLength) CLEAR (xStart,yStart-foot,zStart);
     (* DOOR *)
-    put (3*foot    , 6*foot    , wallWidth) EMPTY   (xStart + 3*foot,        yStart, zStart)
+    put (3*foot    , 2*foot    , wallWidth) CLEAR   (xStart + 3*foot,      yStart + 6*foot, zStart);
+    put (3*foot    , 6*foot    , wallWidth) EMPTY   (xStart + 3*foot,      yStart         , zStart)
 
 );
 
