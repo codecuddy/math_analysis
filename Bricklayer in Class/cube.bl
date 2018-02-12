@@ -1,0 +1,6 @@
+open Level_5;
+build(10,10,10);
+
+put(5,5,5) RED (0,0,0);
+
+show "cube";

@@ -1,0 +1,113 @@
+(*& ====================================================
+    @source   bricklayerLite version 1.2
+    @author   your name
+    @class    class-id
+    @exercise exercise-id
+    @year     2016
+    ====================================================
+ &*)
+
+
+open Level_3;
+
+fun background (x,z) =
+	(
+		put2D (32,16) LIGHTPINK (0,16);
+		put2D (32,16) DARKLAVENDER (0,0) 
+	);
+
+fun ALYSSA (x,z) =
+	(
+
+		(* A *)
+		put2D (1,4) LAVENDER (1,20);
+		put2D (1,3) LAVENDER (2,24);
+		put2D (1,1) LAVENDER (3,27);
+		put2D (1,3) LAVENDER (4,24);
+		put2D (1,4) LAVENDER (5,20);
+		put2D (1,1) LAVENDER (3,24);
+
+		(* L *)
+		put2D (1,8) LAVENDER (7,20);
+		put2D (3,1) LAVENDER (8,20);
+
+		(* Y *)
+		put2D (1,2) LAVENDER (10,26);
+		put2D (1,2) LAVENDER (11,24);
+		put2D (1,4) LAVENDER (12,20);
+		put2D (1,2) LAVENDER (13,24);
+		put2D (1,2) LAVENDER (14,26);
+
+		(* S *)
+		put2D (1,2) LAVENDER (16,25);
+		put2D (2,1) LAVENDER (17,27);
+		put2D (1,1) LAVENDER (19,26);
+		put2D (2,1) LAVENDER (17,24);
+		put2D (1,3) LAVENDER (19,21);
+		put2D (2,1) LAVENDER (17,20);
+		put2D (1,1) LAVENDER (16,21);
+
+		(* S *)
+		put2D (1,2) LAVENDER (21,25);
+		put2D (2,1) LAVENDER (22,27);
+		put2D (1,1) LAVENDER (24,26);
+		put2D (2,1) LAVENDER (22,24);
+		put2D (1,3) LAVENDER (24,21);
+		put2D (2,1) LAVENDER (22,20);
+		put2D (1,1) LAVENDER (21,21);
+
+		(* A *)
+		put2D (1,4) LAVENDER (26,20);
+		put2D (1,3) LAVENDER (27,24);
+		put2D (1,1) LAVENDER (28,27);
+		put2D (1,3) LAVENDER (29,24);
+		put2D (1,4) LAVENDER (30,20);
+		put2D (1,1) LAVENDER (28,24) 
+	);
+
+fun KENNEDY (x,z) =
+	(
+		setOffset2D(1,0);
+
+		(* K *)
+		put2D (1,8) LAVENDER (1,4);
+		put2D (1,2) LAVENDER (4,10);
+		put2D (1,1) LAVENDER (3,9);
+		put2D (1,1) LAVENDER (2,8);
+		put2D (1,1) LAVENDER (3,7);
+		put2D (1,3) LAVENDER (4,4);
+
+		(* E *)
+		put2D (1,8) LAVENDER (6,4);
+		put2D (3,1) LAVENDER (7,4);
+		put2D (3,1) LAVENDER (7,11);
+		put2D (2,1) LAVENDER (7,8);
+
+		(* N *)
+		put2D (1,8) LAVENDER (11,4);
+		put2D (1,8) LAVENDER (15,4);
+		put2D (1,2) LAVENDER (12,9);
+		put2D (1,2) LAVENDER (13,7);
+		put2D (1,2) LAVENDER (14,5);
+
+		(* N *)
+		put2D (1,8) LAVENDER (17,4);
+		put2D (1,8) LAVENDER (21,4);
+		put2D (1,2) LAVENDER (18,9);
+		put2D (1,2) LAVENDER (19,7);
+		put2D (1,2) LAVENDER (20,5);
+
+		(* ... *)
+		setOffset2D(2,0);
+		put2D (1,1) LAVENDER (23,4);
+		put2D (1,1) LAVENDER (25,4);
+		put2D (1,1) LAVENDER (27,4) 
+	);
+
+build2D (32,32);
+
+background(0,0);
+ALYSSA(0,0);
+KENNEDY(0,0);
+
+show2D "thing";

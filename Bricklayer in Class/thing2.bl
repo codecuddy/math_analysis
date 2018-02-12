@@ -1,0 +1,27 @@
+open Level_5;
+build(30,30,30);
+
+put (10,5, 1) WHITE     (1,0, 1);
+put (10,5, 1) WHITE   (1,0,10);
+put ( 1,5,10) WHITE    (1,0,1);
+put ( 1,5,10) WHITE   (10,0,1);
+put (12,1,12) BLUE   (0,5,0);
+line(11,5,12) (6,10,6) PINK;
+line( 0,5,12) (6,10,6) GREEN;
+line(11,5, 0) (6,10,6) WHITE;
+line( 0,5, 0) (6,10,6) BLACK;
+
+
+put (10,1,10) BLACK   (1,0,1);
+put (2, 1, 1) BLACK    (3,0,0);
+put (2, 3, 1) EMPTY    (3,1,1);
+put (2, 2, 1) EMPTY    (6,2,1);
+put (1, 1, 1) ORANGE   (1,0,1);
+
+(*fun picture(x,y,z) = if x = z then 
+    if z = 0 then BLUE else YELLOW
+        else GREEN;
+
+
+traverseWithin (14,0,14) (24,10,24) picture;*)
+show "thing";

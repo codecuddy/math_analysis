@@ -1,0 +1,11 @@
+open Level_5;
+
+
+
+build(30,30,30);
+(* *)
+putHollow (1,11,1) [RED] (0,0,2);
+putHollow (1,1,5) [RED] (0,6,0);
+putHollow (10,1,1) [BLACK] (1,0,2);
+putHollow (1,1,5) [BLACK] (6,0,0);
+show "thing";

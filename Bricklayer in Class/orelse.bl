@@ -1,0 +1,9 @@
+open Level_5;
+build(12,12,12);
+
+fun image(x,y,z) = if x = z orelse 
+    if z = 5 - x then BLUE else YELLOW;
+
+
+image(0,0,0);
+show "thing";

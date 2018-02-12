@@ -1,0 +1,13 @@
+open Level_5;
+build(20,20,20);
+
+fun stripes(x,y,z) = if y mod 2 = 0 then 
+        if x mod 2 = 0 then BLACK else YELLOW
+            else DARKGREEN;
+
+traverseWithin (0,0,0) (6,20,4) stripes;
+
+
+
+
+show "thing";

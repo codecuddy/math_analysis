@@ -1,0 +1,9 @@
+open Level_5;
+build(50,10,50);
+
+put (1,1,7) BLACK (5, 1, 5);
+put (5,1,1) BLACK (3, 1, 9);
+
+put (1,7,1) RED   (5,1,4);
+put (5,1,1) RED   (3,5,4);
+show "thing";

@@ -1,0 +1,72 @@
+open Level_5;
+build(200,40,200);
+
+val wallLength = 24;
+val wallHeight = 8; 
+val wallWidth = 1;
+val foot = 1;
+val hallway = 6;
+
+(* ##### INDIVIDUAL ROOM ON THE WEST SIDE ###### *)
+fun westRoom(xStart, yStart    , zStart) = (
+    put (wallLength, wallHeight, wallWidth ) WHITE   (xStart,              yStart, zStart);
+    put (wallLength, wallHeight, wallWidth ) BLUE    (xStart,              yStart, zStart+wallLength-foot);
+    put (wallWidth , wallHeight, wallLength) RED     (xStart,              yStart, zStart);
+    put (wallWidth , wallHeight, wallLength) GREEN   (xStart+wallLength-1, yStart, zStart);
+    (* Hallway *)
+    put (wallLength, foot, hallway) BLACK    (xStart,yStart,zStart+wallLength);
+    (* Floor *)
+    put (wallLength, foot, wallLength) CLEAR (xStart,yStart-foot,zStart);
+    (* DOOR *)
+    put (3*foot    , 6*foot    , wallWidth ) EMPTY   (xStart + 3*foot,     yStart, zStart+wallLength-foot)
+
+);
+
+(* ##### INDIVIDUAL ROOM ON THE EAST SIDE ###### *)
+fun eastRoom(xStart, yStart, zStart) = (
+    put (wallLength, wallHeight, wallWidth) WHITE   (xStart,                 yStart, zStart);
+    put (wallLength, wallHeight, wallWidth) BLUE    (xStart,                 yStart, zStart+wallLength-foot);
+    put (wallWidth, wallHeight, wallLength) RED     (xStart,                 yStart, zStart);
+    put (wallWidth, wallHeight, wallLength) GREEN   (xStart+wallLength-foot, yStart, zStart);
+    (* Floor *)
+    put (wallLength, foot, wallLength) CLEAR (xStart,yStart-foot,zStart);
+    (* DOOR *)
+    put (3*foot    , 6*foot    , wallWidth) EMPTY   (xStart + 3*foot,        yStart, zStart)
+
+);
+
+
+(* ##### SET OF n ROOMS ON THE WEST SIDE ###### *)
+fun westClassrooms(xStart, yStart, zStart) = (
+
+    westRoom(xStart             ,yStart,zStart);
+    westRoom(wallLength-foot    ,yStart,zStart);
+    westRoom(2*wallLength-2*foot,yStart,zStart);
+    westRoom(3*wallLength-3*foot,yStart,zStart)
+
+);
+
+(* ##### SET OF n ROOMS ON THE EAST SIDE ###### *)
+fun eastClassrooms(xStart, yStart, zStart) = (
+
+    eastRoom(xStart             ,yStart,zStart);
+    eastRoom(wallLength-foot    ,yStart,zStart);
+    eastRoom(2*wallLength-2*foot,yStart,zStart);
+    eastRoom(3*wallLength-3*foot,yStart,zStart)
+
+);
+
+
+(* 1st FLOOR *)
+westClassrooms(0,1,0                  );
+eastClassrooms(0,1,wallLength + hallway);
+
+(* 2nd FLOOR *)
+westClassrooms(0,wallHeight,0                  );
+eastClassrooms(0,wallHeight,wallLength+hallway);
+
+
+(* ORIGIN *)
+put (1,1,5) YELLOW (0,1,0);
+put (5,1,1) PINK(0,1,0);
+show "thing";

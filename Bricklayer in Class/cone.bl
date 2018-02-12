@@ -1,0 +1,15 @@
+open Level_5;
+
+val dim = 10;
+val max = dim - 1;
+
+fun isEven (x,y,z) = (x+y+z) mod 2 = 0;
+
+fun brickFn (x,y,z) = 
+     if isEven(x,y,z) then BLACK else WHITE;
+
+build (dim,dim,dim);
+
+traverseWithin (0,0,0) (max,max,max) brickFn;
+
+show "checkered cube";

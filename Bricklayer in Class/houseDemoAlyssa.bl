@@ -1,0 +1,23 @@
+open Level_5;
+build(20,7,20);
+
+(*cap*)
+sphere 8 [RED,RED,RED,RED,WHITE] (15,3,15);
+sphere 7 [EMPTY] (15,2,15);
+put (40,5,40) EMPTY (0,0,0);
+(*capfloor*)
+ringY 7 5 1 [LIGHTBROWN] (15,5,15);
+
+(*Origin*)
+put (1,1,1) RED (0,0,0);
+(*X*)
+put (1,1,1) GREEN (1,0,0);
+(*Z*)
+put (1,1,1) BLUE (0,0,1);
+
+(*stem*)
+ringY 3 1 6 [LIGHTBROWN,WHITE,WHITEGLOW,WHITE,WHITEGLOW,WHITEGLOW,WHITE,WHITE] (15,0,15);
+(*door*)
+put (1,2,1) EMPTY (15,0,12);
+
+show "thing";

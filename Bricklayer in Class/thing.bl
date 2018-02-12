@@ -1,0 +1,10 @@
+
+
+
+open Level_5;
+
+build2D (16,16,16);
+
+put (1,1,1) RED (0,0,0);
+
+show "thing";

@@ -1,0 +1,31 @@
+open Level_5;
+build(50,1,50);
+
+fun modual(x,y,z) = if x mod 3 = 0 then YELLOW
+        else GREEN;
+
+traverseWithin (0,0,0) (20,20,20) modual;
+
+
+
+fun division(x,y,z) = if x div 6 = 0 then YELLOW
+        else GREEN;
+
+traverseWithin (0,0,22) (20,1,42) division;
+
+show "thing";
+
+
+
+
+
+(*
+
+fun picture(x,y,z) = if x <= z then 
+    if x = z then BLACK else YELLOW
+        else GREEN;
+
+traverseWithin (0,0,0) (20,20,20) picture;
+
+*)
+
