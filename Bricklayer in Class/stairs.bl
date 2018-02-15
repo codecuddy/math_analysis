@@ -1,20 +1,25 @@
 open Level_5;
 build(200,40,200);
 
-val stairHeight = 3;
-val stairWidth = 20; 
-val stairLength = 6;
 val foot = 1;
+val stairHeight = 3*foot;
+val stairWidth = 20*foot; 
+val stairLength = 6*foot;
+
 
 
 fun stairs(xStart, yStart    , zStart) = (
 
-    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+0*stairLength-0*foot,   yStart+0*stairHeight, zStart);
-    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+1*stairLength-1*foot,   yStart+1*stairHeight, zStart);
-    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+2*stairLength-2*foot,   yStart+2*stairHeight, zStart);
-    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+3*stairLength-3*foot,   yStart+3*stairHeight, zStart)
+    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+0*stairLength-0*foot, yStart+0*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+1*stairLength-1*foot, yStart+1*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+2*stairLength-2*foot, yStart+2*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+3*stairLength-3*foot, yStart+3*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+4*stairLength-4*foot, yStart+4*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+5*stairLength-5*foot, yStart+5*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) WHITE   (xStart+6*stairLength-6*foot, yStart+6*stairHeight, zStart);
+    put (stairLength, stairHeight, stairWidth ) BLUE    (xStart+7*stairLength-7*foot, yStart+7*stairHeight, zStart)   
     
-    (* COPY AND PASTE THE CODE ABOVE AND REPEAT THE PATTERN IF YOU WANT TO ADD MORE THAN 4 STAIRS *)
+    (* COPY AND PASTE THE CODE ABOVE AND REPEAT THE PATTERN IF YOU WANT TO ADD MORE THAN 8 STAIRS *)
 
 );
 
