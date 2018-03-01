@@ -3,7 +3,7 @@ build(200,40,200);
 
 val foot = 1;
 val stairHeight = 3*foot;
-val stairWidth = 20*foot; 
+val stairWidth = 12*foot; 
 val stairLength = 6*foot;
 
 
