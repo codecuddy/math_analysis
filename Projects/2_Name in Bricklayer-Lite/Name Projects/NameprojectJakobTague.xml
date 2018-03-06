@@ -1,0 +1,594 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="bcomment" x="740" y="-56">
+    <field name="msg">===================================</field>
+  </block>
+  <block type="openLevel3" x="30" y="8">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="bcomment">
+        <field name="msg">I set black blocks to appear at first, allowing me to just 'chisel out' the letter of a 5x7 brick. This makes it easier to adjust on the fly, much more so than creating lettering using the black bricks</field>
+        <next>
+          <block type="declaration_nullaryFunction">
+            <field name="nameOfFn">letterblock</field>
+            <statement name="body">
+              <block type="put2D">
+                <field name="xSize">5</field>
+                <field name="zSize">7</field>
+                <field name="brick">#000000</field>
+                <field name="xArg">1</field>
+                <field name="zArg">7</field>
+                <value name="semi_or_epsilon">
+                  <block type="bempty"></block>
+                </value>
+                <next>
+                  <block type="put2D">
+                    <field name="xSize">5</field>
+                    <field name="zSize">7</field>
+                    <field name="brick">#000000</field>
+                    <field name="xArg">1</field>
+                    <field name="zArg">17</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bempty"></block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="declaration_nullaryFunction">
+                <field name="nameOfFn">background</field>
+                <statement name="body">
+                  <block type="put2D">
+                    <field name="xSize">32</field>
+                    <field name="zSize">32</field>
+                    <field name="brick">#a4bd46</field>
+                    <field name="xArg">0</field>
+                    <field name="zArg">0</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bempty"></block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="declaration_nullaryFunction">
+                    <field name="nameOfFn">j</field>
+                    <statement name="body">
+                      <block type="put2D">
+                        <field name="xSize">1</field>
+                        <field name="zSize">6</field>
+                        <field name="brick">#cc0000</field>
+                        <field name="xArg">5</field>
+                        <field name="zArg">17</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bempty"></block>
+                        </value>
+                        <next>
+                          <block type="put2D">
+                            <field name="xSize">2</field>
+                            <field name="zSize">5</field>
+                            <field name="brick">#cc0000</field>
+                            <field name="xArg">2</field>
+                            <field name="zArg">18</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bempty"></block>
+                            </value>
+                            <next>
+                              <block type="put2D">
+                                <field name="xSize">2</field>
+                                <field name="zSize">4</field>
+                                <field name="brick">#cc0000</field>
+                                <field name="xArg">1</field>
+                                <field name="zArg">19</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bempty"></block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bcomment">
+                        <field name="msg">I simply copied the As and altered the colors and heights.</field>
+                        <next>
+                          <block type="declaration_nullaryFunction">
+                            <field name="nameOfFn">ared</field>
+                            <statement name="body">
+                              <block type="put2D">
+                                <field name="xSize">3</field>
+                                <field name="zSize">4</field>
+                                <field name="brick">#cc0000</field>
+                                <field name="xArg">2</field>
+                                <field name="zArg">17</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bempty"></block>
+                                </value>
+                                <next>
+                                  <block type="put2D">
+                                    <field name="xSize">3</field>
+                                    <field name="zSize">1</field>
+                                    <field name="brick">#cc0000</field>
+                                    <field name="xArg">2</field>
+                                    <field name="zArg">22</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bempty"></block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="declaration_nullaryFunction">
+                                <field name="nameOfFn">k</field>
+                                <statement name="body">
+                                  <block type="put2D">
+                                    <field name="xSize">3</field>
+                                    <field name="zSize">2</field>
+                                    <field name="brick">#cc0000</field>
+                                    <field name="xArg">2</field>
+                                    <field name="zArg">17</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bempty"></block>
+                                    </value>
+                                    <next>
+                                      <block type="put2D">
+                                        <field name="xSize">3</field>
+                                        <field name="zSize">2</field>
+                                        <field name="brick">#cc0000</field>
+                                        <field name="xArg">2</field>
+                                        <field name="zArg">22</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bempty"></block>
+                                        </value>
+                                        <next>
+                                          <block type="put2D">
+                                            <field name="xSize">2</field>
+                                            <field name="zSize">1</field>
+                                            <field name="brick">#cc0000</field>
+                                            <field name="xArg">4</field>
+                                            <field name="zArg">20</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bempty"></block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="declaration_nullaryFunction">
+                                    <field name="nameOfFn">o</field>
+                                    <statement name="body">
+                                      <block type="put2D">
+                                        <field name="xSize">3</field>
+                                        <field name="zSize">5</field>
+                                        <field name="brick">#cc0000</field>
+                                        <field name="xArg">2</field>
+                                        <field name="zArg">18</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bempty"></block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="declaration_nullaryFunction">
+                                        <field name="nameOfFn">b</field>
+                                        <statement name="body">
+                                          <block type="put2D">
+                                            <field name="xSize">3</field>
+                                            <field name="zSize">2</field>
+                                            <field name="brick">#cc0000</field>
+                                            <field name="xArg">2</field>
+                                            <field name="zArg">18</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bempty"></block>
+                                            </value>
+                                            <next>
+                                              <block type="put2D">
+                                                <field name="xSize">3</field>
+                                                <field name="zSize">2</field>
+                                                <field name="brick">#cc0000</field>
+                                                <field name="xArg">2</field>
+                                                <field name="zArg">21</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bempty"></block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="bcomment">
+                                            <field name="msg">During this project, I tried to make the code as simple as possible by reducing the amount of bricks used. The most complex letter was probably the G, with 3 bricks of all different sizes. Some of the letters do suffer a bit from the simple style, but most people will still recognize letters like the B at the end of Jakob.</field>
+                                            <next>
+                                              <block type="declaration_nullaryFunction">
+                                                <field name="nameOfFn">t</field>
+                                                <statement name="body">
+                                                  <block type="put2D">
+                                                    <field name="xSize">2</field>
+                                                    <field name="zSize">6</field>
+                                                    <field name="brick">#36aebf</field>
+                                                    <field name="xArg">1</field>
+                                                    <field name="zArg">7</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bempty"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="put2D">
+                                                        <field name="xSize">2</field>
+                                                        <field name="zSize">6</field>
+                                                        <field name="brick">#36aebf</field>
+                                                        <field name="xArg">4</field>
+                                                        <field name="zArg">7</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bempty"></block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </statement>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="declaration_nullaryFunction">
+                                                    <field name="nameOfFn">ablu</field>
+                                                    <statement name="body">
+                                                      <block type="put2D">
+                                                        <field name="xSize">3</field>
+                                                        <field name="zSize">4</field>
+                                                        <field name="brick">#36aebf</field>
+                                                        <field name="xArg">2</field>
+                                                        <field name="zArg">7</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bempty"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="put2D">
+                                                            <field name="xSize">3</field>
+                                                            <field name="zSize">1</field>
+                                                            <field name="brick">#36aebf</field>
+                                                            <field name="xArg">2</field>
+                                                            <field name="zArg">12</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bempty"></block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </statement>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="declaration_nullaryFunction">
+                                                        <field name="nameOfFn">g</field>
+                                                        <statement name="body">
+                                                          <block type="put2D">
+                                                            <field name="xSize">3</field>
+                                                            <field name="zSize">2</field>
+                                                            <field name="brick">#36aebf</field>
+                                                            <field name="xArg">2</field>
+                                                            <field name="zArg">8</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bempty"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="put2D">
+                                                                <field name="xSize">3</field>
+                                                                <field name="zSize">1</field>
+                                                                <field name="brick">#36aebf</field>
+                                                                <field name="xArg">2</field>
+                                                                <field name="zArg">12</field>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bempty"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="put2D">
+                                                                    <field name="xSize">4</field>
+                                                                    <field name="zSize">1</field>
+                                                                    <field name="brick">#36aebf</field>
+                                                                    <field name="xArg">1</field>
+                                                                    <field name="zArg">10</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bempty"></block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="declaration_nullaryFunction">
+                                                            <field name="nameOfFn">u</field>
+                                                            <statement name="body">
+                                                              <block type="put2D">
+                                                                <field name="xSize">3</field>
+                                                                <field name="zSize">6</field>
+                                                                <field name="brick">#36aebf</field>
+                                                                <field name="xArg">2</field>
+                                                                <field name="zArg">8</field>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bempty"></block>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bwhat"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="declaration_nullaryFunction">
+                                                                <field name="nameOfFn">e</field>
+                                                                <statement name="body">
+                                                                  <block type="put2D">
+                                                                    <field name="xSize">4</field>
+                                                                    <field name="zSize">2</field>
+                                                                    <field name="brick">#36aebf</field>
+                                                                    <field name="xArg">2</field>
+                                                                    <field name="zArg">8</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bempty"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="put2D">
+                                                                        <field name="xSize">4</field>
+                                                                        <field name="zSize">2</field>
+                                                                        <field name="brick">#36aebf</field>
+                                                                        <field name="xArg">2</field>
+                                                                        <field name="zArg">11</field>
+                                                                        <value name="semi_or_epsilon">
+                                                                          <block type="bempty"></block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </statement>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bwhat"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="bbuild">
+                                                                    <field name="size">(32,32)</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bwhat"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="bcomment">
+                                                                        <field name="msg">Letters are set to the offset, allowing for me to just need to change the height. This could've been improved by changing the offset for the height though.</field>
+                                                                        <next>
+                                                                          <block type="bcallNullary">
+                                                                            <field name="userFunName">background</field>
+                                                                            <value name="semi_or_epsilon">
+                                                                              <block type="bwhat"></block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="bcallNullary">
+                                                                                <field name="userFunName">letterblock</field>
+                                                                                <value name="semi_or_epsilon">
+                                                                                  <block type="bwhat"></block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="bcallNullary">
+                                                                                    <field name="userFunName">j</field>
+                                                                                    <value name="semi_or_epsilon">
+                                                                                      <block type="bwhat"></block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="bcallNullary">
+                                                                                        <field name="userFunName">t</field>
+                                                                                        <value name="semi_or_epsilon">
+                                                                                          <block type="bwhat"></block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="setOffset2D">
+                                                                                            <field name="xVal">6</field>
+                                                                                            <field name="zVal">0</field>
+                                                                                            <value name="semi_or_epsilon">
+                                                                                              <block type="bwhat"></block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="bcallNullary">
+                                                                                                <field name="userFunName">letterblock</field>
+                                                                                                <value name="semi_or_epsilon">
+                                                                                                  <block type="bwhat"></block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="bcallNullary">
+                                                                                                    <field name="userFunName">ared</field>
+                                                                                                    <value name="semi_or_epsilon">
+                                                                                                      <block type="bwhat"></block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="bcallNullary">
+                                                                                                        <field name="userFunName">ablu</field>
+                                                                                                        <value name="semi_or_epsilon">
+                                                                                                          <block type="bwhat"></block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="setOffset2D">
+                                                                                                            <field name="xVal">12</field>
+                                                                                                            <field name="zVal">0</field>
+                                                                                                            <value name="semi_or_epsilon">
+                                                                                                              <block type="bwhat"></block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="bcallNullary">
+                                                                                                                <field name="userFunName">letterblock</field>
+                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                  <block type="bwhat"></block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="bcallNullary">
+                                                                                                                    <field name="userFunName">k</field>
+                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                      <block type="bwhat"></block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="bcallNullary">
+                                                                                                                        <field name="userFunName">g</field>
+                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                          <block type="bwhat"></block>
+                                                                                                                        </value>
+                                                                                                                        <next>
+                                                                                                                          <block type="setOffset2D">
+                                                                                                                            <field name="xVal">18</field>
+                                                                                                                            <field name="zVal">0</field>
+                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                              <block type="bwhat"></block>
+                                                                                                                            </value>
+                                                                                                                            <next>
+                                                                                                                              <block type="bcallNullary">
+                                                                                                                                <field name="userFunName">letterblock</field>
+                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                </value>
+                                                                                                                                <next>
+                                                                                                                                  <block type="bcallNullary">
+                                                                                                                                    <field name="userFunName">o</field>
+                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                    </value>
+                                                                                                                                    <next>
+                                                                                                                                      <block type="bcallNullary">
+                                                                                                                                        <field name="userFunName">u</field>
+                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                        </value>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="setOffset2D">
+                                                                                                                                            <field name="xVal">24</field>
+                                                                                                                                            <field name="zVal">0</field>
+                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                            </value>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="bcallNullary">
+                                                                                                                                                <field name="userFunName">letterblock</field>
+                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="bcallNullary">
+                                                                                                                                                    <field name="userFunName">b</field>
+                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="bcallNullary">
+                                                                                                                                                        <field name="userFunName">e</field>
+                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="show">
+                                                                                                                                                            <field name="artifact">"thing"</field>
+                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                            </value>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

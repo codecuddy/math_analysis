@@ -1,0 +1,645 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="openLevel3" x="70" y="20">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="declaration_function">
+        <field name="nameOfFn">BackgroundA</field>
+        <field name="x">x</field>
+        <field name="z">z</field>
+        <statement name="body">
+          <block type="put2D">
+            <field name="xSize">32</field>
+            <field name="zSize">15</field>
+            <field name="brick">#cc0000</field>
+            <field name="xArg">0</field>
+            <field name="zArg">17</field>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="put2D">
+                <field name="xSize">32</field>
+                <field name="zSize">15</field>
+                <field name="brick">#000000</field>
+                <field name="xArg">0</field>
+                <field name="zArg">0</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="put2D">
+                    <field name="xSize">32</field>
+                    <field name="zSize">2</field>
+                    <field name="brick">#ffffff</field>
+                    <field name="xArg">0</field>
+                    <field name="zArg">15</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bempty"></block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="semi_or_epsilon">
+          <block type="bwhat"></block>
+        </value>
+        <next>
+          <block type="declaration_function">
+            <field name="nameOfFn">Letters</field>
+            <field name="x">x</field>
+            <field name="z">z</field>
+            <statement name="body">
+              <block type="bcomment">
+                <field name="msg">P</field>
+                <next>
+                  <block type="put2D">
+                    <field name="xSize">2</field>
+                    <field name="zSize">13</field>
+                    <field name="brick">#ffffff</field>
+                    <field name="xArg">2</field>
+                    <field name="zArg">18</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="put2D">
+                        <field name="xSize">4</field>
+                        <field name="zSize">2</field>
+                        <field name="brick">#ffffff</field>
+                        <field name="xArg">4</field>
+                        <field name="zArg">29</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="put2D">
+                            <field name="xSize">2</field>
+                            <field name="zSize">4</field>
+                            <field name="brick">#ffffff</field>
+                            <field name="xArg">8</field>
+                            <field name="zArg">25</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="put2D">
+                                <field name="xSize">4</field>
+                                <field name="zSize">2</field>
+                                <field name="brick">#ffffff</field>
+                                <field name="xArg">4</field>
+                                <field name="zArg">23</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="put2D">
+                                    <field name="xSize">1</field>
+                                    <field name="zSize">1</field>
+                                    <field name="brick">#ffffff</field>
+                                    <field name="xArg">8</field>
+                                    <field name="zArg">29</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="put2D">
+                                        <field name="xSize">1</field>
+                                        <field name="zSize">1</field>
+                                        <field name="brick">#ffffff</field>
+                                        <field name="xArg">8</field>
+                                        <field name="zArg">24</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="put2D">
+                                            <field name="xSize">1</field>
+                                            <field name="zSize">1</field>
+                                            <field name="brick">#ffffff</field>
+                                            <field name="xArg">8</field>
+                                            <field name="zArg">24</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="bcomment">
+                                                <field name="msg">I</field>
+                                                <next>
+                                                  <block type="put2D">
+                                                    <field name="xSize">8</field>
+                                                    <field name="zSize">2</field>
+                                                    <field name="brick">#ffffff</field>
+                                                    <field name="xArg">11</field>
+                                                    <field name="zArg">29</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="put2D">
+                                                        <field name="xSize">8</field>
+                                                        <field name="zSize">2</field>
+                                                        <field name="brick">#ffffff</field>
+                                                        <field name="xArg">11</field>
+                                                        <field name="zArg">18</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="put2D">
+                                                            <field name="xSize">2</field>
+                                                            <field name="zSize">9</field>
+                                                            <field name="brick">#ffffff</field>
+                                                            <field name="xArg">14</field>
+                                                            <field name="zArg">20</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bwhat"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="bcomment">
+                                                                <field name="msg">E</field>
+                                                                <next>
+                                                                  <block type="put2D">
+                                                                    <field name="xSize">8</field>
+                                                                    <field name="zSize">2</field>
+                                                                    <field name="brick">#ffffff</field>
+                                                                    <field name="xArg">21</field>
+                                                                    <field name="zArg">29</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bwhat"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="put2D">
+                                                                        <field name="xSize">2</field>
+                                                                        <field name="zSize">11</field>
+                                                                        <field name="brick">#ffffff</field>
+                                                                        <field name="xArg">21</field>
+                                                                        <field name="zArg">18</field>
+                                                                        <value name="semi_or_epsilon">
+                                                                          <block type="bwhat"></block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="put2D">
+                                                                            <field name="xSize">8</field>
+                                                                            <field name="zSize">2</field>
+                                                                            <field name="brick">#ffffff</field>
+                                                                            <field name="xArg">21</field>
+                                                                            <field name="zArg">18</field>
+                                                                            <value name="semi_or_epsilon">
+                                                                              <block type="bwhat"></block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="put2D">
+                                                                                <field name="xSize">4</field>
+                                                                                <field name="zSize">2</field>
+                                                                                <field name="brick">#ffffff</field>
+                                                                                <field name="xArg">22</field>
+                                                                                <field name="zArg">24</field>
+                                                                                <value name="semi_or_epsilon">
+                                                                                  <block type="bempty"></block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="bcomment">
+                                                                                    <field name="msg">B</field>
+                                                                                    <next>
+                                                                                      <block type="put2D">
+                                                                                        <field name="xSize">2</field>
+                                                                                        <field name="zSize">13</field>
+                                                                                        <field name="brick">#ffffff</field>
+                                                                                        <field name="xArg">2</field>
+                                                                                        <field name="zArg">1</field>
+                                                                                        <value name="semi_or_epsilon">
+                                                                                          <block type="bwhat"></block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="put2D">
+                                                                                            <field name="xSize">4</field>
+                                                                                            <field name="zSize">2</field>
+                                                                                            <field name="brick">#ffffff</field>
+                                                                                            <field name="xArg">4</field>
+                                                                                            <field name="zArg">12</field>
+                                                                                            <value name="semi_or_epsilon">
+                                                                                              <block type="bwhat"></block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="put2D">
+                                                                                                <field name="xSize">4</field>
+                                                                                                <field name="zSize">2</field>
+                                                                                                <field name="brick">#ffffff</field>
+                                                                                                <field name="xArg">4</field>
+                                                                                                <field name="zArg">6</field>
+                                                                                                <value name="semi_or_epsilon">
+                                                                                                  <block type="bwhat"></block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="put2D">
+                                                                                                    <field name="xSize">2</field>
+                                                                                                    <field name="zSize">4</field>
+                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                    <field name="xArg">8</field>
+                                                                                                    <field name="zArg">8</field>
+                                                                                                    <value name="semi_or_epsilon">
+                                                                                                      <block type="bwhat"></block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="put2D">
+                                                                                                        <field name="xSize">4</field>
+                                                                                                        <field name="zSize">2</field>
+                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                        <field name="xArg">4</field>
+                                                                                                        <field name="zArg">1</field>
+                                                                                                        <value name="semi_or_epsilon">
+                                                                                                          <block type="bwhat"></block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="put2D">
+                                                                                                            <field name="xSize">2</field>
+                                                                                                            <field name="zSize">3</field>
+                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                            <field name="xArg">8</field>
+                                                                                                            <field name="zArg">3</field>
+                                                                                                            <value name="semi_or_epsilon">
+                                                                                                              <block type="bwhat"></block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="put2D">
+                                                                                                                <field name="xSize">1</field>
+                                                                                                                <field name="zSize">1</field>
+                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                <field name="xArg">8</field>
+                                                                                                                <field name="zArg">2</field>
+                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                  <block type="bwhat"></block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="put2D">
+                                                                                                                    <field name="xSize">1</field>
+                                                                                                                    <field name="zSize">1</field>
+                                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                                    <field name="xArg">8</field>
+                                                                                                                    <field name="zArg">6</field>
+                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                      <block type="bwhat"></block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="put2D">
+                                                                                                                        <field name="xSize">1</field>
+                                                                                                                        <field name="zSize">1</field>
+                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                        <field name="xArg">8</field>
+                                                                                                                        <field name="zArg">7</field>
+                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                          <block type="bwhat"></block>
+                                                                                                                        </value>
+                                                                                                                        <next>
+                                                                                                                          <block type="put2D">
+                                                                                                                            <field name="xSize">1</field>
+                                                                                                                            <field name="zSize">1</field>
+                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                            <field name="xArg">8</field>
+                                                                                                                            <field name="zArg">12</field>
+                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                              <block type="bwhat"></block>
+                                                                                                                            </value>
+                                                                                                                            <next>
+                                                                                                                              <block type="bcomment">
+                                                                                                                                <field name="msg">O</field>
+                                                                                                                                <next>
+                                                                                                                                  <block type="put2D">
+                                                                                                                                    <field name="xSize">2</field>
+                                                                                                                                    <field name="zSize">9</field>
+                                                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                                                    <field name="xArg">11</field>
+                                                                                                                                    <field name="zArg">3</field>
+                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                    </value>
+                                                                                                                                    <next>
+                                                                                                                                      <block type="put2D">
+                                                                                                                                        <field name="xSize">2</field>
+                                                                                                                                        <field name="zSize">9</field>
+                                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                                        <field name="xArg">18</field>
+                                                                                                                                        <field name="zArg">3</field>
+                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                        </value>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="put2D">
+                                                                                                                                            <field name="xSize">5</field>
+                                                                                                                                            <field name="zSize">2</field>
+                                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                                            <field name="xArg">13</field>
+                                                                                                                                            <field name="zArg">12</field>
+                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                            </value>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="put2D">
+                                                                                                                                                <field name="xSize">5</field>
+                                                                                                                                                <field name="zSize">2</field>
+                                                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                                                <field name="xArg">13</field>
+                                                                                                                                                <field name="zArg">1</field>
+                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="put2D">
+                                                                                                                                                    <field name="xSize">1</field>
+                                                                                                                                                    <field name="zSize">1</field>
+                                                                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                                                                    <field name="xArg">12</field>
+                                                                                                                                                    <field name="zArg">2</field>
+                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="put2D">
+                                                                                                                                                        <field name="xSize">1</field>
+                                                                                                                                                        <field name="zSize">1</field>
+                                                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                                                        <field name="xArg">18</field>
+                                                                                                                                                        <field name="zArg">2</field>
+                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="put2D">
+                                                                                                                                                            <field name="xSize">1</field>
+                                                                                                                                                            <field name="zSize">1</field>
+                                                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                                                            <field name="xArg">12</field>
+                                                                                                                                                            <field name="zArg">12</field>
+                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="put2D">
+                                                                                                                                                                <field name="xSize">1</field>
+                                                                                                                                                                <field name="zSize">1</field>
+                                                                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                                                                <field name="xArg">18</field>
+                                                                                                                                                                <field name="zArg">12</field>
+                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <next>
+                                                                                                                                                                  <block type="bcomment">
+                                                                                                                                                                    <field name="msg">Y</field>
+                                                                                                                                                                    <next>
+                                                                                                                                                                      <block type="put2D">
+                                                                                                                                                                        <field name="xSize">2</field>
+                                                                                                                                                                        <field name="zSize">7</field>
+                                                                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                                                                        <field name="xArg">25</field>
+                                                                                                                                                                        <field name="zArg">1</field>
+                                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <next>
+                                                                                                                                                                          <block type="put2D">
+                                                                                                                                                                            <field name="xSize">2</field>
+                                                                                                                                                                            <field name="zSize">2</field>
+                                                                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                                                                            <field name="xArg">24</field>
+                                                                                                                                                                            <field name="zArg">8</field>
+                                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                                            </value>
+                                                                                                                                                                            <next>
+                                                                                                                                                                              <block type="put2D">
+                                                                                                                                                                                <field name="xSize">2</field>
+                                                                                                                                                                                <field name="zSize">2</field>
+                                                                                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                                                                                <field name="xArg">26</field>
+                                                                                                                                                                                <field name="zArg">8</field>
+                                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <next>
+                                                                                                                                                                                  <block type="put2D">
+                                                                                                                                                                                    <field name="xSize">2</field>
+                                                                                                                                                                                    <field name="zSize">2</field>
+                                                                                                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                                                                                                    <field name="xArg">23</field>
+                                                                                                                                                                                    <field name="zArg">9</field>
+                                                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                                                    </value>
+                                                                                                                                                                                    <next>
+                                                                                                                                                                                      <block type="put2D">
+                                                                                                                                                                                        <field name="xSize">2</field>
+                                                                                                                                                                                        <field name="zSize">2</field>
+                                                                                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                                                                                        <field name="xArg">22</field>
+                                                                                                                                                                                        <field name="zArg">10</field>
+                                                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <next>
+                                                                                                                                                                                          <block type="put2D">
+                                                                                                                                                                                            <field name="xSize">2</field>
+                                                                                                                                                                                            <field name="zSize">2</field>
+                                                                                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                                                                                            <field name="xArg">21</field>
+                                                                                                                                                                                            <field name="zArg">11</field>
+                                                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                                                            </value>
+                                                                                                                                                                                            <next>
+                                                                                                                                                                                              <block type="put2D">
+                                                                                                                                                                                                <field name="xSize">2</field>
+                                                                                                                                                                                                <field name="zSize">2</field>
+                                                                                                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                                                                                                <field name="xArg">20</field>
+                                                                                                                                                                                                <field name="zArg">12</field>
+                                                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <next>
+                                                                                                                                                                                                  <block type="put2D">
+                                                                                                                                                                                                    <field name="xSize">2</field>
+                                                                                                                                                                                                    <field name="zSize">2</field>
+                                                                                                                                                                                                    <field name="brick">#ffffff</field>
+                                                                                                                                                                                                    <field name="xArg">27</field>
+                                                                                                                                                                                                    <field name="zArg">9</field>
+                                                                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                                                                    </value>
+                                                                                                                                                                                                    <next>
+                                                                                                                                                                                                      <block type="put2D">
+                                                                                                                                                                                                        <field name="xSize">2</field>
+                                                                                                                                                                                                        <field name="zSize">2</field>
+                                                                                                                                                                                                        <field name="brick">#ffffff</field>
+                                                                                                                                                                                                        <field name="xArg">28</field>
+                                                                                                                                                                                                        <field name="zArg">10</field>
+                                                                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <next>
+                                                                                                                                                                                                          <block type="put2D">
+                                                                                                                                                                                                            <field name="xSize">2</field>
+                                                                                                                                                                                                            <field name="zSize">2</field>
+                                                                                                                                                                                                            <field name="brick">#ffffff</field>
+                                                                                                                                                                                                            <field name="xArg">29</field>
+                                                                                                                                                                                                            <field name="zArg">11</field>
+                                                                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <next>
+                                                                                                                                                                                                              <block type="put2D">
+                                                                                                                                                                                                                <field name="xSize">2</field>
+                                                                                                                                                                                                                <field name="zSize">2</field>
+                                                                                                                                                                                                                <field name="brick">#ffffff</field>
+                                                                                                                                                                                                                <field name="xArg">30</field>
+                                                                                                                                                                                                                <field name="zArg">12</field>
+                                                                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                                                                  <block type="bempty"></block>
+                                                                                                                                                                                                                </value>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </next>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </next>
+                                                                                                                                                                                                      </block>
+                                                                                                                                                                                                    </next>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </next>
+                                                                                                                                                                                              </block>
+                                                                                                                                                                                            </next>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </next>
+                                                                                                                                                                                      </block>
+                                                                                                                                                                                    </next>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </next>
+                                                                                                                                                                              </block>
+                                                                                                                                                                            </next>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </next>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </next>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </next>
+                                                                                                                                                              </block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="bbuild">
+                <field name="size">(32,32)</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="bcall">
+                    <field name="userFunName">BackgroundA</field>
+                    <field name="xArg">0</field>
+                    <field name="zArg">0</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bcall">
+                        <field name="userFunName">Letters</field>
+                        <field name="xArg">0</field>
+                        <field name="zArg">0</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="show">
+                            <field name="artifact">"thing"</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

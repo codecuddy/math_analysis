@@ -1,0 +1,785 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="openLevel3" x="13" y="-11">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="declaration_function">
+        <field name="nameOfFn">Lines</field>
+        <field name="x">x</field>
+        <field name="z">z</field>
+        <statement name="body">
+          <block type="bcomment">
+            <field name="msg">BG</field>
+            <next>
+              <block type="put2D">
+                <field name="xSize">64</field>
+                <field name="zSize">64</field>
+                <field name="brick">#6e99c9</field>
+                <field name="xArg">x+0</field>
+                <field name="zArg">z+0</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="bcomment">
+                    <field name="msg">Diagonal</field>
+                    <next>
+                      <block type="lineXZ">
+                        <field name="x1">x+61</field>
+                        <field name="z1">z+0</field>
+                        <field name="x2">x+64</field>
+                        <field name="z2">z+3</field>
+                        <field name="brick">#9fc3e9</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="lineXZ">
+                            <field name="x1">x+60</field>
+                            <field name="z1">z+0</field>
+                            <field name="x2">x+64</field>
+                            <field name="z2">z+4</field>
+                            <field name="brick">#0d69ab</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="lineXZ">
+                                <field name="x1">x+59</field>
+                                <field name="z1">z+0</field>
+                                <field name="x2">x+64</field>
+                                <field name="z2">z+5</field>
+                                <field name="brick">#9fc3e9</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="lineXZ">
+                                    <field name="x1">x+51</field>
+                                    <field name="z1">z+0</field>
+                                    <field name="x2">x+64</field>
+                                    <field name="z2">z+13</field>
+                                    <field name="brick">#9fc3e9</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="lineXZ">
+                                        <field name="x1">x+50</field>
+                                        <field name="z1">z+0</field>
+                                        <field name="x2">x+64</field>
+                                        <field name="z2">z+14</field>
+                                        <field name="brick">#0d69ab</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="lineXZ">
+                                            <field name="x1">x+49</field>
+                                            <field name="z1">z+0</field>
+                                            <field name="x2">x+64</field>
+                                            <field name="z2">z+15</field>
+                                            <field name="brick">#9fc3e9</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="lineXZ">
+                                                <field name="x1">x+41</field>
+                                                <field name="z1">z+0</field>
+                                                <field name="x2">x+64</field>
+                                                <field name="z2">z+23</field>
+                                                <field name="brick">#9fc3e9</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="lineXZ">
+                                                    <field name="x1">x+40</field>
+                                                    <field name="z1">z+0</field>
+                                                    <field name="x2">x+64</field>
+                                                    <field name="z2">z+24</field>
+                                                    <field name="brick">#0d69ab</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="lineXZ">
+                                                        <field name="x1">x+39</field>
+                                                        <field name="z1">z+0</field>
+                                                        <field name="x2">x+64</field>
+                                                        <field name="z2">z+25</field>
+                                                        <field name="brick">#9fc3e9</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="lineXZ">
+                                                            <field name="x1">x+31</field>
+                                                            <field name="z1">z+0</field>
+                                                            <field name="x2">x+64</field>
+                                                            <field name="z2">z+33</field>
+                                                            <field name="brick">#9fc3e9</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bwhat"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="lineXZ">
+                                                                <field name="x1">x+30</field>
+                                                                <field name="z1">z+0</field>
+                                                                <field name="x2">x+64</field>
+                                                                <field name="z2">z+34</field>
+                                                                <field name="brick">#0d69ab</field>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bwhat"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="lineXZ">
+                                                                    <field name="x1">x+29</field>
+                                                                    <field name="z1">z+0</field>
+                                                                    <field name="x2">x+64</field>
+                                                                    <field name="z2">z+35</field>
+                                                                    <field name="brick">#9fc3e9</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bwhat"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="lineXZ">
+                                                                        <field name="x1">x+21</field>
+                                                                        <field name="z1">z+0</field>
+                                                                        <field name="x2">x+64</field>
+                                                                        <field name="z2">z+43</field>
+                                                                        <field name="brick">#9fc3e9</field>
+                                                                        <value name="semi_or_epsilon">
+                                                                          <block type="bwhat"></block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="lineXZ">
+                                                                            <field name="x1">x+20</field>
+                                                                            <field name="z1">z+0</field>
+                                                                            <field name="x2">x+64</field>
+                                                                            <field name="z2">z+44</field>
+                                                                            <field name="brick">#0d69ab</field>
+                                                                            <value name="semi_or_epsilon">
+                                                                              <block type="bwhat"></block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="lineXZ">
+                                                                                <field name="x1">x+19</field>
+                                                                                <field name="z1">z+0</field>
+                                                                                <field name="x2">x+64</field>
+                                                                                <field name="z2">z+45</field>
+                                                                                <field name="brick">#9fc3e9</field>
+                                                                                <value name="semi_or_epsilon">
+                                                                                  <block type="bwhat"></block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="lineXZ">
+                                                                                    <field name="x1">x+11</field>
+                                                                                    <field name="z1">z+0</field>
+                                                                                    <field name="x2">x+64</field>
+                                                                                    <field name="z2">z+53</field>
+                                                                                    <field name="brick">#9fc3e9</field>
+                                                                                    <value name="semi_or_epsilon">
+                                                                                      <block type="bwhat"></block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="lineXZ">
+                                                                                        <field name="x1">x+10</field>
+                                                                                        <field name="z1">z+0</field>
+                                                                                        <field name="x2">x+64</field>
+                                                                                        <field name="z2">z+54</field>
+                                                                                        <field name="brick">#0d69ab</field>
+                                                                                        <value name="semi_or_epsilon">
+                                                                                          <block type="bwhat"></block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="lineXZ">
+                                                                                            <field name="x1">x+9</field>
+                                                                                            <field name="z1">z+0</field>
+                                                                                            <field name="x2">x+64</field>
+                                                                                            <field name="z2">z+55</field>
+                                                                                            <field name="brick">#9fc3e9</field>
+                                                                                            <value name="semi_or_epsilon">
+                                                                                              <block type="bwhat"></block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="lineXZ">
+                                                                                                <field name="x1">x+1</field>
+                                                                                                <field name="z1">z+0</field>
+                                                                                                <field name="x2">x+64</field>
+                                                                                                <field name="z2">z+63</field>
+                                                                                                <field name="brick">#9fc3e9</field>
+                                                                                                <value name="semi_or_epsilon">
+                                                                                                  <block type="bwhat"></block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="lineXZ">
+                                                                                                    <field name="x1">x+0</field>
+                                                                                                    <field name="z1">z+0</field>
+                                                                                                    <field name="x2">x+64</field>
+                                                                                                    <field name="z2">z+64</field>
+                                                                                                    <field name="brick">#0d69ab</field>
+                                                                                                    <value name="semi_or_epsilon">
+                                                                                                      <block type="bwhat"></block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="lineXZ">
+                                                                                                        <field name="x1">x+0</field>
+                                                                                                        <field name="z1">z+1</field>
+                                                                                                        <field name="x2">x+63</field>
+                                                                                                        <field name="z2">z+64</field>
+                                                                                                        <field name="brick">#9fc3e9</field>
+                                                                                                        <value name="semi_or_epsilon">
+                                                                                                          <block type="bwhat"></block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="lineXZ">
+                                                                                                            <field name="x1">x+0</field>
+                                                                                                            <field name="z1">z+9</field>
+                                                                                                            <field name="x2">x+55</field>
+                                                                                                            <field name="z2">z+64</field>
+                                                                                                            <field name="brick">#9fc3e9</field>
+                                                                                                            <value name="semi_or_epsilon">
+                                                                                                              <block type="bwhat"></block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="lineXZ">
+                                                                                                                <field name="x1">x+0</field>
+                                                                                                                <field name="z1">z+10</field>
+                                                                                                                <field name="x2">x+54</field>
+                                                                                                                <field name="z2">z+64</field>
+                                                                                                                <field name="brick">#0d69ab</field>
+                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                  <block type="bwhat"></block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="lineXZ">
+                                                                                                                    <field name="x1">x+0</field>
+                                                                                                                    <field name="z1">z+11</field>
+                                                                                                                    <field name="x2">x+53</field>
+                                                                                                                    <field name="z2">z+64</field>
+                                                                                                                    <field name="brick">#9fc3e9</field>
+                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                      <block type="bwhat"></block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="lineXZ">
+                                                                                                                        <field name="x1">x+0</field>
+                                                                                                                        <field name="z1">z+19</field>
+                                                                                                                        <field name="x2">x+45</field>
+                                                                                                                        <field name="z2">z+64</field>
+                                                                                                                        <field name="brick">#9fc3e9</field>
+                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                          <block type="bwhat"></block>
+                                                                                                                        </value>
+                                                                                                                        <next>
+                                                                                                                          <block type="lineXZ">
+                                                                                                                            <field name="x1">x+0</field>
+                                                                                                                            <field name="z1">z+20</field>
+                                                                                                                            <field name="x2">x+44</field>
+                                                                                                                            <field name="z2">z+64</field>
+                                                                                                                            <field name="brick">#0d69ab</field>
+                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                              <block type="bwhat"></block>
+                                                                                                                            </value>
+                                                                                                                            <next>
+                                                                                                                              <block type="lineXZ">
+                                                                                                                                <field name="x1">x+0</field>
+                                                                                                                                <field name="z1">z+21</field>
+                                                                                                                                <field name="x2">x+43</field>
+                                                                                                                                <field name="z2">z+64</field>
+                                                                                                                                <field name="brick">#9fc3e9</field>
+                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                </value>
+                                                                                                                                <next>
+                                                                                                                                  <block type="lineXZ">
+                                                                                                                                    <field name="x1">x+0</field>
+                                                                                                                                    <field name="z1">z+29</field>
+                                                                                                                                    <field name="x2">x+35</field>
+                                                                                                                                    <field name="z2">z+64</field>
+                                                                                                                                    <field name="brick">#9fc3e9</field>
+                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                    </value>
+                                                                                                                                    <next>
+                                                                                                                                      <block type="lineXZ">
+                                                                                                                                        <field name="x1">x+0</field>
+                                                                                                                                        <field name="z1">z+30</field>
+                                                                                                                                        <field name="x2">x+34</field>
+                                                                                                                                        <field name="z2">z+64</field>
+                                                                                                                                        <field name="brick">#0d69ab</field>
+                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                        </value>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="lineXZ">
+                                                                                                                                            <field name="x1">x+0</field>
+                                                                                                                                            <field name="z1">z+31</field>
+                                                                                                                                            <field name="x2">x+33</field>
+                                                                                                                                            <field name="z2">z+64</field>
+                                                                                                                                            <field name="brick">#9fc3e9</field>
+                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                            </value>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="lineXZ">
+                                                                                                                                                <field name="x1">x+0</field>
+                                                                                                                                                <field name="z1">z+39</field>
+                                                                                                                                                <field name="x2">x+25</field>
+                                                                                                                                                <field name="z2">z+64</field>
+                                                                                                                                                <field name="brick">#9fc3e9</field>
+                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="lineXZ">
+                                                                                                                                                    <field name="x1">x+0</field>
+                                                                                                                                                    <field name="z1">z+40</field>
+                                                                                                                                                    <field name="x2">x+24</field>
+                                                                                                                                                    <field name="z2">z+64</field>
+                                                                                                                                                    <field name="brick">#0d69ab</field>
+                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="lineXZ">
+                                                                                                                                                        <field name="x1">x+0</field>
+                                                                                                                                                        <field name="z1">z+41</field>
+                                                                                                                                                        <field name="x2">x+23</field>
+                                                                                                                                                        <field name="z2">z+64</field>
+                                                                                                                                                        <field name="brick">#9fc3e9</field>
+                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="lineXZ">
+                                                                                                                                                            <field name="x1">x+0</field>
+                                                                                                                                                            <field name="z1">z+49</field>
+                                                                                                                                                            <field name="x2">x+15</field>
+                                                                                                                                                            <field name="z2">z+64</field>
+                                                                                                                                                            <field name="brick">#9fc3e9</field>
+                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="lineXZ">
+                                                                                                                                                                <field name="x1">x+0</field>
+                                                                                                                                                                <field name="z1">z+50</field>
+                                                                                                                                                                <field name="x2">x+14</field>
+                                                                                                                                                                <field name="z2">z+64</field>
+                                                                                                                                                                <field name="brick">#0d69ab</field>
+                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                  <block type="bwhat"></block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <next>
+                                                                                                                                                                  <block type="lineXZ">
+                                                                                                                                                                    <field name="x1">x+0</field>
+                                                                                                                                                                    <field name="z1">z+51</field>
+                                                                                                                                                                    <field name="x2">x+13</field>
+                                                                                                                                                                    <field name="z2">z+64</field>
+                                                                                                                                                                    <field name="brick">#9fc3e9</field>
+                                                                                                                                                                    <value name="semi_or_epsilon">
+                                                                                                                                                                      <block type="bwhat"></block>
+                                                                                                                                                                    </value>
+                                                                                                                                                                    <next>
+                                                                                                                                                                      <block type="lineXZ">
+                                                                                                                                                                        <field name="x1">x+0</field>
+                                                                                                                                                                        <field name="z1">z+59</field>
+                                                                                                                                                                        <field name="x2">x+5</field>
+                                                                                                                                                                        <field name="z2">z+64</field>
+                                                                                                                                                                        <field name="brick">#9fc3e9</field>
+                                                                                                                                                                        <value name="semi_or_epsilon">
+                                                                                                                                                                          <block type="bwhat"></block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <next>
+                                                                                                                                                                          <block type="lineXZ">
+                                                                                                                                                                            <field name="x1">x+0</field>
+                                                                                                                                                                            <field name="z1">z+60</field>
+                                                                                                                                                                            <field name="x2">x+4</field>
+                                                                                                                                                                            <field name="z2">z+64</field>
+                                                                                                                                                                            <field name="brick">#0d69ab</field>
+                                                                                                                                                                            <value name="semi_or_epsilon">
+                                                                                                                                                                              <block type="bwhat"></block>
+                                                                                                                                                                            </value>
+                                                                                                                                                                            <next>
+                                                                                                                                                                              <block type="lineXZ">
+                                                                                                                                                                                <field name="x1">x+0</field>
+                                                                                                                                                                                <field name="z1">z+61</field>
+                                                                                                                                                                                <field name="x2">x+3</field>
+                                                                                                                                                                                <field name="z2">z+64</field>
+                                                                                                                                                                                <field name="brick">#9fc3e9</field>
+                                                                                                                                                                                <value name="semi_or_epsilon">
+                                                                                                                                                                                  <block type="bempty"></block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                              </block>
+                                                                                                                                                                            </next>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </next>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </next>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </next>
+                                                                                                                                                              </block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="semi_or_epsilon">
+          <block type="bwhat"></block>
+        </value>
+        <next>
+          <block type="declaration_function">
+            <field name="nameOfFn">Circles</field>
+            <field name="x">x</field>
+            <field name="z">z</field>
+            <statement name="body">
+              <block type="circleXZ">
+                <field name="radius">3</field>
+                <field name="brick">#e1d5ed</field>
+                <field name="xArg">x+6</field>
+                <field name="zArg">z+6</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="circleXZ">
+                    <field name="radius">3</field>
+                    <field name="brick">#e1d5ed</field>
+                    <field name="xArg">x+26</field>
+                    <field name="zArg">z+6</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="circleXZ">
+                        <field name="radius">3</field>
+                        <field name="brick">#e1d5ed</field>
+                        <field name="xArg">x+46</field>
+                        <field name="zArg">z+6</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="circleXZ">
+                            <field name="radius">3</field>
+                            <field name="brick">#e1d5ed</field>
+                            <field name="xArg">x+66</field>
+                            <field name="zArg">z+6</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bempty"></block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="declaration_function">
+                <field name="nameOfFn">CirclesAll</field>
+                <field name="x">x</field>
+                <field name="z">z</field>
+                <statement name="body">
+                  <block type="bcall">
+                    <field name="userFunName">Circles</field>
+                    <field name="xArg">x+0</field>
+                    <field name="zArg">z+0</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bcall">
+                        <field name="userFunName">Circles</field>
+                        <field name="xArg">x+10</field>
+                        <field name="zArg">z+20</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bcall">
+                            <field name="userFunName">Circles</field>
+                            <field name="xArg">x+0</field>
+                            <field name="zArg">z+40</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">Circles</field>
+                                <field name="xArg">x+10</field>
+                                <field name="zArg">z+60</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bempty"></block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="declaration_function">
+                    <field name="nameOfFn">Rings</field>
+                    <field name="x">x</field>
+                    <field name="z">z</field>
+                    <statement name="body">
+                      <block type="ringXZ">
+                        <field name="radius">5</field>
+                        <field name="thickness">1</field>
+                        <field name="brick">#203a56</field>
+                        <field name="xArg">x+2</field>
+                        <field name="zArg">z+2</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="ringXZ">
+                            <field name="radius">5</field>
+                            <field name="thickness">1</field>
+                            <field name="brick">#203a56</field>
+                            <field name="xArg">x+22</field>
+                            <field name="zArg">z+2</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="ringXZ">
+                                <field name="radius">5</field>
+                                <field name="thickness">1</field>
+                                <field name="brick">#203a56</field>
+                                <field name="xArg">x+42</field>
+                                <field name="zArg">z+2</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="ringXZ">
+                                    <field name="radius">5</field>
+                                    <field name="thickness">1</field>
+                                    <field name="brick">#203a56</field>
+                                    <field name="xArg">x+62</field>
+                                    <field name="zArg">z+2</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bempty"></block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="declaration_function">
+                        <field name="nameOfFn">RingsAll</field>
+                        <field name="x">x</field>
+                        <field name="z">z</field>
+                        <statement name="body">
+                          <block type="bcall">
+                            <field name="userFunName">Rings</field>
+                            <field name="xArg">x+0</field>
+                            <field name="zArg">z+0</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">Rings</field>
+                                <field name="xArg">x+10</field>
+                                <field name="zArg">z+20</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">Rings</field>
+                                    <field name="xArg">x+0</field>
+                                    <field name="zArg">z+40</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="bcall">
+                                        <field name="userFunName">Rings</field>
+                                        <field name="xArg">x+10</field>
+                                        <field name="zArg">z+60</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bempty"></block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="declaration_function">
+                            <field name="nameOfFn">All</field>
+                            <field name="x">x</field>
+                            <field name="z">z</field>
+                            <statement name="body">
+                              <block type="bcall">
+                                <field name="userFunName">Lines</field>
+                                <field name="xArg">x+0</field>
+                                <field name="zArg">z+0</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">CirclesAll</field>
+                                    <field name="xArg">x+0</field>
+                                    <field name="zArg">z+0</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="bcall">
+                                        <field name="userFunName">RingsAll</field>
+                                        <field name="xArg">x+0</field>
+                                        <field name="zArg">z+0</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bempty"></block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bbuild">
+                                <field name="size">(64,64)</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">All</field>
+                                    <field name="xArg">0</field>
+                                    <field name="zArg">0</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="show">
+                                        <field name="artifact">"thing"</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

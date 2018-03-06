@@ -1,0 +1,619 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="openLevel3" x="9" y="3">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="declaration_function">
+        <field name="nameOfFn">DAB</field>
+        <field name="x">x</field>
+        <field name="z">z</field>
+        <statement name="body">
+          <block type="ringXZ">
+            <field name="radius">16</field>
+            <field name="thickness">1</field>
+            <field name="brick">#000000</field>
+            <field name="xArg">x+32</field>
+            <field name="zArg">z+32</field>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="ringXZ">
+                <field name="radius">15</field>
+                <field name="thickness">1</field>
+                <field name="brick">#ffffff</field>
+                <field name="xArg">x+32</field>
+                <field name="zArg">z+32</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="ringXZ">
+                    <field name="radius">14</field>
+                    <field name="thickness">1</field>
+                    <field name="brick">#000000</field>
+                    <field name="xArg">x+32</field>
+                    <field name="zArg">z+32</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="ringXZ">
+                        <field name="radius">13</field>
+                        <field name="thickness">1</field>
+                        <field name="brick">#ffffff</field>
+                        <field name="xArg">x+32</field>
+                        <field name="zArg">z+32</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="ringXZ">
+                            <field name="radius">12</field>
+                            <field name="thickness">1</field>
+                            <field name="brick">#000000</field>
+                            <field name="xArg">x+32</field>
+                            <field name="zArg">z+32</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="ringXZ">
+                                <field name="radius">11</field>
+                                <field name="thickness">1</field>
+                                <field name="brick">#ffffff</field>
+                                <field name="xArg">x+32</field>
+                                <field name="zArg">z+32</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="ringXZ">
+                                    <field name="radius">10</field>
+                                    <field name="thickness">1</field>
+                                    <field name="brick">#000000</field>
+                                    <field name="xArg">x+32</field>
+                                    <field name="zArg">z+32</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="ringXZ">
+                                        <field name="radius">9</field>
+                                        <field name="thickness">1</field>
+                                        <field name="brick">#ffffff</field>
+                                        <field name="xArg">x+32</field>
+                                        <field name="zArg">z+32</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="ringXZ">
+                                            <field name="radius">8</field>
+                                            <field name="thickness">1</field>
+                                            <field name="brick">#000000</field>
+                                            <field name="xArg">x+32</field>
+                                            <field name="zArg">z+32</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="ringXZ">
+                                                <field name="radius">7</field>
+                                                <field name="thickness">1</field>
+                                                <field name="brick">#ffffff</field>
+                                                <field name="xArg">x+32</field>
+                                                <field name="zArg">z+32</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="ringXZ">
+                                                    <field name="radius">6</field>
+                                                    <field name="thickness">1</field>
+                                                    <field name="brick">#000000</field>
+                                                    <field name="xArg">x+32</field>
+                                                    <field name="zArg">z+32</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="ringXZ">
+                                                        <field name="radius">5</field>
+                                                        <field name="thickness">1</field>
+                                                        <field name="brick">#ffffff</field>
+                                                        <field name="xArg">x+32</field>
+                                                        <field name="zArg">z+32</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="ringXZ">
+                                                            <field name="radius">4</field>
+                                                            <field name="thickness">1</field>
+                                                            <field name="brick">#000000</field>
+                                                            <field name="xArg">x+32</field>
+                                                            <field name="zArg">z+32</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bwhat"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="ringXZ">
+                                                                <field name="radius">3</field>
+                                                                <field name="thickness">1</field>
+                                                                <field name="brick">#ffffff</field>
+                                                                <field name="xArg">x+32</field>
+                                                                <field name="zArg">z+32</field>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bwhat"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="ringXZ">
+                                                                    <field name="radius">2</field>
+                                                                    <field name="thickness">1</field>
+                                                                    <field name="brick">#000000</field>
+                                                                    <field name="xArg">x+32</field>
+                                                                    <field name="zArg">z+32</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bwhat"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="ringXZ">
+                                                                        <field name="radius">1</field>
+                                                                        <field name="thickness">1</field>
+                                                                        <field name="brick">#ffffff</field>
+                                                                        <field name="xArg">x+32</field>
+                                                                        <field name="zArg">z+32</field>
+                                                                        <value name="semi_or_epsilon">
+                                                                          <block type="bwhat"></block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="ringXZ">
+                                                                            <field name="radius">0</field>
+                                                                            <field name="thickness">1</field>
+                                                                            <field name="brick">#000000</field>
+                                                                            <field name="xArg">x+32</field>
+                                                                            <field name="zArg">z+32</field>
+                                                                            <value name="semi_or_epsilon">
+                                                                              <block type="bempty"></block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="semi_or_epsilon">
+          <block type="bwhat"></block>
+        </value>
+        <next>
+          <block type="declaration_function">
+            <field name="nameOfFn">mans</field>
+            <field name="x">x</field>
+            <field name="z">z</field>
+            <statement name="body">
+              <block type="bcall">
+                <field name="userFunName">DAB</field>
+                <field name="xArg">x+16</field>
+                <field name="zArg">z</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="bcall">
+                    <field name="userFunName">DAB</field>
+                    <field name="xArg">x-16</field>
+                    <field name="zArg">z</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bcall">
+                        <field name="userFunName">DAB</field>
+                        <field name="xArg">x</field>
+                        <field name="zArg">z+16</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bcall">
+                            <field name="userFunName">DAB</field>
+                            <field name="xArg">x</field>
+                            <field name="zArg">z-16</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">DAB</field>
+                                <field name="xArg">x</field>
+                                <field name="zArg">z</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bempty"></block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="declaration_function">
+                <field name="nameOfFn">not</field>
+                <field name="x">x</field>
+                <field name="z">z</field>
+                <statement name="body">
+                  <block type="bcall">
+                    <field name="userFunName">DAB</field>
+                    <field name="xArg">x+16</field>
+                    <field name="zArg">z</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bcall">
+                        <field name="userFunName">DAB</field>
+                        <field name="xArg">x-16</field>
+                        <field name="zArg">z</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bcall">
+                            <field name="userFunName">DAB</field>
+                            <field name="xArg">x</field>
+                            <field name="zArg">z+16</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">DAB</field>
+                                <field name="xArg">x</field>
+                                <field name="zArg">z-16</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">DAB</field>
+                                    <field name="xArg">x</field>
+                                    <field name="zArg">z</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bempty"></block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="declaration_function">
+                    <field name="nameOfFn">hot</field>
+                    <field name="x">x</field>
+                    <field name="z">z</field>
+                    <statement name="body">
+                      <block type="bcall">
+                        <field name="userFunName">DAB</field>
+                        <field name="xArg">x+16</field>
+                        <field name="zArg">z</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bcall">
+                            <field name="userFunName">DAB</field>
+                            <field name="xArg">x-16</field>
+                            <field name="zArg">z</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">DAB</field>
+                                <field name="xArg">x</field>
+                                <field name="zArg">z+16</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">DAB</field>
+                                    <field name="xArg">x</field>
+                                    <field name="zArg">z-16</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="bcall">
+                                        <field name="userFunName">DAB</field>
+                                        <field name="xArg">x</field>
+                                        <field name="zArg">z</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bempty"></block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="declaration_function">
+                        <field name="nameOfFn">UHH</field>
+                        <field name="x">x</field>
+                        <field name="z">z</field>
+                        <statement name="body">
+                          <block type="bcall">
+                            <field name="userFunName">DAB</field>
+                            <field name="xArg">x+16</field>
+                            <field name="zArg">z</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="bcall">
+                                <field name="userFunName">DAB</field>
+                                <field name="xArg">x-16</field>
+                                <field name="zArg">z</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">DAB</field>
+                                    <field name="xArg">x</field>
+                                    <field name="zArg">z+16</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="bcall">
+                                        <field name="userFunName">DAB</field>
+                                        <field name="xArg">x</field>
+                                        <field name="zArg">z-16</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="bcall">
+                                            <field name="userFunName">DAB</field>
+                                            <field name="xArg">x</field>
+                                            <field name="zArg">z</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bempty"></block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bbuild">
+                            <field name="size">(128,128)</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="put2D">
+                                <field name="xSize">128</field>
+                                <field name="zSize">128</field>
+                                <field name="brick">#e4adc8</field>
+                                <field name="xArg">0</field>
+                                <field name="zArg">0</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcall">
+                                    <field name="userFunName">DAB</field>
+                                    <field name="xArg">32</field>
+                                    <field name="zArg">32</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="bcall">
+                                        <field name="userFunName">DAB</field>
+                                        <field name="xArg">98</field>
+                                        <field name="zArg">32</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="bcall">
+                                            <field name="userFunName">DAB</field>
+                                            <field name="xArg">-32</field>
+                                            <field name="zArg">32</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="bcall">
+                                                <field name="userFunName">DAB</field>
+                                                <field name="xArg">32</field>
+                                                <field name="zArg">98</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="bcall">
+                                                    <field name="userFunName">DAB</field>
+                                                    <field name="xArg">-32</field>
+                                                    <field name="zArg">98</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="bcall">
+                                                        <field name="userFunName">DAB</field>
+                                                        <field name="xArg">98</field>
+                                                        <field name="zArg">98</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="bcall">
+                                                            <field name="userFunName">DAB</field>
+                                                            <field name="xArg">32</field>
+                                                            <field name="zArg">-35</field>
+                                                            <value name="semi_or_epsilon">
+                                                              <block type="bwhat"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="bcall">
+                                                                <field name="userFunName">DAB</field>
+                                                                <field name="xArg">-32</field>
+                                                                <field name="zArg">-35</field>
+                                                                <value name="semi_or_epsilon">
+                                                                  <block type="bwhat"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="bcall">
+                                                                    <field name="userFunName">DAB</field>
+                                                                    <field name="xArg">98</field>
+                                                                    <field name="zArg">-35</field>
+                                                                    <value name="semi_or_epsilon">
+                                                                      <block type="bwhat"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="bcall">
+                                                                        <field name="userFunName">mans</field>
+                                                                        <field name="xArg">0</field>
+                                                                        <field name="zArg">0</field>
+                                                                        <value name="semi_or_epsilon">
+                                                                          <block type="bwhat"></block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="bcall">
+                                                                            <field name="userFunName">not</field>
+                                                                            <field name="xArg">64</field>
+                                                                            <field name="zArg">0</field>
+                                                                            <value name="semi_or_epsilon">
+                                                                              <block type="bwhat"></block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="bcall">
+                                                                                <field name="userFunName">hot</field>
+                                                                                <field name="xArg">0</field>
+                                                                                <field name="zArg">64</field>
+                                                                                <value name="semi_or_epsilon">
+                                                                                  <block type="bwhat"></block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="bcall">
+                                                                                    <field name="userFunName">UHH</field>
+                                                                                    <field name="xArg">64</field>
+                                                                                    <field name="zArg">64</field>
+                                                                                    <value name="semi_or_epsilon">
+                                                                                      <block type="bwhat"></block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="show">
+                                                                                        <field name="artifact">"thing"</field>
+                                                                                        <value name="semi_or_epsilon">
+                                                                                          <block type="bwhat"></block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

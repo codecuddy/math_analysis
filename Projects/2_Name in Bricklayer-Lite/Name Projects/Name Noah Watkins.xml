@@ -1,0 +1,229 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="openLevel3" x="49" y="17">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="bcomment">
+        <field name="msg">Background</field>
+        <next>
+          <block type="declaration_nullaryFunction">
+            <field name="nameOfFn">BackG</field>
+            <statement name="body">
+              <block type="put2D">
+                <field name="xSize">16</field>
+                <field name="zSize">16</field>
+                <field name="brick">#0d69ab</field>
+                <field name="xArg">0</field>
+                <field name="zArg">16</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="put2D">
+                    <field name="xSize">16</field>
+                    <field name="zSize">16</field>
+                    <field name="brick">#cd6298</field>
+                    <field name="xArg">16</field>
+                    <field name="zArg">16</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="put2D">
+                        <field name="xSize">16</field>
+                        <field name="zSize">16</field>
+                        <field name="brick">#287f46</field>
+                        <field name="xArg">16</field>
+                        <field name="zArg">0</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="put2D">
+                            <field name="xSize">16</field>
+                            <field name="zSize">16</field>
+                            <field name="brick">#cc0000</field>
+                            <field name="xArg">0</field>
+                            <field name="zArg">0</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bempty"></block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="bcomment">
+                <field name="msg">No</field>
+                <next>
+                  <block type="declaration_nullaryFunction">
+                    <field name="nameOfFn">No</field>
+                    <statement name="body">
+                      <block type="put2D">
+                        <field name="xSize">1</field>
+                        <field name="zSize">14</field>
+                        <field name="brick">#da8540</field>
+                        <field name="xArg">1</field>
+                        <field name="zArg">17</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="put2D">
+                            <field name="xSize">1</field>
+                            <field name="zSize">1</field>
+                            <field name="brick">#da8540</field>
+                            <field name="xArg">2</field>
+                            <field name="zArg">30</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="put2D">
+                                <field name="xSize">1</field>
+                                <field name="zSize">1</field>
+                                <field name="brick">#da8540</field>
+                                <field name="xArg">3</field>
+                                <field name="zArg">29</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="put2D">
+                                    <field name="xSize">1</field>
+                                    <field name="zSize">12</field>
+                                    <field name="brick">#da8540</field>
+                                    <field name="xArg">4</field>
+                                    <field name="zArg">17</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="put2D">
+                                        <field name="xSize">1</field>
+                                        <field name="zSize">1</field>
+                                        <field name="brick">#da8540</field>
+                                        <field name="xArg">5</field>
+                                        <field name="zArg">17</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="put2D">
+                                            <field name="xSize">1</field>
+                                            <field name="zSize">14</field>
+                                            <field name="brick">#da8540</field>
+                                            <field name="xArg">6</field>
+                                            <field name="zArg">17</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="circleXZ">
+                                                <field name="radius">3</field>
+                                                <field name="brick">#da8540</field>
+                                                <field name="xArg">11</field>
+                                                <field name="zArg">21</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="circleXZ">
+                                                    <field name="radius">2</field>
+                                                    <field name="brick">#0d69ab</field>
+                                                    <field name="xArg">11</field>
+                                                    <field name="zArg">21</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="put2D">
+                                                        <field name="xSize">1</field>
+                                                        <field name="zSize">1</field>
+                                                        <field name="brick">#ffffff</field>
+                                                        <field name="xArg">0</field>
+                                                        <field name="zArg">0</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bempty"></block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="bbuild">
+                        <field name="size">(32,32)</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="bcomment">
+                            <field name="msg">Background (What is making it visible)</field>
+                            <next>
+                              <block type="bcallNullary">
+                                <field name="userFunName">BackG</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="bcomment">
+                                    <field name="msg">No (What is making it visible)</field>
+                                    <next>
+                                      <block type="bcallNullary">
+                                        <field name="userFunName">No</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="show">
+                                            <field name="artifact">"thing"</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
