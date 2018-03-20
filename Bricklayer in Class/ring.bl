@@ -1,13 +1,14 @@
 open Level_4;
 build(50,50,50);
 
-(*
-ringY 10 11 1 [BLUE,GREEN] (20,0,20);
-*)
+
+ringY 6 3 5 [BLUE,GREEN] (20,0,20);
+
 
 (*
 hollowCylinderY 10 1 [BLUE,GREEN] (20,0,20);
 *)
-
+(*
 circle 10 RED (20, 0, 20);
+*)
 show "thing";

@@ -1,0 +1,43 @@
+open Level_5;
+build(200,40,200);
+
+val wallLength = 18;
+val roofHeight = 12;
+val wallHeight = 8; 
+val foot = 1;
+
+(* ##### HOUSE ##### *)
+
+put(wallLength, wallHeight, 2*wallLength+1) RED (0,0,0);
+
+(* ##### FIRST SIDE OF ROOF ###### *)
+fun westRoof(xStart, yStart    , zStart) = (
+   line(xStart+0*foot, yStart+wallHeight+roofHeight, zStart) (xStart+0*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+1*foot, yStart+wallHeight+roofHeight, zStart) (xStart+1*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+2*foot, yStart+wallHeight+roofHeight, zStart) (xStart+2*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+3*foot, yStart+wallHeight+roofHeight, zStart) (xStart+3*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+4*foot, yStart+wallHeight+roofHeight, zStart) (xStart+4*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+5*foot, yStart+wallHeight+roofHeight, zStart) (xStart+5*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+6*foot, yStart+wallHeight+roofHeight, zStart) (xStart+6*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+7*foot, yStart+wallHeight+roofHeight, zStart) (xStart+7*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+8*foot, yStart+wallHeight+roofHeight, zStart) (xStart+8*foot, yStart+wallHeight, zStart+wallLength) BLACK;
+   line(xStart+9*foot, yStart+wallHeight+roofHeight, zStart) (xStart+9*foot, yStart+wallHeight, zStart+wallLength) BLACK
+);
+
+(* ##### SECOND SIDE OF ROOF ###### *)
+fun eastRoof(xStart, yStart    , zStart) = (
+   line(xStart+0*foot, yStart+wallHeight, zStart) (xStart+0*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+1*foot, yStart+wallHeight, zStart) (xStart+1*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+2*foot, yStart+wallHeight, zStart) (xStart+2*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+3*foot, yStart+wallHeight, zStart) (xStart+3*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+4*foot, yStart+wallHeight, zStart) (xStart+4*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+5*foot, yStart+wallHeight, zStart) (xStart+5*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+6*foot, yStart+wallHeight, zStart) (xStart+6*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+7*foot, yStart+wallHeight, zStart) (xStart+7*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+8*foot, yStart+wallHeight, zStart) (xStart+8*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK;
+   line(xStart+9*foot, yStart+wallHeight, zStart) (xStart+9*foot, yStart+wallHeight+roofHeight, zStart+wallLength) BLACK
+);
+
+eastRoof(0,0,0);
+westRoof(0,0,wallLength);
+show "roof";
