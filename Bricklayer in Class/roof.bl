@@ -1,14 +1,14 @@
 open Level_5;
 build(200,40,200);
 
-val wallLength = 18;
-val roofHeight = 12;
-val wallHeight = 8; 
+val wallLength = 10;
+val roofHeight = 10;
+val wallHeight = 10; 
 val foot = 1;
 
 (* ##### HOUSE ##### *)
 
-put(wallLength, wallHeight, 2*wallLength+1) RED (0,0,0);
+putHollow(2*wallLength, wallHeight, 2*wallLength+1) RED (0,0,0);
 
 (* ##### FIRST SIDE OF ROOF ###### *)
 fun westRoof(xStart, yStart    , zStart) = (

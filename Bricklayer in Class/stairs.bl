@@ -2,8 +2,8 @@ open Level_5;
 build(200,40,200);
 
 val foot = 1;
-val stairHeight = 3*foot;
-val stairWidth = 12*foot; 
+val stairHeight = 2*foot;
+val stairWidth = 8*foot; 
 val stairLength = 6*foot;
 
 
