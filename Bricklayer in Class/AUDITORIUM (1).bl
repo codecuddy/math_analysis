@@ -1,0 +1,66 @@
+open Level_5;
+build(100,100,100);
+
+val auditoriumLength = 52;
+val auditoriumLengthtwo =84;
+val auditoriumHeight = 24;
+val auditoriumWidth = 1;
+val stageLength = 36;
+val stageWidth = 84;
+val stageHeight = 5;
+
+
+fun room(xStart, yStart, zStart) = (
+
+
+
+put (auditoriumLength ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart,yStart);
+
+put (auditoriumLength-9 ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart+1,yStart);
+
+put (auditoriumLength-18 ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart+2,yStart);
+
+put (auditoriumLength-27 ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart+3,yStart);
+
+put (auditoriumLength-36 ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart+4,yStart);
+
+put (auditoriumLength-45 ,auditoriumWidth, auditoriumLengthtwo) GRAY (  xStart,zStart+5,yStart);
+
+put (auditoriumWidth,auditoriumHeight,auditoriumLengthtwo) LIGHTBROWN (    xStart,zStart,yStart);
+
+put (auditoriumLength,auditoriumHeight,auditoriumWidth) LIGHTBROWN (       xStart,zStart,yStart);
+
+put (auditoriumLength,auditoriumHeight,auditoriumWidth) LIGHTBROWN (       xStart,zStart,yStart+84);
+
+put (auditoriumWidth,auditoriumHeight-19,auditoriumLengthtwo-1) BLACK (xStart+53,zStart,yStart+1);
+
+put (auditoriumWidth,auditoriumHeight-19,auditoriumLengthtwo-52) EMPTY (xStart+51,zStart,yStart+26);
+
+put (auditoriumWidth+4,auditoriumHeight-19,auditoriumLengthtwo-50) BLACK (xStart+54,zStart,yStart+26);
+
+put (auditoriumWidth+3,auditoriumHeight-19,auditoriumLengthtwo-52) EMPTY (xStart+52,zStart+1,yStart+26);
+
+put (auditoriumWidth+5,auditoriumHeight-23,auditoriumLengthtwo-52) GRAY (xStart+50,zStart,yStart+26)
+
+);
+
+
+fun stage (xStart, zStart, yStart) = (
+
+put (stageLength-2, stageHeight, stageWidth) BLACK (xStart+6,zStart,yStart);
+
+put (stageLength-30, stageHeight, stageWidth-52) EMPTY (xStart+4,zStart,yStart+26);
+
+put (auditoriumLength-12,auditoriumHeight,auditoriumWidth) LIGHTGRAY (       xStart,zStart,yStart);
+
+put (auditoriumLength-12,auditoriumHeight,auditoriumWidth) LIGHTGRAY (       xStart,zStart,yStart+84);
+
+put (auditoriumWidth,auditoriumHeight,auditoriumLengthtwo+1) LIGHTGRAY (    xStart+40,zStart,yStart)
+
+);
+
+stage (51,5,5);
+
+room (5,5,5);
+
+showSTL_ASCII "thing";

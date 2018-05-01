@@ -1,0 +1,351 @@
+open Level_5;
+build(100,60,100);
+val Pagoda=1;
+fun pagoda (xStart,yStart,zStart)=(
+
+putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+45,zStart-1);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+46,zStart+0);
+putHollow (23,1,19) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+1,yStart+47,zStart+1);
+putHollow (21,1,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+48,zStart+2);
+putHollow (19,1,15) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+3,yStart+49,zStart+3);
+putHollow (17,1,13) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+4,yStart+50,zStart+4);
+putHollow (11,3,7) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+7,yStart+51,zStart+7);
+putHollow (13,1,10) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+6,yStart+54,zStart+6);
+putHollow (11,1,7) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+7,yStart+55,zStart+7);
+putHollow (9,1,4) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+8,yStart+56,zStart+8);
+putHollow (7,1,2) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+9,yStart+57,zStart+9);
+putHollow (3,3,2) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+11,yStart+58,zStart+9);
+
+
+(*PILLAR HOLES*)
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+(*INNER HOLES*)
+put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+(*put (25,1,21) EMPTY (0,5,0);*)
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+(*2X2*)
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+
+(*Four holes on outer part 1*)
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+);
+
+fun pagodatwo (xStart,yStart,zStart)=(
+
+
+putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+
+
+(*PILLAR HOLES*)
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+(*INNER HOLES*)
+put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+(*put (25,1,21) EMPTY (0,5,0);*)
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+(*2X2*)
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+(*Four holes on outer part 1*)
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+
+);
+
+fun pagodafour (xStart,yStart,zStart)=(
+
+
+putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+
+
+(*PILLAR HOLES*)
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+(*INNER HOLES*)
+put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+(*put (25,1,21) EMPTY (0,5,0);*)
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+(*2X2*)
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+(*Four holes on outer part 1*)
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+
+);
+
+fun pagodathree (xStart,yStart,zStart)=(
+
+
+putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+
+
+(*PILLAR HOLES*)
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+(*INNER HOLES*)
+put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+(*put (25,1,21) EMPTY (0,5,0);*)
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+(*2X2*)
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+(*Four holes on outer part 1*)
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+
+);
+
+
+fun pagodafour (xStart,yStart,zStart)=(
+
+
+putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+
+
+(*PILLAR HOLES*)
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+put (5,4,1) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+7,yStart+0,zStart+0);
+put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+(*INNER HOLES*)
+put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+(*put (25,1,21) EMPTY (0,5,0);*)
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+(*2X2*)
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+(*Four holes on outer part 1*)
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+
+);
+
+
+put (25,1,21) RED (6,0,5);
+put (1,1,1) RED (0,0,0);
+put (1,1,1) BLUE (35,0,35);
+pagoda (6,1,5);
+pagodatwo (6,10,5);
+pagodathree (6,19,5);
+pagodafour (6,28,5);
+pagodafour (6,37,5);
+
+show "thing";

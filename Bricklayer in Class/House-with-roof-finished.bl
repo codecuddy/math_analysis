@@ -1,0 +1,376 @@
+open Level_5;
+ build (200,80,200);
+
+
+        (*FIRST FLOOR*)
+(*octagon*)
+put (4,0,1) WHITE (57,0,20);
+put (12,0,2) WHITE (53,0,21);
+(*Frist two squars*)
+put (32,0,16) WHITE (35,0,23);
+(*FOUR SQUARS*)
+put (64,0,16) WHITE (19,0,39);
+(*THREE SQUARS*)
+put (48,0,16) WHITE (19,0,55);
+
+
+
+ 
+        (*SECOND FLOOR*) 
+(*octagon*)
+put (4,1,1) WHITE (57,16,20);
+put (12,1,2) WHITE (53,16,21);
+(*Frist two squars*)
+put (32,1,16) WHITE (35,16,23);
+(*FOUR SQUARS*)
+put (64,1,16) WHITE (19,16,39);
+(*THREE SQUARS*)
+put (48,1,16) WHITE (19,16,55);
+
+
+
+
+
+           (*WALLS/WINDOWS*)
+(*middle octagon*)
+put (4,16,1) WHITE (57,1,20);
+put (2,4,1) EMPTY (58,5,20);
+
+(*left octagon*)
+put (4,16,1) WHITE (53,1,21);
+put (2,4,2) EMPTY (54,5,21);
+put (1,16,1) WHITE (53,1,22);
+
+(*right octagon*)
+put (4,16,1) WHITE (61,1,21);
+put (2,4,2) EMPTY (62,5,21);
+put (1,16,1) WHITE (64,1,22);
+
+(*wall above the octagon*)
+put (18,16,1) WHITE (49,16,23);
+(*RIGHT WINDOW*) put (3,4,1) EMPTY (54,22,23);
+(*LEFT WINDOW*)  put (3,4,1) EMPTY (61,22,23);
+
+(*frontwall with door*)
+put (18,32,1) WHITE (35,0,23);
+(*DOOR*)        put (6,8,1) EMPTY (42,1,23);
+(*RIGHT WINDOW*) put (3,4,1) EMPTY (47,22,23);
+(*LEFT WINDOW*) put (3,4,1) EMPTY (40,22,23);
+
+(*right side wall*)
+put (1,32,16) WHITE (67,0,23);
+put (2,16,2) WHITE (65,1,21);
+
+(*left side wall*)
+put (1,32,16) WHITE (35,0,23);
+
+(*front wall with two big window*)
+put (17,32,1) WHITE (19,0,39);
+put (6,5,1) EMPTY (24,5,39);
+put (6,5,1) EMPTY (24,21,39);
+
+(*far right front wall*)
+put (16,16,1) WHITE (67,0,39);
+put (6,5,1) EMPTY (72,5,39);
+
+(*left wall*)
+put (1,32,32) WHITE (19,0,39);
+
+(*far right wall*)
+put (1,16,16) WHITE (82,0,39);
+
+(*second floor wall above side section*)
+put (1,16,16) WHITE (67,16,39);
+
+(*back wall side section*)
+put (16,16,1) WHITE (67,0,54);
+
+(*right wall behind*)
+put (1,32,16) WHITE (67,0,55);
+
+(*back wall*)
+put (48,32,1) WHITE (19,0,70);
+
+
+(*roof back wall*)
+
+put (48,1,1) BROWN (19,33,70);
+put (47,1,1) BROWN (21,34,70);
+put (44,1,1) BROWN (23,35,70);
+put (40,1,1) BROWN (25,36,70);
+put (38,1,1) BROWN (26,37,70);
+put (36,1,1) BROWN (27,38,70);
+put (34,1,1) BROWN (28,39,70);
+put (32,1,1) BROWN (29,40,70);
+put (28,1,1) BROWN (30,41,70);
+put (26,1,1) BROWN (31,42,70);
+put (24,1,1) BROWN (32,43,70);
+put (22,1,1) BROWN (33,44,70);
+put (20,1,1) BROWN (34,45,70);
+put (18,1,1) BROWN (35,46,70);
+put (16,1,1) BROWN (36,47,70);
+put (14,1,1) BROWN (37,48,70);
+put (10,1,1) BROWN (39,49,70);
+put (6,1,1) BROWN (40,50,70);
+put (5,1,1) BROWN (42,51,70);
+
+(*roof wall forward*)
+put (48,1,1) BROWN (19,33,39);
+put (47,1,1) BROWN (21,34,39);
+put (44,1,1) BROWN (23,35,39);
+put (40,1,1) BROWN (25,36,39);
+put (38,1,1) BROWN (26,37,39);
+put (36,1,1) BROWN (27,38,39);
+put (34,1,1) BROWN (28,39,39);
+put (32,1,1) BROWN (29,40,39);
+put (28,1,1) BROWN (30,41,39);
+put (26,1,1) BROWN (31,42,39);
+put (24,1,1) BROWN (32,43,39);
+put (22,1,1) BROWN (33,44,39);
+put (20,1,1) BROWN (34,45,39);
+put (18,1,1) BROWN (35,46,39);
+put (16,1,1) BROWN (36,47,39);
+put (14,1,1) BROWN (37,48,39);
+put (10,1,1) BROWN (39,49,39);
+put (6,1,1) BROWN (40,50,39);
+put (5,1,1) BROWN (42,51,39);
+
+
+
+
+
+
+
+
+
+
+
+
+(*Roof and celing*)
+
+(*second floor celing*)
+put (33,1,16) WHITE (35,32,23);
+put (49,1,16) WHITE (19,32,39);
+put (49,1,16) WHITE (19,32,55);
+
+(*roof*)
+val wallLength = 25;
+val roofHeight = 20;
+val wallHeight = 32; 
+val foot = 1;
+
+ fun westRoof(xStart, yStart    , zStart) = (
+   line(xStart, yStart+wallHeight+roofHeight, zStart+0*foot) (xStart+wallLength, yStart+wallHeight, zStart+0*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+1*foot) (xStart+wallLength, yStart+wallHeight, zStart+1*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+2*foot) (xStart+wallLength, yStart+wallHeight, zStart+2*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+3*foot) (xStart+wallLength, yStart+wallHeight, zStart+3*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+4*foot) (xStart+wallLength, yStart+wallHeight, zStart+4*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+5*foot) (xStart+wallLength, yStart+wallHeight, zStart+5*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+6*foot) (xStart+wallLength, yStart+wallHeight, zStart+6*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+7*foot) (xStart+wallLength, yStart+wallHeight, zStart+7*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+8*foot) (xStart+wallLength, yStart+wallHeight, zStart+8*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+9*foot) (xStart+wallLength, yStart+wallHeight, zStart+9*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+10*foot) (xStart+wallLength, yStart+wallHeight, zStart+10*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+11*foot) (xStart+wallLength, yStart+wallHeight, zStart+11*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+12*foot) (xStart+wallLength, yStart+wallHeight, zStart+12*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+13*foot) (xStart+wallLength, yStart+wallHeight, zStart+13*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+14*foot) (xStart+wallLength, yStart+wallHeight, zStart+14*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+15*foot) (xStart+wallLength, yStart+wallHeight, zStart+15*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+16*foot) (xStart+wallLength, yStart+wallHeight, zStart+16*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+17*foot) (xStart+wallLength, yStart+wallHeight, zStart+17*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+18*foot) (xStart+wallLength, yStart+wallHeight, zStart+18*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+19*foot) (xStart+wallLength, yStart+wallHeight, zStart+19*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+20*foot) (xStart+wallLength, yStart+wallHeight, zStart+20*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+21*foot) (xStart+wallLength, yStart+wallHeight, zStart+21*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+22*foot) (xStart+wallLength, yStart+wallHeight, zStart+22*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+23*foot) (xStart+wallLength, yStart+wallHeight, zStart+23*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+24*foot) (xStart+wallLength, yStart+wallHeight, zStart+24*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+25*foot) (xStart+wallLength, yStart+wallHeight, zStart+25*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+26*foot) (xStart+wallLength, yStart+wallHeight, zStart+26*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+27*foot) (xStart+wallLength, yStart+wallHeight, zStart+27*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+28*foot) (xStart+wallLength, yStart+wallHeight, zStart+28*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+29*foot) (xStart+wallLength, yStart+wallHeight, zStart+29*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+30*foot) (xStart+wallLength, yStart+wallHeight, zStart+30*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart+31*foot) (xStart+wallLength, yStart+wallHeight, zStart+31*foot) BROWN
+);
+
+fun eastRoof(xStart, yStart    , zStart) = (
+   line(xStart, yStart+wallHeight, zStart+0*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+0*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+1*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+1*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+2*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+2*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+3*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+3*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+4*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+4*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+5*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+5*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+6*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+6*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+7*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+7*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+8*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+8*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+9*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+9*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+10*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+10*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+11*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+11*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+12*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+12*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+13*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+13*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+14*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+14*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+15*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+15*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+16*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+16*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+17*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+17*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+18*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+18*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+19*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+19*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+20*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+20*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+21*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+21*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+22*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+22*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+23*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+23*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+24*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+24*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+25*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+25*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+26*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+26*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+27*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+27*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+28*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+28*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+29*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+29*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+30*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+30*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart+31*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart+31*foot) BROWN
+);
+
+(*second roof front rectangle*)
+
+val wallLength = 17;
+val roofHeight = 10;
+val wallHeight = 32; 
+val foot = 1;
+
+fun northRoof(xStart, yStart    , zStart) = (
+   line(xStart, yStart+wallHeight, zStart-0*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-0*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-1*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-1*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-2*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-2*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-3*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-3*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-4*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-4*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-5*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-5*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-6*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-6*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-7*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-7*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-8*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-8*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-9*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-9*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-10*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-10*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-11*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-11*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-12*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-12*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-13*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-13*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-14*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-14*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-15*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-15*foot) BROWN
+);
+
+
+
+
+fun southRoof(xStart, yStart    , zStart) = (
+   line(xStart, yStart+wallHeight+roofHeight, zStart-0*foot) (xStart+wallLength, yStart+wallHeight, zStart-0*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-1*foot) (xStart+wallLength, yStart+wallHeight, zStart-1*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-2*foot) (xStart+wallLength, yStart+wallHeight, zStart-2*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-3*foot) (xStart+wallLength, yStart+wallHeight, zStart-3*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-4*foot) (xStart+wallLength, yStart+wallHeight, zStart-4*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-5*foot) (xStart+wallLength, yStart+wallHeight, zStart-5*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-6*foot) (xStart+wallLength, yStart+wallHeight, zStart-6*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-7*foot) (xStart+wallLength, yStart+wallHeight, zStart-7*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-8*foot) (xStart+wallLength, yStart+wallHeight, zStart-8*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-9*foot) (xStart+wallLength, yStart+wallHeight, zStart-9*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-10*foot) (xStart+wallLength, yStart+wallHeight, zStart-10*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-11*foot) (xStart+wallLength, yStart+wallHeight, zStart-11*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-12*foot) (xStart+wallLength, yStart+wallHeight, zStart-12*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-13*foot) (xStart+wallLength, yStart+wallHeight, zStart-13*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-14*foot) (xStart+wallLength, yStart+wallHeight, zStart-14*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-15*foot) (xStart+wallLength, yStart+wallHeight, zStart-15*foot) BROWN
+);
+
+
+(*front roof wall*)
+put (32,1,1) BROWN (35,33,23);
+put (30,1,1) BROWN (37,34,23);
+put (25,1,1) BROWN (39,35,23);
+put (23,1,1) BROWN (41,36,23);
+put (17,1,1) BROWN (43,37,23);
+put (15,1,1) BROWN (45,38,23);
+put (10,1,1) BROWN (46,39,23);
+put (8,1,1) BROWN (47,40,23);
+put (3,1,1) BROWN (50,41,23);
+
+(*far right roof*)
+
+val wallLength = 8;
+val roofHeight = 5;
+val wallHeight = 16; 
+val foot = 1;
+
+fun rightRoof(xStart, yStart    , zStart) = (
+
+   line(xStart, yStart+wallHeight, zStart-0*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-0*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-1*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-1*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-2*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-2*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-3*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-3*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-4*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-4*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-5*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-5*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-6*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-6*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-7*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-7*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-8*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-8*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-9*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-9*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-10*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-10*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-11*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-11*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-12*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-12*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-13*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-13*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-14*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-14*foot) BROWN;
+   line(xStart, yStart+wallHeight, zStart-15*foot) (xStart+wallLength, yStart+wallHeight+roofHeight, zStart-15*foot) BROWN
+);
+
+fun secondrightRoof(xStart, yStart    , zStart) = (
+   line(xStart, yStart+wallHeight+roofHeight, zStart-0*foot) (xStart+wallLength, yStart+wallHeight, zStart-0*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-1*foot) (xStart+wallLength, yStart+wallHeight, zStart-1*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-2*foot) (xStart+wallLength, yStart+wallHeight, zStart-2*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-3*foot) (xStart+wallLength, yStart+wallHeight, zStart-3*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-4*foot) (xStart+wallLength, yStart+wallHeight, zStart-4*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-5*foot) (xStart+wallLength, yStart+wallHeight, zStart-5*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-6*foot) (xStart+wallLength, yStart+wallHeight, zStart-6*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-7*foot) (xStart+wallLength, yStart+wallHeight, zStart-7*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-8*foot) (xStart+wallLength, yStart+wallHeight, zStart-8*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-9*foot) (xStart+wallLength, yStart+wallHeight, zStart-9*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-10*foot) (xStart+wallLength, yStart+wallHeight, zStart-10*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-11*foot) (xStart+wallLength, yStart+wallHeight, zStart-11*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-12*foot) (xStart+wallLength, yStart+wallHeight, zStart-12*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-13*foot) (xStart+wallLength, yStart+wallHeight, zStart-13*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-14*foot) (xStart+wallLength, yStart+wallHeight, zStart-14*foot) BROWN;
+   line(xStart, yStart+wallHeight+roofHeight, zStart-15*foot) (xStart+wallLength, yStart+wallHeight, zStart-15*foot) BROWN
+
+);
+
+(*right roof wall*)
+put (13,1,1) BROWN (69,17,54);
+put (10,1,1) BROWN (70,18,54);
+put (8,1,1) BROWN (71,19,54);
+put (4,1,1) BROWN (73,20,54);
+
+(*front right roof wall*)
+put (13,1,1) BROWN (69,17,39);
+put (10,1,1) BROWN (70,18,39);
+put (8,1,1) BROWN (71,19,39);
+put (4,1,1) BROWN (73,20,39);
+
+
+(*
+fun roof(x,y,z) = (
+    westRoof (x+44,y+0,z+39);
+    eastRoof (x+18,y+0,z+39);
+    northRoof (x+34,y+0,z+38);
+    southRoof (x+52,y+0,z+38);
+    rightRoof (x+67,y+0,z+54);
+    secondrightRoof (x+75,y+0,z+54)
+);
+*)
+
+
+
+
+(*ORIGIN*)
+put (3,1,1) RED (0,0,0);(*X-AXIS*)
+put (1,1,3) GREEN (0,0,0);(*Y-AXIS*)                   
+westRoof (44,0,39);
+eastRoof (18,0,39);
+northRoof (34,0,38);
+southRoof (52,0,38);
+rightRoof (67,0,54);
+secondrightRoof (75,0,54);
+
+show "thing"

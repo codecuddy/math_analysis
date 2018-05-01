@@ -1,0 +1,435 @@
+open Level_5;
+build (800,35,305);
+(*bryan outline*)
+
+
+
+(* AREA A*)
+
+val Xwall=176;
+val Ywall=30;
+val Zwall=262;
+val wallwidthX=1;
+val wallwidthZ=1;
+val XwallConnectAB=30
+val YwallConnectAB=30
+val ZwallConnectAB=206
+val connectABlengthFromEdge=28
+
+
+fun areaA(Xstart,Ystart,Zstart)=
+( 
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart+Zwall);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart);
+
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart+Ywall,Zstart);
+    (*conecting Area A and B *)
+
+    
+    putMultibrick (XwallConnectAB,YwallConnectAB,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+    putMultibrick (XwallConnectAB,YwallConnectAB,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart+connectABlengthFromEdge);
+    putMultibrick (wallwidthZ,YwallConnectAB,ZwallConnectAB) [EMPTY] (Xstart+Xwall,Ystart,Zstart+connectABlengthFromEdge);
+    putMultibrick (wallwidthZ,YwallConnectAB,ZwallConnectAB) [EMPTY] (Xstart+Xwall+XwallConnectAB-1,Ystart,Zstart+connectABlengthFromEdge);
+    putMultibrick (wallwidthZ,15,ZwallConnectAB) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall+XwallConnectAB-1,Ystart+15,Zstart+connectABlengthFromEdge);
+
+    putMultibrick (XwallConnectAB+1,1,ZwallConnectAB) [STONEGRAY] (Xstart+Xwall,Ystart+Ywall,Zstart+connectABlengthFromEdge);
+
+(* fixes the area by the main doors and adds the overhang *)
+    putMultibrick (12,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall-12,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+    putMultibrick (13,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall-12,Ystart,Zstart+connectABlengthFromEdge);
+
+    putMultibrick (wallwidthZ,Ywall,28) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall-12,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,28) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall-12,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+
+    putMultibrick (11,Ywall,wallwidthX) [EMPTY] (Xstart+Xwall-11,Ystart,Zstart+Zwall);
+    putMultibrick (11,Ywall,wallwidthX) [EMPTY] (Xstart+Xwall-11,Ystart,Zstart);
+
+    putMultibrick (wallwidthZ,Ywall,28) [EMPTY] (Xstart+Xwall,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,27) [EMPTY] (Xstart+Xwall,Ystart,Zstart+Zwall-connectABlengthFromEdge+1);
+
+    putMultibrick (11,1,28) [EMPTY] (Xstart+Xwall-11,Ystart,Zstart);
+    putMultibrick (11,1,28) [EMPTY] (Xstart+Xwall-11,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+
+
+
+(*the pillar thing *)
+
+    putMultibrick (2,Ywall,4) [WARMGOLD] (Xstart+Xwall,Ystart,Zstart);
+    putMultibrick (2,Ywall,4) [WARMGOLD] (Xstart+Xwall,Ystart,Zstart+Zwall-4);
+
+
+
+    (*doors*)
+  (* main entrance doors*)
+    put (3,8,1) WHITE (Xstart+Xwall+3,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+5,Ystart+3,Zstart+connectABlengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+7,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+7,Ystart+3,Zstart+connectABlengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall+12,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+14,Ystart+3,Zstart+connectABlengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+16,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+16,Ystart+3,Zstart+connectABlengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall+21,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+23,Ystart+3,Zstart+connectABlengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+25,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+25,Ystart+3,Zstart+connectABlengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall-11,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall-9,Ystart+3,Zstart+connectABlengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall-5,Ystart,Zstart+connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall-5,Ystart+3,Zstart+connectABlengthFromEdge);
+    put (9,14,1) TRANSPARENT (Xstart+Xwall-11,Ystart+10,Zstart+connectABlengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall-11,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall-9,Ystart+3,Zstart+Zwall-connectABlengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall-5,Ystart,Zstart+Zwall-connectABlengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall-5,Ystart+3,Zstart+Zwall-connectABlengthFromEdge);
+    put (9,14,1) TRANSPARENT (Xstart+Xwall-11,Ystart+10,Zstart+Zwall-connectABlengthFromEdge);
+(*putting the overhang and door, closest to the parking lot.*)
+
+    putMultibrick (13,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart+28);
+    putMultibrick (12,Ywall,wallwidthX) [EMPTY] (Xstart,Ystart,Zstart);
+
+    putMultibrick (wallwidthZ,Ywall,28) [EMPTY] (Xstart,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,28) [BROWN,BROWN,DARKBROWN] (Xstart+12,Ystart,Zstart);
+
+    putMultibrick (12,1,28) [EMPTY] (Xstart,Ystart,Zstart);
+
+
+    put (3,8,1) WHITE (Xstart+9,Ystart,Zstart+28);
+    put (1,1,1) GRAY (Xstart+9,Ystart+3,Zstart+28);   
+    put (3,8,1) WHITE (Xstart+3,Ystart,Zstart+28);
+    put (1,1,1) GRAY (Xstart+3,Ystart+3,Zstart+28);
+
+(*the pillar thing *)
+
+    putMultibrick (2,Ywall,4) [WARMGOLD] (Xstart,Ystart,Zstart);
+
+
+(*vwhdhwe*)
+
+    putMultibrick (13,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart+Zwall-28);
+    putMultibrick (12,Ywall,wallwidthX) [EMPTY] (Xstart,Ystart,Zstart+Zwall);
+
+    putMultibrick (wallwidthZ,Ywall,28) [EMPTY] (Xstart,Ystart,Zstart+Zwall-28);
+    putMultibrick (wallwidthZ,Ywall,28) [BROWN,BROWN,DARKBROWN] (Xstart+12,Ystart,Zstart+Zwall-28);
+
+    putMultibrick (12,1,28) [EMPTY] (Xstart,Ystart,Zstart+Zwall-28);
+
+
+    put (3,8,1) WHITE (Xstart+9,Ystart,Zstart+Zwall-28);
+    put (1,1,1) GRAY (Xstart+9,Ystart+3,Zstart+Zwall-28);   
+    put (3,8,1) WHITE (Xstart+3,Ystart,Zstart+Zwall-28);
+    put (1,1,1) GRAY (Xstart+3,Ystart+3,Zstart+Zwall-28);
+
+(*the pillar thing *)
+
+    putMultibrick (2,Ywall,4) [WARMGOLD] (Xstart,Ystart,Zstart+Zwall-4);
+
+(* Adding the windows for the clases*)
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+13,Ystart,Zstart);
+    put (28,2,1) TRANSPARENT (Xstart+14,Ystart+8,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+14,Ystart,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+14,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+14,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+42,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+43,Ystart,Zstart);
+    put (28,2,1) TRANSPARENT (Xstart+44,Ystart+8,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+44,Ystart,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+44,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+44,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+72,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+73,Ystart,Zstart);
+    put (28,2,1) TRANSPARENT (Xstart+74,Ystart+8,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+74,Ystart,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+74,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+74,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+102,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+103,Ystart,Zstart);
+    put (28,2,1) TRANSPARENT (Xstart+104,Ystart+8,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+104,Ystart,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+104,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+104,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+132,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+133,Ystart,Zstart);
+    put (28,2,1) TRANSPARENT (Xstart+134,Ystart+8,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+134,Ystart,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+134,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+134,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+162,Ystart,Zstart);
+
+(*second floor*)
+
+    put (28,2,1) TRANSPARENT (Xstart+14,Ystart+23,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+14,Ystart+15,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+14,Ystart+15,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+14,Ystart+15,Zstart);
+
+    put (28,2,1) TRANSPARENT (Xstart+44,Ystart+23,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+44,Ystart+15,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+44,Ystart+15,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+44,Ystart+15,Zstart);
+
+    put (28,2,1) TRANSPARENT (Xstart+74,Ystart+23,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+74,Ystart+15,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+74,Ystart+15,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+74,Ystart+15,Zstart);
+
+    put (28,2,1) TRANSPARENT (Xstart+104,Ystart+23,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+104,Ystart+15,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+104,Ystart+15,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+104,Ystart+15,Zstart);
+
+    put (28,2,1) TRANSPARENT (Xstart+134,Ystart+23,Zstart+1);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+134,Ystart+15,Zstart+1);
+    put (28,2,1) EMPTY (Xstart+134,Ystart+15,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+134,Ystart+15,Zstart);
+
+    putMultibrick (176,5,1) [WARMGOLD] (Xstart,Ystart+26,Zstart);
+    putMultibrick (176,5,1) [WARMGOLD] (Xstart,Ystart+26,Zstart+Zwall);
+    putMultibrick (1,5,262) [WARMGOLD] (Xstart,Ystart+26,Zstart);
+    putMultibrick (1,5,262) [WARMGOLD] (Xstart+Xwall,Ystart+26,Zstart);
+
+(* to add the second floor windows copy this (up) and remove the pilars and at 'Ystart'add a +15 ish*)
+  
+
+(* otherside windows*)
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+13,Ystart,Zstart+Zwall);
+    put (28,2,1) TRANSPARENT (Xstart+14,Ystart+8,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+14,Ystart,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+14,Ystart,Zstart);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+14,Ystart,Zstart+Zwall);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+42,Ystart,Zstart+Zwall);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+43,Ystart,Zstart+Zwall);
+    put (28,2,1) TRANSPARENT (Xstart+44,Ystart+8,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+44,Ystart,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+44,Ystart,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+44,Ystart,Zstart+Zwall);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+72,Ystart,Zstart+Zwall);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+73,Ystart,Zstart+Zwall);
+    put (28,2,1) TRANSPARENT (Xstart+74,Ystart+8,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+74,Ystart,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+74,Ystart,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+74,Ystart,Zstart+Zwall);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+102,Ystart,Zstart+Zwall);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+103,Ystart,Zstart+Zwall);
+    put (28,2,1) TRANSPARENT (Xstart+104,Ystart+8,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+104,Ystart,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+104,Ystart,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+104,Ystart,Zstart+Zwall);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+132,Ystart,Zstart+Zwall);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+133,Ystart,Zstart+Zwall);
+    put (28,2,1) TRANSPARENT (Xstart+134,Ystart+8,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+134,Ystart,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+134,Ystart,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+134,Ystart,Zstart+Zwall);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+162,Ystart,Zstart+Zwall);
+
+(* Other side Second Fllor windows *)
+
+    put (28,2,1) TRANSPARENT (Xstart+14,Ystart+23,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+14,Ystart+15,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+14,Ystart+15,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+14,Ystart+15,Zstart+Zwall);
+
+    put (28,2,1) TRANSPARENT (Xstart+44,Ystart+23,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+44,Ystart+15,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+44,Ystart+15,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+44,Ystart+15,Zstart+Zwall);
+
+    put (28,2,1) TRANSPARENT (Xstart+74,Ystart+23,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+74,Ystart+15,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+74,Ystart+15,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+74,Ystart+15,Zstart+Zwall);
+
+    put (28,2,1) TRANSPARENT (Xstart+104,Ystart+23,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+104,Ystart+15,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+104,Ystart+15,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+104,Ystart+15,Zstart+Zwall);
+
+    put (28,2,1) TRANSPARENT (Xstart+134,Ystart+23,Zstart-1+Zwall);
+    putMultibrick (28,8,1) [BROWN,BROWN,DARKBROWN] (Xstart+134,Ystart+15,Zstart-1+Zwall);
+    put (28,2,1) EMPTY (Xstart+134,Ystart+15,Zstart+Zwall);
+    putMultibrick (28,10,1) [EMPTY] (Xstart+134,Ystart+15,Zstart+Zwall);
+
+       (*     Front windows  *)
+    putMultibrick (1,10,20) [TRANSPARENT] (Xstart,Ystart,Zstart+55);
+    putMultibrick (1,10,20) [TRANSPARENT] (Xstart,Ystart,Zstart+85);
+    putMultibrick (1,10,20) [TRANSPARENT] (Xstart,Ystart,Zstart+115);
+    putMultibrick (1,10,20) [TRANSPARENT] (Xstart,Ystart,Zstart+145);
+    putMultibrick (1,10,20) [TRANSPARENT] (Xstart,Ystart,Zstart+175)
+);
+
+
+
+
+(* AREA B *)
+
+val Xwall=166;
+val Ywall=15;
+val Zwall=282;
+val wallwidthX=1;
+val wallwidthZ=1;
+val XwallConnectBC=18
+val YwallConnectBC=15
+val ZwallConnectBC=180
+val connectBClengthFromEdge=51
+
+
+
+fun areaB(Xstart,Ystart,Zstart)=
+(
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart+Zwall);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart);
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart+Ywall,Zstart);   
+    (*connecting B and C*)
+
+    putMultibrick (XwallConnectBC,YwallConnectBC,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart+Zwall-connectBClengthFromEdge);
+    putMultibrick (XwallConnectBC,YwallConnectBC,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart+connectBClengthFromEdge);
+    putMultibrick (wallwidthZ,YwallConnectBC,ZwallConnectBC) [EMPTY] (Xstart+Xwall,Ystart,Zstart+connectBClengthFromEdge);
+    putMultibrick (wallwidthZ,YwallConnectBC,ZwallConnectBC) [EMPTY] (Xstart+Xwall+XwallConnectBC-3,Ystart,Zstart+connectBClengthFromEdge);
+
+    putMultibrick (XwallConnectBC+1,1,ZwallConnectBC) [STONEGRAY] (Xstart+Xwall,Ystart,Zstart+connectBClengthFromEdge);
+
+
+    put (3,8,1) WHITE (Xstart+Xwall+1,Ystart,Zstart+connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+3,Ystart+3,Zstart+connectBClengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+5,Ystart,Zstart+connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+5,Ystart+3,Zstart+connectBClengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall+10,Ystart,Zstart+connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+12,Ystart+3,Zstart+connectBClengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+14,Ystart,Zstart+connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+14,Ystart+3,Zstart+connectBClengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall+1,Ystart,Zstart+Zwall-connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+3,Ystart+3,Zstart+Zwall-connectBClengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+5,Ystart,Zstart+Zwall-connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+5,Ystart+3,Zstart+Zwall-connectBClengthFromEdge);
+
+    put (3,8,1) WHITE (Xstart+Xwall+10,Ystart,Zstart+Zwall-connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+12,Ystart+3,Zstart+Zwall-connectBClengthFromEdge);   
+    put (3,8,1) WHITE (Xstart+Xwall+14,Ystart,Zstart+Zwall-connectBClengthFromEdge);
+    put (1,1,1) GRAY (Xstart+Xwall+14,Ystart+3,Zstart+Zwall-connectBClengthFromEdge);
+
+(* windows by the cafeteria *)
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart,Ystart,Zstart);
+    put (16,10,1) TRANSPARENT (Xstart+1,Ystart,Zstart+1);
+    put (16,10,1) EMPTY (Xstart+1,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+17,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+18,Ystart,Zstart);
+    put (16,10,1) TRANSPARENT (Xstart+19,Ystart,Zstart+1);
+    put (16,10,1) EMPTY (Xstart+19,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+35,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+36,Ystart,Zstart);
+    putMultibrick (16,10,1) [BROWN,BROWN,DARKBROWN] (Xstart+37,Ystart,Zstart+1);
+    put (16,10,1) EMPTY (Xstart+37,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+54,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+54,Ystart,Zstart);
+    put (16,10,1) TRANSPARENT (Xstart+55,Ystart,Zstart+1);
+    put (16,10,1) EMPTY (Xstart+55,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+72,Ystart,Zstart);
+
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+72,Ystart,Zstart);
+    put (16,10,1) TRANSPARENT (Xstart+73,Ystart,Zstart+1);
+    put (16,10,1) EMPTY (Xstart+73,Ystart,Zstart);
+    putMultibrick (1,Ywall,3) [WARMGOLD] (Xstart+90,Ystart,Zstart)
+
+
+);
+
+
+(* AREA C *)
+
+
+val Xwall=135;
+val Ywall=20;
+val Zwall=188;
+val wallwidthX=1;
+val wallwidthZ=1;
+
+
+fun areaC(Xstart,Ystart,Zstart)=
+(
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,Ywall,wallwidthX) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart+Zwall);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart,Ystart,Zstart);
+    putMultibrick (wallwidthZ,Ywall,Zwall) [BROWN,BROWN,DARKBROWN] (Xstart+Xwall,Ystart,Zstart);
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart,Zstart);
+    putMultibrick (Xwall,1,Zwall) [STONEGRAY] (Xstart,Ystart+Ywall,Zstart);
+
+(* Doors, Doors, And more Doors *)
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+56);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+58);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+60);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+60);
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+65);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+67);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+69);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+69);
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+74);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+76);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+78);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+78);
+
+
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+114);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+116);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+118);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+118);
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+123);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+125);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+127);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+127);
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+132);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+134);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+136);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+136);
+
+
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+22);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+24);
+ 
+
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+163);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+165);
+    put (1,8,3) WHITE (Xstart+Xwall,Ystart,Zstart+167);
+    put (1,1,1) GRAY (Xstart+Xwall,Ystart+3,Zstart+167)
+  
+);
+
+areaC(386,1,47); 
+areaB(205,1,0);   
+areaA(0,1,10);
+
+
+showLDR "thing";

@@ -1,0 +1,412 @@
+open Level_5;
+build (200,30,200);
+
+fun LogMove (x,y,z) =
+(
+(*LogEnds*)
+ringX 8 12 1 [BrownClay]  (x+15,y+6,z+15);
+ringX 8 12 1 [BrownClay]  (x+60,y+6,z+15);
+ringX 7 1 1 [OakPlank] (x+60,y+6,z+15);
+ringX 5 1 1 [OakPlank] (x+60,y+6,z+15);
+ringX 3 1 1 [OakPlank] (x+60,y+6,z+15);
+ringX 1 1 1 [OakPlank] (x+60,y+6,z+15);
+ringX 7 1 1 [OakPlank] (x+15,y+6,z+15);
+ringX 5 1 1 [OakPlank] (x+15,y+6,z+15);
+ringX 3 1 1 [OakPlank] (x+15,y+6,z+15);
+ringX 1 1 1 [OakPlank] (x+15,y+6,z+15);
+
+(*Log*)
+ringX 8 1 46 [DarkOakPlank,DarkOakPlank,SprucePlank,DarkOakPlank,DarkOakPlank] (x+15,y+6,z+15);
+
+(*Floors*)
+put (45,1,15) BrownClay (x+16,y+5,z+8);
+put (45,1,9) BrownClay  (x+16,y+0,z+10)
+);
+
+fun StairMove (x,y,z) = 
+(
+(*MushroomStair*)
+ringY 2 1 23 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+62,y+0,15);
+put (13,2,11) OakPlank                                                                (x+56,y+23,z+10);
+put (11,2,13) OakPlank                                                                (x+57,y+23,z+9);
+put (15,1,9) OakPlank                                                                 (x+55,y+23,z+11);
+put (9,1,15) OakPlank                                                                 (x+58,y+23,z+8);
+ringY 2 1 9 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay]  (x+71,y+0,z+10);
+put (13,2,11) OakPlank                                                                (x+65,y+9,z+5);
+put (11,2,13) OakPlank                                                                (x+66,y+9,z+4);
+put (15,1,9) OakPlank                                                                 (x+64,y+9,z+6);
+put (9,1,15) OakPlank                                                                 (x+67,y+9,z+3)
+); 
+
+fun Fountain (x,y,z) =
+(
+put (1,1,1) StoneBricks (x+10,y+10,z+10);
+ringY 3 1 1 [StoneBricks] (x+10,y+8,z+10);
+ringY 2 2 1 [StoneBricks] (x+10,y+7,z+10);
+put (1,8,3) StoneBricks (x+10,y+2,z+9);
+put (3,8,1) StoneBricks (x+9,y+2,z+10);
+ringY 2 2 1 [StoneBricks] (x+10,y+2,z+10);
+ringY 5 6 1 [StoneBricks] (x+10,y+1,z+10);
+ringY 6 1 1 [StoneBricks] (x+10,y+2,z+10);
+put (1,1,1) Water (x+10,y+11,z+10)
+);
+
+(*These are the flatcap mushrooms*)
+
+fun Brownshroom (x,y,z) =
+(
+ringY 3 4 1 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+16,y+0,z+16);
+ringY 3 1 18 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+16,y+0,z+16);
+put (1,2,1) EMPTY (x+16,y+1,z+13);
+ringY 8 9 1 [OakPlank] (x+16,y+19,z+16);
+ringY 6 8 1 [OakPlank](x+16,y+18,z+16)
+);
+
+(*This is the super tall watchtower*)
+
+fun Watchtower (x,y,z) =
+(
+Brownshroom (x+16,y+0,z+16);
+put (1,5,1) DarkOakFence (x+27,y+21,z+27);
+put (1,5,1) DarkOakFence (x+37,y+21,x+27);
+put (1,5,1) DarkOakFence (x+37,y+21,z+37);
+put (1,5,1) DarkOakFence (x+27,y+21,z+37);
+ringY 7 1 1 [DarkOakFence] (x+32,y+20,z+32);
+coneY 8 1 [OakPlank,OakPlank,OakPlank] (x+32,y+24,z+32);
+put (1,4,1) EMPTY (x+32,y+18,z+34)
+);
+
+fun MushHouse4 (x,y,z) =
+(
+(*cap*)
+ringY 7 1 1 [OakPlank] (x+15,y+13,z+15);
+ringY 6 7 1 [BrownClay] (x+15,y+13,z+15);
+ringY 6 8 1 [OakPlank] (x+15,y+14,z+15);
+ringY 4 6 1 [OakPlank] (x+15,y+15,z+15);
+(*Deck*)
+ringY 3 4 1 [OakPlank] (x+15,y+6,z+18);
+ringY 2 3 1 [OakPlank] (x+15,y+5,z+18);
+put (5,1,2) EMPTY (x+13,y+5,z+16);
+put (3,1,1) EMPTY (x+14,y+5,z+18);
+(*stem*)
+ringY 3 1 12 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+15,y+1,z+15);
+(*door*)
+put (1,2,1) EMPTY (x+15,y+1,z+12);
+(*DeckDoor*)
+put (1,2,1) EMPTY (x+15,y+7,z+18);
+(*windows*)
+put (1,1,1) EMPTY (x+18,y+2,z+15);
+put (1,1,1) EMPTY (x+18,y+8,z+15);
+put (1,1,1) EMPTY (x+15,y+2,z+18);
+put (1,1,1) EMPTY (x+12,y+2,z+15);
+put (1,1,1) EMPTY (x+12,y+8,z+15);
+put (1,1,1) EMPTY (x+15,y+8,z+12);
+(*2ndfloor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+6,z+15);
+put (1,1,1) EMPTY (x+17,y+6,z+15);
+(*floor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+0,z+15)
+);
+
+fun MushHouse3 (x,y,z) =
+(
+(*cap*)
+ringY 7 1 1 [OakPlank] (x+15,y+13,z+15);
+ringY 6 7 1 [BrownClay] (x+15,y+13,z+15);
+ringY 6 8 1 [OakPlank] (x+15,y+14,z+15);
+ringY 4 6 1 [OakPlank] (x+15,y+15,z+15);
+(*stem*)
+ringY 3 1 12 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+15,y+1,z+15);
+(*door*)
+put (1,2,1) EMPTY (x+15,y+1,z+12);
+(*chimney*)
+sphere 3 [SprucePlank,DarkOakPlank,DarkOakPlank] (x+12,y+0,z+17);
+sphere 2 [EMPTY] (x+12,y+0,z+17);
+ringY 2 3 1 [Netherrack,RedClay] (x+12,y+0,z+17);
+put (3,12,5) EMPTY (x+14,y+0,z+13);
+put (5,12,3) EMPTY (x+13,y+0,z+14);
+putMultibrick (2,16,2) [DarkOakPlank,DarkOakPlank,DarkOakPlank,DarkOakPlank,SprucePlank] (x+12,y+3,z+17);
+(*windows*)
+put (1,1,1) EMPTY (x+18,y+2,z+15);
+put (1,1,1) EMPTY (x+18,y+8,z+15);
+put (1,1,1) EMPTY (x+12,y+8,z+15);
+put (1,1,1) EMPTY (x+15,y+8,z+18);
+put (1,1,1) EMPTY (x+15,y+8,z+12);
+(*2ndfloor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+6,z+15);
+put (1,1,1) EMPTY (x+17,y+6,z+15);
+(*floor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+0,z+15)
+);
+
+fun MushHouse2 (x,y,z) =
+(
+(*cap*)
+sphere 9 [RedClay,RedClay,WhiteClay,RedClay,RedClay] (x+15,y+4,z+15);
+sphere 7 [EMPTY] (x+15,y+3,z+15);
+put (40,6,40) EMPTY (x+0,y+0,z+0);
+(*capfloor*)
+ringY 7 5 1 [BrownClay] (x+15,y+6,z+15);
+(*OffRoomCap*)
+sphere 5 [RedClay,RedClay,WhiteClay,RedClay,RedClay] (x+20,y+0,z+15);
+sphere 4 [EMPTY] (x+20,y+0,z+15);
+ringY 3 6 4 [EMPTY] (x+15,y+1,z+15);
+(*OffRoomFloor*)
+ringY 4 5 1 [BrownClay] (x+20,y+0,z+15);
+(*stem*)
+ringY 3 1 6 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,Quartz,WhiteClay,WhiteClay] (x+15,y+1,z+15);
+(*door*)
+put (1,2,1) EMPTY (x+15,y+1,z+12);
+(*door2*)
+put (1,2,1) EMPTY (x+18,y+1,z+15);
+(*windows*)
+put (1,1,1) EMPTY (x+12,y+2,z+15);
+put (1,1,1) EMPTY (x+15,y+2,z+18);
+(*2ndfloor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+6,z+15);
+put (1,1,1) EMPTY (x+17,y+6,z+15);
+(*floor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+0,z+15)
+);
+
+fun MushHouse1 (x,y,z) =
+(
+(*cap*)
+sphere 8 [RedClay,RedClay,WhiteClay,RedClay,RedClay] (x+15,y+4,z+15);
+sphere 7 [EMPTY] (x+15,y+3,z+15);
+put (40,6,40) EMPTY (x+0,y+0,z+0);
+(*capfloor*)
+ringY 7 5 1 [BrownClay] (x+15,y+6,z+15);
+(*stem*)
+ringY 3 1 6 [BrownClay,WhiteClay,Quartz,WhiteClay,Quartz,WhiteClay,WhiteClay,WhiteClay] (x+15,y+1,z+15);
+(*door*)
+put (1,2,1) EMPTY (x+15,y+1,z+12);
+(*windows*)
+put (1,1,1) EMPTY (x+18,y+2,z+15);
+put (1,1,1) EMPTY (x+12,y+2,z+15);
+put (1,1,1) EMPTY (x+15,y+2,z+18);
+(*2ndfloor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+6,z+15);
+put (1,1,1) EMPTY (x+17,y+6,z+15);
+(*floor*)
+ringY 3 4 1 [WhiteClay,Quartz,Quartz,BrownClay] (x+15,y+0,z+15)
+);
+
+fun Library (x,y,z) =
+(
+(*THE BOOK*)
+put (40,8,25) LightBlueWool (x,y,z);
+put (8,1,19) CyanWool (x+25,y+7,z+3);
+put (6,1,17) LightBlueWool (x+26,y+7,z+4);
+put (40,6,25) EMPTY (x,y+1,z+1);
+put (38,6,23) LightGrayWool (x+1,y+1,z+1);
+putMultibrick (38,1,23) [GrayWool, GrayWool, GrayWool, LightGrayWool] (x+1,y+2,z+1);
+put (38,1,23) GrayWool (x+1,y+4,z+1);
+putMultibrick (38,1,23) [GrayWool, GrayWool, GrayWool, LightGrayWool] (x+1,y+6,z+1);
+put (36,6,21) EMPTY (x+2,y+1,z+2);
+put (4,1,1) RedstoneLampOn (x+17,y+2,z+23);
+put (2,2,1) EMPTY (x+18,y+1,z+23);
+put (2,1,1) DarkOakDoor (x+18,y+1,z+23);
+(*Interiors*)
+put (10,4,2) Bookshelf (x+28,y+1,z+4);
+put (10,4,2) Bookshelf (x+4,y+1,z+4);
+put (10,4,2) Bookshelf (x+4,y+1,z+20);
+put (10,4,2) Bookshelf (x+28,y+1,z+20);
+put (1,1,1) RedstoneLampOn (x+4,y+4,z+4);
+put (1,1,1) RedstoneLampOn (x+4,y+4,z+20);
+put (1,1,1) RedstoneLampOn (x+28,y+4,z+4);
+put (1,1,1) RedstoneLampOn (x+28,y+4,z+20)
+);
+
+(*These are the individual blades of grass. Be careful when editing them because they will directly affect the clusters of grass.*)
+
+fun TallGrass1 (x,y,z) =
+(
+put (1,5,1) GreenWool (x,y,z);
+put (1,4,1) GreenWool (x,y+5,z+1);
+put (1,3,1) GreenWool (x,y+9,z+2);
+put (1,3,1) GreenWool (x,y+12,z+3)
+);
+
+fun TallGrass2 (x,y,z) =
+(
+put (1,6,1) GreenWool (x,y,z);
+put (1,4,1) GreenWool (x+1,y+6,z+1);
+put (1,4,1) GreenWool (x+1,y+10,z+2);
+put (1,3,1) GreenWool (x+2,y+14,z+3)
+);
+
+fun TallGrass3 (x,y,z) =
+(
+put (1,4,1) GreenWool (x,y,z+1);
+put (1,4,1) GreenWool (x+1,y+4,z+1);
+put (1,4,1) GreenWool (x+1,y+8,z);
+put (1,3,1) GreenWool (x+2,y+12,z)
+);
+
+fun ShortGrass1 (x,y,z) =
+(
+put (1,3,1) GreenWool (x,y,z);
+put (1,2,1) GreenWool (x,y+3,z+1);
+put (1,2,1) GreenWool (x,y+5,z+2);
+put (1,1,1) GreenWool (x,y+7,z+3)
+);
+
+fun ShortGrass2 (x,y,z) =
+(
+put (1,3,1) GreenWool (x,y,z);
+put (1,3,1) GreenWool (x+1,y+3,z+1);
+put (1,2,1) GreenWool (x+1,y+6,z+2);
+put (1,2,1) GreenWool (x+2,y+8,z+3)
+);
+
+fun TallGrass4 (x,y,z) =
+(
+put (1,5,1) GreenWool (x,y,z);
+put (1,4,1) GreenWool (x+1,y+5,z-1);
+put (1,3,1) GreenWool (x+2,y+9,z-2);
+put (1,3,1) GreenWool (x+2,y+12,z-3)
+);
+
+fun TallGrass5 (x,y,z) =
+(
+put (1,6,1) GreenWool (x,y,z);
+put (1,4,1) GreenWool (x-1,y+6,z-1);
+put (1,4,1) GreenWool (x-2,y+10,z-2);
+put (1,3,1) GreenWool (x-2,y+14,z-2)
+);
+
+fun TallGrass6 (x,y,z) =
+(
+put (1,4,1) GreenWool (x,y,z-1);
+put (1,4,1) GreenWool (x-1,y+4,z);
+put (1,4,1) GreenWool (x,y+8,z);
+put (1,3,1) GreenWool (x+1,y+12,z+1)
+);
+
+fun ShortGrass3 (x,y,z) =
+(
+put (1,3,1) GreenWool (x,y,z);
+put (1,2,1) GreenWool (x,y+3,z-1);
+put (1,2,1) GreenWool (x,y+5,z-2);
+put (1,1,1) GreenWool (x,y+7,z-3)
+);
+
+fun ShortGrass4 (x,y,z) =
+(
+put (1,3,1) GreenWool (x,y,z);
+put (1,3,1) GreenWool (x-1,y+3,z-1);
+put (1,2,1) GreenWool (x-1,y+6,z-2);
+put (1,2,1) GreenWool (x-2,y+8,z-3)
+);
+
+(*For future reference, the completed grass clusters are called as "TGCx" for tall or "SGCx" for short, whrere x is the variant*)
+
+fun TGC1 (x,y,z) =
+(
+ShortGrass1 (x-2,y,z+1);
+ShortGrass4 (x+5,y,z+4);
+TallGrass5 (x+4,y,z+1);
+TallGrass1 (x+1,y,z)
+);
+
+fun TGC2 (x,y,z) =
+(
+ShortGrass3 (x-2,y,z+1);
+ShortGrass4 (x+5,y,z+4);
+TallGrass3 (x+4,y,z+1);
+TallGrass2 (x+6,y,z);
+TallGrass4 (x+1,y,z)
+);
+
+fun TGC3 (x,y,z) =
+(
+ShortGrass2 (x-2,y,z+1);
+ShortGrass4 (x+5,y,z+4);
+TallGrass6 (x+4,y,z+1);
+TallGrass1 (x+6,y,z);
+TallGrass6 (x+1,y,z)
+);
+
+fun SGC1 (x,y,z) =
+(
+ShortGrass1 (x-1,y,z+1);
+ShortGrass4 (x+3,y,z+2);
+ShortGrass1 (x+6,y,z);
+ShortGrass2 (x+2,y,z+1)
+);
+
+fun SGC2 (x,y,z) =
+(
+ShortGrass1 (x+2,y,z+1);
+ShortGrass2 (x+2,y,z-4);
+ShortGrass3 (x-4,y,z+1);
+ShortGrass1 (x+3,y,z);
+ShortGrass3 (x+6,y,z-1)
+);
+
+fun SGC3 (x,y,z) =
+(
+ShortGrass2 (x-2,y,z+1);
+ShortGrass4 (x+5,y,z+4);
+ShortGrass3 (x+4,y,z+1);
+ShortGrass1 (x+6,y,z);
+ShortGrass2 (x+3,y,z)
+);
+
+(*Calls: SGC3/2/1, LGC3/2/1, Library, MushHouse4/3/2/1, Watchtower, Fountain, LogMove, StairMove*)
+
+SGC3 (160,1,20);
+SGC2 (154,1,27);
+SGC1 (166,1,24);
+TGC3 (184,1,30);
+SGC2 (23,1,153);
+SGC3 (25,1,157);
+SGC1 (20,1,165);
+TGC2 (34,1,150);
+TGC2 (90,1,144);
+TGC1 (130,1,86);
+TGC3 (83,1,140);
+TGC2 (97,1,130);
+SGC3 (180,1,180);
+SGC3 (160,1,190);
+SGC3 (190,1,179);
+SGC2 (188,1,160);
+SGC1 (149,1,152);
+SGC1 (196,1,130);
+TGC3 (120,1,190);
+TGC3 (140,1,174);
+TGC2 (180,1,100);
+TGC3 (175,1,120);
+TGC2 (185,1,110);
+TGC3 (150,1,68);
+TGC2 (180,1,40);
+TGC3 (175,1,67);
+TGC2 (185,1,90);
+TGC1 (123,1,178);
+SGC2 (133,1,180);
+TGC1 (110,1,167);
+TGC3 (115,1,150);
+TGC1 (83,1,178);
+SGC2 (93,1,180);
+TGC1 (100,1,167);
+TGC3 (55,1,150);
+LogMove (0,1,0);
+StairMove (0,1,0);
+MushHouse4 (10,1,15);
+MushHouse4 (47,1,68);
+MushHouse3 (10,1,80);
+MushHouse2 (30,1,30);
+MushHouse1 (60,1,30);
+MushHouse1 (65,1,74);
+Library (90,1,14);
+MushHouse3 (26,1,100);
+MushHouse2 (50,1,97);
+Fountain (60,1,60);
+MushHouse1 (80,1,84);
+MushHouse3 (100,1,120);
+Watchtower (10,1,130);
+Watchtower (130,1,10);
+putMultibrick (200,0,200) [Grass,Grass,Grass,Grass,Podzol] (0,0,0);
+ringY 150 5 1 [Gravel] (0,0,3);
+show "Town";

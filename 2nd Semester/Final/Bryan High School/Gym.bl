@@ -1,0 +1,212 @@
+open Level_5; 
+build (150,50,150);
+
+val gymWallLength    = 144;
+val gymWallLengthTwo = 114;
+val gymWallHeight    = 20;
+val gymWallWidth     = 1;
+
+
+fun gym (xStart, yStart, zStart) = (
+
+put(gymWallLength, gymWallWidth,  gymWallLengthTwo) COOLYELLOW  (xStart, zStart, yStart);
+putHollow (gymWallLength, gymWallHeight, gymWallWidth)     [WHITE]      (xStart, yStart, zStart);
+putHollow (gymWallWidth,  gymWallHeight, gymWallLengthTwo) [WHITE]      (xStart, yStart, zStart);
+putHollow (gymWallWidth,  gymWallHeight, gymWallLengthTwo) [WHITE]      (xStart+gymWallLength, yStart, zStart);
+putHollow (gymWallLength, gymWallHeight, gymWallWidth)     [WHITE]      (xStart,yStart,zStart+gymWallLengthTwo)
+      
+);
+
+
+val bleacherStartingHeight = 12;
+val bleacherHowFarFromOrigin = 7;
+val bleacherBottomHeight = 0 ;
+
+fun eBleachers (xStart, yStart, zStart) = (
+
+line (bleacherHowFarFromOrigin+xStart+0, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+0,     bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+1, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+1,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+2, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+2,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+3, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+3,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+4, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+4,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+5, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+5,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+6, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+6,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;                 
+line (bleacherHowFarFromOrigin+xStart+7, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+7,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+8, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+8,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+9, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+9,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+10, bleacherStartingHeight,  bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+10,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN
+
+);
+
+fun wBleachers (xStart, yStart, zStart) = (
+
+line (bleacherHowFarFromOrigin+xStart+0, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+0,     bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+1, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+1,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+2, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+2,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+3, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+3,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+4, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+4,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+5, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+5,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+6, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+6,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;                 
+line (bleacherHowFarFromOrigin+xStart+7, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+7,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+8, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+8,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+9, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+9,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+10, bleacherBottomHeight,  bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+10,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN
+
+);
+
+
+
+fun eastBleachers(xStart,yStart,zStart) = (
+    eBleachers (xStart,yStart,zStart);
+    eBleachers (xStart+10,yStart,zStart);
+    eBleachers (xStart+20,yStart,zStart);
+    eBleachers (xStart+30,yStart,zStart);
+    eBleachers (xStart+40,yStart,zStart);
+    eBleachers (xStart+50,yStart,zStart);
+    eBleachers (xStart+60,yStart,zStart);
+    eBleachers (xStart+70,yStart,zStart);
+    eBleachers (xStart+80,yStart,zStart);
+    eBleachers (xStart+90,yStart,zStart);
+    eBleachers (xStart+100,yStart,zStart);
+    eBleachers (xStart+110,yStart,zStart);
+    eBleachers (xStart+120,yStart,zStart)
+);
+
+fun westBleachers(xStart,yStart,zStart) = (
+    wBleachers (xStart,yStart,zStart);
+    wBleachers (xStart+10,yStart,zStart);
+    wBleachers (xStart+20,yStart,zStart);
+    wBleachers (xStart+30,yStart,zStart);
+    wBleachers (xStart+40,yStart,zStart);
+    wBleachers (xStart+50,yStart,zStart);
+    wBleachers (xStart+60,yStart,zStart);
+    wBleachers (xStart+70,yStart,zStart);
+    wBleachers (xStart+80,yStart,zStart);
+    wBleachers (xStart+90,yStart,zStart);
+    wBleachers (xStart+100,yStart,zStart);
+    wBleachers (xStart+110,yStart,zStart);
+    wBleachers (xStart+120,yStart,zStart)
+);
+
+gym (0,0,0);
+
+
+(* out of bounds *)
+put (120,1,2) GREEN (12,0,18);
+put (120,1,2) GREEN (12,0,94);
+put (2,1,77)  GREEN (12,0,19);
+put (2,1,77)  GREEN (130,0,19);
+
+
+eastBleachers(0,0,0);
+westBleachers(0,0,102);
+
+put (1,8,10) EMPTY (0,1,18);
+put (1,8,10) EMPTY (0,1,84);
+
+(*FLAG*)
+put (1,6,10) RED (0,12,86);
+line (0,12,86) (0,12,95) WHITEGLOW;
+line (0,14,86) (0,14,95) WHITEGLOW;
+line (0,16,86) (0,16,95) WHITEGLOW;
+put (1,2,3) GREEN (0,16,86);
+
+
+fun endOfTheLineWords (xStart, yStart, zStart) = (
+(* WORDS AT THE END bryan bears *)
+
+(* B *)
+put (7,1,1) GREEN  (xStart+4,yStart,zStart+30);
+put (1,1,3) GREEN  (xStart+4,yStart,zStart+31);
+put (2,1,1) GREEN  (xStart+5,yStart,zStart+34);
+put (1,1,4) GREEN  (xStart+7,yStart,zStart+30);
+put (2,1,1) GREEN  (xStart+8,yStart,zStart+34);
+put (1,1,3) GREEN  (xStart+10,yStart,zStart+31);
+(* R *)
+put (7,1,1) GREEN  (xStart+4,yStart,zStart+38);
+put (1,1,3) GREEN  (xStart+4,yStart,zStart+39);
+put (2,1,1) GREEN  (xStart+5,yStart,zStart+42);
+put (1,1,4) GREEN  (xStart+7,yStart,zStart+38);
+put (1,1,1) GREEN  (xStart+8,yStart,zStart+40);
+put (1,1,1) GREEN  (xStart+9,yStart,zStart+41);
+put (1,1,1) GREEN  (xStart+10,yStart,zStart+42);
+(* Y *)
+put (4,1,1) GREEN  (xStart+7,yStart,zStart+48);
+put (1,1,1) GREEN  (xStart+6,yStart,zStart+47);
+put (1,1,1) GREEN  (xStart+5,yStart,zStart+46);
+put (1,1,1) GREEN  (xStart+4,yStart,zStart+45);
+put (1,1,1) GREEN  (xStart+6,yStart,zStart+49);
+put (1,1,1) GREEN  (xStart+5,yStart,zStart+50);
+put (1,1,1) GREEN  (xStart+4,yStart,zStart+51);
+(* A *)
+put (1,1,1) GREEN  (xStart+10,yStart,zStart+52);
+put (1,1,1) GREEN  (xStart+9,yStart,zStart+52);
+put (1,1,1) GREEN  (xStart+8,yStart,zStart+53);
+put (1,1,1) GREEN  (xStart+7,yStart,zStart+53);
+put (1,1,1) GREEN  (xStart+6,yStart,zStart+54);
+put (1,1,1) GREEN  (xStart+5,yStart,zStart+54);
+put (1,1,1) GREEN  (xStart+4,yStart,zStart+55);
+put (1,1,1) GREEN  (xStart+5,yStart,zStart+56);
+put (1,1,1) GREEN  (xStart+6,yStart,zStart+56);
+put (1,1,1) GREEN  (xStart+7,yStart,zStart+57);
+put (1,1,1) GREEN  (xStart+8,yStart,zStart+57);
+put (1,1,1) GREEN  (xStart+9,yStart,zStart+58);
+put (1,1,1) GREEN  (xStart+10,yStart,zStart+58);
+put (1,1,4) GREEN  (xStart+8,yStart,zStart+53);
+(* N *)
+put (7,1,1) GREEN  (xStart+4,yStart,zStart+61);
+put (1,1,1) GREEN  (xStart+5,yStart,zStart+62);
+put (1,1,1) GREEN  (xStart+6,yStart,zStart+62);
+put (1,1,1) GREEN  (xStart+7,yStart,zStart+63);
+put (1,1,1) GREEN  (xStart+8,yStart,zStart+63);
+put (1,1,1) GREEN  (xStart+9,yStart,zStart+64);
+put (1,1,1) GREEN  (xStart+10,yStart,zStart+64);
+put (7,1,1) GREEN  (xStart+4,yStart,zStart+65);
+(* B *)
+put (7,1,1) GREEN  (xStart+133,yStart,zStart+65);
+put (1,1,3) GREEN  (xStart+139,yStart,zStart+62);
+put (2,1,1) GREEN  (xStart+137,yStart,zStart+61);
+put (1,1,3) GREEN  (xStart+136,yStart,zStart+62);
+put (2,1,1) GREEN  (xStart+134,yStart,zStart+61);
+put (1,1,3) GREEN  (xStart+133,yStart,zStart+62);
+(* E *)
+put (7,1,1) GREEN  (xStart+133,yStart,zStart+57);
+put (1,1,3) GREEN  (xStart+139,yStart,zStart+54);
+put (1,1,2) GREEN  (xStart+136,yStart,zStart+55);
+put (1,1,3) GREEN  (xStart+133,yStart,zStart+54);
+(* A *)
+put (1,1,1) GREEN  (xStart+133,yStart,zStart+51);
+put (1,1,1) GREEN  (xStart+134,yStart,zStart+51);
+put (1,1,1) GREEN  (xStart+135,yStart,zStart+50);
+put (1,1,1) GREEN  (xStart+136,yStart,zStart+50);
+put (1,1,1) GREEN  (xStart+137,yStart,zStart+49);
+put (1,1,1) GREEN  (xStart+138,yStart,zStart+49);
+put (1,1,1) GREEN  (xStart+139,yStart,zStart+48);
+put (1,1,1) GREEN  (xStart+138,yStart,zStart+47);
+put (1,1,1) GREEN  (xStart+137,yStart,zStart+47);
+put (1,1,1) GREEN  (xStart+136,yStart,zStart+46);
+put (1,1,1) GREEN  (xStart+135,yStart,zStart+46);
+put (1,1,1) GREEN  (xStart+134,yStart,zStart+45);
+put (1,1,1) GREEN  (xStart+133,yStart,zStart+45);
+put (1,1,4) GREEN  (xStart+135,yStart,zStart+48);
+(* R *)
+put (7,1,1) GREEN  (xStart+133,yStart,zStart+41);
+put (1,1,4) GREEN  (xStart+139,yStart,zStart+38);
+put (2,1,1) GREEN  (xStart+137,yStart,zStart+37);
+put (1,1,4) GREEN  (xStart+136,yStart,zStart+38);
+put (1,1,1) GREEN  (xStart+135,yStart,zStart+39);
+put (1,1,1) GREEN  (xStart+134,yStart,zStart+38);
+put (1,1,1) GREEN  (xStart+133,yStart,zStart+37);
+(* S *) 
+put (1,1,4) GREEN  (xStart+139,yStart,zStart+31);
+put (3,1,1) GREEN  (xStart+136,yStart,zStart+34);
+put (1,1,4) GREEN  (xStart+136,yStart,zStart+31);
+put (3,1,1) GREEN  (xStart+133,yStart,zStart+31);
+put (1,1,4) GREEN  (xStart+133,yStart,zStart+31)
+
+); 
+
+endOfTheLineWords (0,0,8);
+
+
+showVisibleLDR "thing"; 

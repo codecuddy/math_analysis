@@ -1,0 +1,96 @@
+open Level_5;
+fun ONE (x,y,z) = (
+    put(3,1,1) SILVER (x+0,y,z+0);
+    put(1,1,5) SILVER (x+1,y,z+0);
+    put(1,1,1) SILVER (x,y,z+4);
+0);
+fun TWO (x,y,z) = (
+    put(3,1,5) SILVER (x+0,y+0,z+0);
+    put(2,1,1) EMPTY (x+1,y+0,z+1);
+    put(2,1,1) EMPTY (x+0,y+0,z+3);
+0);
+fun THREE (x,y,z) = (
+    put(1,1,5) SILVER (x+2,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+2);
+    put(3,1,1) SILVER (x+0,y+0,z+4);
+0);
+fun FOUR (x,y,z) = (
+    put(1,1,5) SILVER (x+2,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+2);
+    put(1,1,3) SILVER (x+0,y+0,z+2);
+0);
+fun FIVE (x,y,z) = (
+    put(3,1,5) SILVER (x+0,y+0,z+0);
+    put(2,1,1) EMPTY (x+0,y+0,z+1);
+    put(2,1,1) EMPTY (x+1,y+0,z+3);
+0);
+fun SIX (x,y,z) = (
+    put(1,1,5) SILVER (x+0,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+2);
+    put(3,1,1) SILVER (x+0,y+0,z+4);
+    put(1,1,3) SILVER (x+2,y+0,z+0);
+0);
+fun SEVEN (x,y,z) = (
+    put(1,1,5) SILVER (x+2,y+0,z+0);
+    put(3,1,1) SILVER (x+0,y+0,z+4);
+    put(1,1,1) SILVER (x+0,y+0,z+3);
+0);
+fun EIGHT (x,y,z) = (
+    put(3,1,5) SILVER (x+0,y+0,z+0);
+    put(1,1,1) EMPTY (x+1,y+0,z+1);
+    put(1,1,1) EMPTY (x+1,y+0,z+3);
+0);
+fun NINE (x,y,z) = (
+    put(3,1,5) SILVER (x+0,y+0,z+0);
+    put(2,1,1) EMPTY (x+0,y+0,z+1);
+    put(1,1,1) EMPTY (x+1,y+0,z+3);
+0);
+fun ZERO (x,y,z) = (
+    put(3,1,5) SILVER (x+0,y+0,z+0);
+    put(1,1,3) EMPTY (x+1,y+0,z+1);
+0);
+fun TEN (x,y,z) = (
+    ONE (x+0,y+0,z+0);
+    ZERO (x+4,y+0,z+0);
+0);
+fun ELEVEN (x,y,z) = (
+    ONE (x+0,y+0,z+0);
+    ONE (x+4,y+0,z+0);
+0);
+fun TWELVE (x,y,z) = (
+    ONE (x+0,y+0,z+0);
+    TWO (x+4,y+0,z+0);
+0);
+
+
+
+fun NUMBERS (x,y,z) = (
+    TWELVE (x-3,y,z+17);
+    THREE (x+17,y,z-2);
+    SIX (x-1,y,z-21);
+    NINE (x-19,y,z-2);
+    ONE (x+8,y,z+13);
+    FIVE (x+8,y,z-17);
+    SEVEN (x-10,y,z-17);
+    TWO (x+14,y,z+6);
+    FOUR (x+14,y,z-10);
+    EIGHT (x-16,y,z-10);
+    TEN (x-17,y,z+6);
+    ELEVEN (x-12,y,z+13);
+0);
+
+build(100,10,100);
+ringY 25 50 1 [STONEGRAY] (50,0,50);
+ringY 25 2 3 [BLACK] (50,0,50);
+ringY 3 50 3 [BLACK] (50,0,50);
+
+put(18,2,1) SILVER (35,0,50);
+put(2,2,3) SILVER (50,0,54);
+put(1,2,2) SILVER (50,0,57);
+
+NUMBERS (50,1,50);
+
+show "project";
+

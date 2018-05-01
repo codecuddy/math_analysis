@@ -1,0 +1,13 @@
+open Level_5;
+
+fun thing (x,y,z) =
+	(
+		put (1,1) RED (x+4,y,z+5);
+		put (1,1) GREEN (x,y,z) 
+	);
+
+thing(0,0);
+build (16,16);
+
+
+show "any string";

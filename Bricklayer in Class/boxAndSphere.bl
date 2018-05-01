@@ -1,0 +1,31 @@
+open Level_5;
+
+build(100,100,100);
+
+val dim = 50;
+val rad = 25;
+
+fun box(x,y,z) = (
+    putHollow(dim,dim,dim) [BLUE, AQUA, BLACK] (x,y,z);
+    put (dim-4, dim-4,     1) EMPTY (x+2    ,y+2,z      );
+    put (dim-4, dim-4,     1) EMPTY (x+2    ,y+2,z+dim-1);
+    put (1    , dim-4, dim-4) EMPTY (x      ,y+2,z+2    );
+    put (1    , dim-4, dim-4) EMPTY (x+dim-1,y+2,z+2    )
+
+);
+
+fun sphere1(x,y,z) = (
+    hollowSphere rad 10 [PINK] (rad-1,rad-1,rad-1)
+);
+
+(*show in LDraw*)
+(*showLDR "dice"*)
+
+(*show in LDD*)
+box(0,0,0);
+sphere1(0,0,0);
+show "box"
+
+(*show as a .stl file for 3D printing*)
+(*note: change YELLOW to EMPTY before attempting to 3D print*)
+(*showSTL_ASCII "dice"*)

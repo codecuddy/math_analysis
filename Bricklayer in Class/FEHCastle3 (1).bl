@@ -1,0 +1,176 @@
+open Level_5;
+(*
+fun f(x,y,z) = if x mod 3 + z mod 2 = 1 then GREEN else EMPTY
+*)
+(*Scale is 1:6*)
+(*ORIGIN POINT*)
+fun ORIGIN (x,y,z) = (
+   put(1,1,2) RED (0,0,0);
+0);
+(*
+BASIC LAYOUT IS 6x9
+FINAL LAYOUT IS 36x54
+*)
+
+fun MEDIUMLARGE (x,y,z) = (
+    put(36,1,54) STONEGRAY (0,0,0);
+0);
+fun STONECUT (x,y,z) = (
+    put(24,3,6) EMPTY (x+0,y+0,z+0);
+(* A *)
+    put(24,1,2) STONEGRAY (x+0,y+0,z+0);
+    put(24,1,2) STONEGRAY (x+0,y+1,z+2);
+    put(24,1,2) STONEGRAY (x+0,y+2,z+4);
+(* A *)
+    put(36,1,6) STONEGRAY (x-6,y+3,z+6);
+0);
+fun CARPET (x,y,z) = (
+    put(12,1,54) INDIGO (x+0,y+0,z+0);
+(* COPIED FROM A *)
+    put(12,1,2) INDIGO (x+0,y+1,z+42);
+    put(12,1,2) INDIGO (x+0,y+2,z+44);
+    put(12,1,2) INDIGO (x+0,y+3,z+46);
+    put(12,1,6) INDIGO (x+0,y+4,z+48);
+(* *)
+0);
+fun CARPETEDGE (x,y,z) = (
+    put(2,1,50) YELLOW (x+10,y+0,z+0);
+(* COPIED FROM A *)
+    put(2,1,2) YELLOW (x+10,y+1,z+42);
+    put(2,1,2) YELLOW (x+10,y+2,z+44);
+    put(2,1,2) YELLOW (x+10,y+3,z+46);
+    put(2,1,6) YELLOW (x+10,y+4,z+48);
+(* *)
+0);
+
+(* CARPET: cc=INDIGO, edge=YELLOW, DARKBROWN *)
+(*FROM PEDRO
+big pillar
+put(9,1,9) WHITEGLOW (0,1,12);
+ringY(4,1,6) YELLOW (0,2,12);
+small pillar
+ringY 2 1 6 YELLOW (30,2,30);
+    END*)
+
+fun BIGPILLARS (x,y,z) = (
+    put(9,1,9) WHITEGLOW (x-3,y+0,z+7);
+    ringY 3 1 12 [YELLOW] (x+1,y+1,z+11);
+0);
+fun SMALLPILLARS (x,y,z) = (
+    ringY 2 1 10 [YELLOW] (x,y,z);
+0);
+fun FOUNDATIONS (x,y,z) = ( (*
+    put(6,1,6) GRAY (4,1,6);
+    put(6,1,6) GRAY (25,1,6);
+    put(6,1,6) GRAY (5,1,35);
+    put(6,1,6) GRAY (27,1,35);*)
+0);
+fun QUEST (x,y,z) = (
+    ringY 3 1 2 [LIGHTGRAY] (x+1,y+0,z+5);
+    hollowCylinderY 2 2 [CLEARBLUE] (x+1,y+0,z+5);(*
+    put (3,9,3) LIGHTGRAY (x+0,y+0,z+4);
+    put (2,3,2) LIGHTGRAY (x+0,y+6,z+2);
+    put (2,3,2) LIGHTGRAY (x+0,y+6,z+7);
+    put (2,2,3) LIGHTGRAY (x+0,y+9,z+11);
+    put (2,2,3) LIGHTGRAY (x+0,y+9,z+0);
+    put (2,2,2) LIGHTGRAY (x+0,y+8,z+8);
+    put (2,2,2) LIGHTGRAY (x+0,y+8,z+1);*)
+    put(1,6,1) LIGHTGRAY (x+1,y+0,z+5);
+    put(1,2,1) LIGHTGRAY (x+0,y+5,z+4);
+    put(1,2,1) LIGHTGRAY (x+2,y+5,z+4);
+    put(1,2,1) LIGHTGRAY (x+0,y+5,z+6);
+    put(1,2,1) LIGHTGRAY (x+2,y+5,z+6);
+    put(1,2,1) LIGHTGRAY (x-1,y+6,z+7);
+    put(1,2,1) LIGHTGRAY (x+3,y+6,z+7);
+    hollowCylinderY 1 4 [LIGHTGRAY] (x+1,y+0,z+5);
+0);
+fun FRIEND (x,y,z) = (
+    hollowCylinderY 3 1 [TITANIUM] (x+7,y+1,z+9);
+    hollowCylinderY 2 2 [TITANIUM] (x+7,y+1,z+9);(*
+    put (5,3,1) TITANIUM (x+5,y+3,z+9);
+    put (3,3,1) TITANIUM (x+6,y+4,z+9);*)
+    put (3,4,1) TITANIUM (x+6,y+3,z+9);
+(*ABOVE IS ORIGINAL, BELOW IS EDIT *)
+    put (1,3,1) TITANIUM (x+5,y+3,z+8);
+    put (1,5,1) TITANIUM (x+7,y+3,z+9);
+    put (1,3,1) TITANIUM (x+9,y+3,z+10);
+    put (1,1,1) LIGHTROYALBLUE (x+7,y+3,z+9);
+    put (1,1,1) LIGHTROYALBLUE (x+7,y+5,z+9);
+0);
+fun NOTICE (x,y,z) = (
+    hollowCylinderY 3 1 [LIGHTGRAY] (x+7,y+1,z+10);
+    hollowCylinderY 2 1 [LIGHTGRAY] (x+7,y+2,z+10);
+    put (1,7,1) WARMGOLD (x+4,y+2,z+9);
+    put (1,7,1) WARMGOLD (x+10,y+2,z+11);
+    put (5,4,1) WARMGOLD (x+5,y+4,z+10);
+    put (1,1,1) WHITE (x+6,y+6,z+10);
+    put (1,1,1) YELLOW (x+8,y+5,z+10);
+
+0);
+(*
+fun COLORING (x,y,z) = if x mod 2 = 0 and z mod = 0 then YELLOW
+         else ORANGE;
+*)
+fun isEven (x,y,z) = (x+y+z) mod 2 = 0;
+fun COLORINGLEFT (x,y,z) =
+    if isEven (x,y,z) then YELLOW else ORANGE;
+fun COLORINGRIGHT (x,y,z) =
+    if isEven (x,y,z) then ORANGE else YELLOW;
+
+fun FEH (x,y,z) = (
+    ringY 3 1 1 [GRAY] (x+1,y,z+2);
+    ringY 2 1 2 [GRAY] (x+1,y,z+2);
+    put (1,4,1) ORANGE (x+1,y,z+2);
+    put (2,1,1) ORANGE (x+2,y+3,z+2);
+    putMultibrick (3,2,3) [DARKGREEN,GREEN,GREEN] (x+0,y,z+1);
+    (*FEH*)
+    sphere 1 [WHITE] (x+1,y+5,z+2);
+    put (1,1,3) WHITE (x+2,y+4,z+2);
+    put (1,1,3) WHITE (x+0,y+4,z+2);
+    put (1,1,1) YELLOW (x+1,y+5,z+1);
+0);
+
+(* ~~~~~~~~~~ FUNCTIONS END ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *)
+
+build(50,20,80);
+
+MEDIUMLARGE (0,0,0);
+put(36,3,12) STONEGRAY (0,1,42);
+STONECUT (6,1,42);
+CARPET (12,0,0);
+CARPETEDGE (0,0,0);
+CARPETEDGE (14,0,0);
+BIGPILLARS (0,1,12);
+BIGPILLARS (33,1,12);
+put(1,12,7) YELLOW (0,2,20);
+put(10,15,10) EMPTY (36,0,18);
+put(1,12,7) YELLOW (35,2,20);
+SMALLPILLARS (33,4,45);
+SMALLPILLARS (2,4,45);
+put(4,1,4) WHITEGLOW (0,1,0);
+put(4,1,4) WHITEGLOW (32,1,0);
+SMALLPILLARS (35,2,0);
+SMALLPILLARS (0,2,0);
+put(3,15,50) EMPTY (36,0,0);
+FOUNDATIONS (0,0,0);
+QUEST (28,0,4);
+FRIEND (0,0,0);
+NOTICE (0,0,27);
+(*put(2,1,50) YELLOW (x+10,y+0,z+0);
+COPIED FROM A
+    put(2,1,2) YELLOW (x+10,y+1,z+42);
+    put(2,1,2) YELLOW (x+10,y+2,z+44);
+    put(2,1,2) YELLOW (x+10,y+3,z+46);
+    put(2,1,6) YELLOW (x+10,y+4,z+48);
+*)
+traverseWithin (10,0,0) (11,0,50) COLORINGLEFT;
+traverseWithin (24,0,0) (25,0,50) COLORINGRIGHT;
+traverseWithin (10,1,42) (11,1,43) COLORINGLEFT;
+FEH (28,1,36);
+show "the_project";
+
+
+
+
+
+

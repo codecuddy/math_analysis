@@ -1,0 +1,50 @@
+open Level_5;
+build(100,80,100);                                                                                                                                
+
+val wallLength = 30;
+val wallHeight = 4; 
+val wallWidth = 1;
+val foot = 1;
+
+fun bedroom(xStart, yStart, zStart) = (
+
+
+put (wallLength-10, wallHeight+10, wallWidth ) RED (xStart+30,              yStart, zStart);
+put (wallLength-10, wallHeight+10, wallWidth ) WHITE (xStart+30,              yStart, zStart+wallLength-1);
+put (wallWidth,  wallHeight+10, wallLength) BLUE (xStart+50,              yStart, zStart);
+put (wallWidth,  wallHeight+10, wallLength) BROWN (xStart+wallLength-1, yStart, zStart)
+
+);
+
+fun bathroom(xStart, yStart, zStart) = (
+
+
+put (wallLength-10, wallHeight+10, wallWidth ) RED (xStart+30,              yStart, zStart);
+put (wallLength-10, wallHeight+10, wallWidth ) PINK (xStart+30,              yStart, zStart+wallLength-1);
+put (wallWidth,  wallHeight+10, wallLength) BLUE (xStart+50,              yStart, zStart);
+put (wallWidth,  wallHeight+10, wallLength) GREEN (xStart+wallLength-1, yStart, zStart)
+
+);
+
+fun bigroom(xStart, yStart, zStart) = (
+
+
+put (wallLength, wallHeight+10, wallWidth ) RED (xStart+30,              yStart, zStart);
+put (wallLength, wallHeight+10, wallWidth ) WHITE (xStart+30,              yStart, zStart+wallLength-1);
+put (wallWidth,  wallHeight+10, wallLength) BLUE (xStart+60,              yStart, zStart);
+put (wallWidth,  wallHeight+10, wallLength) BROWN (xStart+wallLength-1, yStart, zStart)
+
+
+);
+fun roomWalls(xStart, yStart, zStart) = (
+
+put (wallWidth,  wallHeight+10, 10) ORANGE (xStart+30, yStart+22, zStart+1);
+
+put (42,wallHeight+10,wallWidth) BLACK (xStart+8, yStart+22, zStart+14)
+);
+
+bigroom(0,8,0);
+bedroom(0,22,0);
+bathroom(22,22,0);
+roomWalls(22,0,0);
+show "thing";

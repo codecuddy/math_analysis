@@ -1,0 +1,187 @@
+open Level_5;
+build (100,40,100);
+
+val WallLength = 60;
+val WallWidth = 93;
+val CafewallHeight = 1;
+val CafewallWidth = 2;
+val TableHeight = 2;
+val TableWidth = 3;
+val TableLength = 10;
+val CafeChair = 1;
+val CafeChairHeight = 1;
+val CafeDoorFloorLength = 2;
+val CafeDoorHeight = 7;
+val CafeDoorWidth = 1;
+
+fun condiments (x,y,z) = (
+    put (3, 4, 6) GREEN (x+56, y+CafewallHeight, z+26);
+    put (1, 1, 1) REDROUND (x+56, y+CafewallHeight+4, z+30);
+    put (1, 1, 1) YELLOWROUND (x+56, y+CafewallHeight+4, z+28);
+    put (1, 1, 1) WHITEROUND (x+56, y+CafewallHeight+4, z+26)
+
+);
+
+(*
+fun SandwichCart (x,y,z) = (
+    put (2,4,7) SILVER (5,0,70);
+    (*sandwich poles up*)
+    put (1,3,1) SILVER (5,4,72);
+    put (1,3,1) SILVER (5,4,74);
+    put (1,3,1) SILVER (5,4, 76)
+    
+);
+
+*)
+(*
+fun Cafedoor (x,y,z) = (
+    put (CafeDoorFloorLength, CafeDoorHeight, CafeDoorWidth) EMPTY (x+5,y+0,z+0)
+
+);
+*)
+
+fun LunchTable (x,y,z) = (
+    put (TableWidth, 1, TableLength) DARKBROWN (x+13, y+TableHeight, z+15)
+
+);
+
+fun LunchChair(x,y,z) = (
+    put (CafeChair, CafeChairHeight, CafeChair) GREEN (x+12, y+TableHeight-1, z+17);
+    put (CafeChair, CafeChairHeight, CafeChair) GREEN (x+12, y+TableHeight-1, z+19);
+    put (CafeChair, CafeChairHeight, CafeChair) GREEN (x+12, y+TableHeight-1, z+21);
+    put (CafeChair, CafeChairHeight, CafeChair) GREEN (x+12, y+TableHeight-1, z+23)
+
+);
+
+fun seating(x,y,z) = (
+(*front row*)
+    LunchTable      (0,0,0);
+    LunchTable      (10,0,0);
+    LunchTable      (0,0,10);
+    LunchTable      (10,0,10);
+    LunchTable      (20,0,0);
+    LunchTable      (20,0,10);
+    LunchTable      (30,0,0);
+    LunchTable      (30,0,10);
+(*middle row*)
+    LunchTable      (5,0,25);
+    LunchTable      (5,0,35);
+    LunchTable      (15,0,25);
+    LunchTable      (15,0,35);
+    LunchTable      (25,0,25);
+    LunchTable      (25,0,35);
+(*back row*)
+    LunchTable      (0,0,48);
+    LunchTable      (0,0,58);
+    LunchTable      (10,0,48);
+    LunchTable      (10,0,58);
+    LunchTable      (20,0,48);
+    LunchTable      (20,0,58);
+    LunchTable      (0,0,58);
+    LunchTable      (20,0,58);
+    LunchTable      (30,0,48);
+    LunchTable      (30,0,58);
+(*front row*)
+    LunchChair      (0,0,0);
+    LunchChair      (0,0,10);
+    LunchChair      (TableWidth+1,0,0);
+    LunchChair      (TableWidth+1,0,10);
+    LunchChair      (TableWidth+11,0,0);
+    LunchChair      (TableWidth+11,0,10);
+    LunchChair      (TableWidth+21,0,0);
+    LunchChair      (TableWidth+21,0,10);
+    LunchChair      (TableWidth+31,0,0);
+    LunchChair      (TableWidth+31,0,10);
+    LunchChair      (10,0,0);
+    LunchChair      (10,0,10);
+    LunchChair      (20,0,0);
+    LunchChair      (20,0,10);
+    LunchChair      (30,0,0);
+    LunchChair      (30,0,10);
+(*middle row*)
+    LunchChair      (5,0,25);
+    LunchChair      (5,0,35);
+    LunchChair      (15,0,25);
+    LunchChair      (15,0,35);
+    LunchChair      (25,0,25);
+    LunchChair      (25,0,35);
+        (*right side of middle row*)
+    LunchChair      (9,0,25);
+    LunchChair      (9,0,35);
+    LunchChair      (19,0,25);
+    LunchChair      (19,0,35);
+    LunchChair      (29,0,25);
+    LunchChair      (29,0,35);
+(*top tow*)
+    (*left side of the top row*)
+    LunchChair      (0,0,48);
+    LunchChair      (0,0,58);
+    LunchChair      (10,0,48);
+    LunchChair      (10,0,58);
+    LunchChair      (20,0,48);
+    LunchChair      (20,0,58);
+    LunchChair      (30,0,48);
+    LunchChair      (30,0,58);
+    (*right side of the top row*)
+    LunchChair      (TableWidth+1,0,48);
+    LunchChair      (TableWidth+1,0,58);
+    LunchChair      (TableWidth+11,0,48);
+    LunchChair      (TableWidth+11,0,58);
+    LunchChair      (TableWidth+21,0,48);
+    LunchChair      (TableWidth+21,0,58);
+    LunchChair      (TableWidth+31,0,48);
+    LunchChair      (TableWidth+31,0,58)
+
+);
+
+
+fun condimentsTwo (x,y,z) = (
+    put (3, 4, 6) GREEN (x+CafewallWidth+2, y+CafewallHeight, z+26);
+    put (1, 1, 1) REDROUND (x+CafewallWidth+2, y+CafewallHeight+4, z+30);
+    put (1, 1, 1) YELLOWROUND (x+CafewallWidth+2, y+CafewallHeight+4, z+28);
+    put (1, 1, 1) WHITEROUND (x+CafewallWidth+2, y+CafewallHeight+4, z+26)
+
+);
+
+
+    
+(*origin
+put (1,10,5) BLACK (0,0,0);*)
+
+(*floor base*)
+putMultibrick (60, 1, 93) [WHITE, WHITE, COOLYELLOW, WHITE, WHITE, BRICKYELLOW] (0,0,0);
+(*brick wall closest to commons*) 
+putMultibrick (60, 10, 2) [RED, BROWN, BROWN] (0, CafewallHeight, 90);
+(*wall near the outside*)
+putMultibrick (2, 5, WallWidth) [COOLYELLOW, COOLYELLOW, COOLYELLOW, COOLYELLOW, WARMGOLD] (0,0,0);
+(*windows*)
+put (2, 5, WallWidth) TRANSPARENT (0,5,0);
+
+(*doors leading to food entrance*)
+putMultibrick (WallLength, 10, 2) [COOLYELLOW, COOLYELLOW, COOLYELLOW, COOLYELLOW] (0,0,0);
+put (2, 7, 1) SILVER (10,0,0);
+put (2, 7, 1) SILVER (20,0,0);
+put (2, 7, 1) SILVER (30,0,0);
+put (2, 7, 1) SILVER (40,0,0);
+put (2, 7, 1) SILVER (50,0,0);
+
+
+
+
+(*wall with gaps for entry*)
+putMultibrick (2, 10, 19) [RED, BROWN, BROWN] (58, CafewallHeight, 71);
+    (*empty space*)
+put (2, 10, 17) COOLYELLOW (58, CafewallHeight, 46);
+    (*empty space*)
+put (2, 10, 17) COOLYELLOW (58, CafewallHeight, 21);
+    (*empty space*)
+put (2, 10, 13) COOLYELLOW (58, CafewallHeight, 0);
+
+seating (0,0,0);
+condiments (0,0,0);
+condimentsTwo (0,0,0);
+(*
+SandwichCart (0,0,0);
+*)
+(* Cafedoor (0,0,0); *)
+showLDR "lunchroom";

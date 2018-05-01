@@ -1,0 +1,122 @@
+open Level_5;
+
+
+val Pagoda=1;
+
+fun roof (xStart,yStart,zStart)=
+    (
+        putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart- 1,yStart+ 0,zStart-1);
+        putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 0,yStart+ 1,zStart+0);
+        putHollow (23,1,19) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 1,yStart+ 2,zStart+1);
+        putHollow (21,1,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 2,yStart+ 3,zStart+2);
+        putHollow (19,1,15) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 3,yStart+ 4,zStart+3);
+        putHollow (17,1,13) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 4,yStart+ 5,zStart+4);
+        putHollow (11,3, 7) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 7,yStart+ 6,zStart+7);
+        putHollow (13,1,10) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 6,yStart+ 9,zStart+6);
+        putHollow (11,1, 7) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 7,yStart+10,zStart+7);
+        putHollow ( 9,1, 4) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 8,yStart+11,zStart+8);
+        putHollow ( 7,1, 2) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+ 9,yStart+12,zStart+9);
+        putHollow ( 3,3, 2) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+11,yStart+13,zStart+9)
+   );
+
+fun floor (xStart,yStart,zStart)=
+    (
+        (* Dimensions = 28 x 8 x 25 *) 
+
+        putHollow (25,4,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+0,zStart+0);
+        putHollow (21,4,17) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+2,yStart+0,zStart+2);
+        putHollow (25,1,21) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart+0,yStart+4,zStart+0);
+        putHollow (27,1,23) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-1,yStart+5,zStart-1);
+        putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+6,zStart-2);
+        putHollow (31,1,27) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-3,yStart+7,zStart-3);
+        putHollow (29,1,25) [RED,RED,RED,RED,BLACK,DARKBROWN] (xStart-2,yStart+8,zStart-2);
+
+
+        (*PILLAR HOLES*)
+        put (5,4,1) EMPTY (xStart+ 1,yStart+0,zStart+20);
+        put (3,4,1) EMPTY (xStart+ 7,yStart+0,zStart+20);
+        put (3,4,1) EMPTY (xStart+11,yStart+0,zStart+20);
+        put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+20);
+        put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+20);
+
+        put (5,4,1) EMPTY (xStart+ 1,yStart+0,zStart+0);
+        put (3,4,1) EMPTY (xStart+ 7,yStart+0,zStart+0);
+        put (3,4,1) EMPTY (xStart+15,yStart+0,zStart+0);
+        put (5,4,1) EMPTY (xStart+19,yStart+0,zStart+0);
+
+        put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+ 1);
+        put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+ 7);
+        put (1,4,3) EMPTY (xStart+24,yStart+0,zStart+11);
+        put (1,4,5) EMPTY (xStart+24,yStart+0,zStart+15);
+
+        put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+1);
+        put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+7);
+        put (1,4,3) EMPTY (xStart+0,yStart+0,zStart+11);
+        put (1,4,5) EMPTY (xStart+0,yStart+0,zStart+15);
+
+        (*INNER HOLES*)
+        put (1,4,24) EMPTY (xStart+1,yStart+0,zStart+0);
+        put (3,4,4) EMPTY (xStart+11,yStart+0,zStart+0);
+        (*put (25,1,21) EMPTY (0,5,0);*)
+        put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+1);
+        put (1,4,25) EMPTY (xStart+23,yStart+0,zStart+0);
+        put (25,4,1) EMPTY (xStart+0,yStart+0,zStart+19);
+
+        (*2X2*)
+        put (2,2,2) YELLOW (xStart-4,yStart+7,zStart-4);
+
+        put (1,1,1) YELLOW (xStart-4,yStart+9,zStart-4);
+        put (2,2,2) YELLOW (xStart+27,yStart+7,zStart+23);
+
+        put (1,1,1) YELLOW (xStart+28,yStart+9,zStart+24);
+        put (2,2,2) YELLOW (xStart-4,yStart+7,zStart+23);
+
+        put (1,1,1) YELLOW (xStart-4,yStart+9,zStart+24);
+        put (2,2,2) YELLOW (xStart+27,yStart+7,zStart-4);
+
+        put (1,1,1) YELLOW (xStart+28,yStart+9,zStart-4);
+
+
+        (*Four holes on outer part 1*)
+        put (1,1,1) EMPTY (xStart+25,yStart+5,zStart+21);
+        put (1,1,1) EMPTY (xStart-1,yStart+5,zStart+21);
+        put (1,1,1) EMPTY (xStart+25,yStart+5,zStart-1);
+        put (1,1,1) EMPTY (xStart-1,yStart+5,zStart-1)
+    );
+
+
+(* (x,y,z) is the lower-left corner of bounding box *)
+fun pagoda (x,y,z) =
+    let
+        val xStart = x + 6;
+        val yStart = y+1;
+        val zStart = z + 6;
+    in
+
+        (* foundation *)
+        putMultibrick (40,1,40) [Quartz,MossStone] (x,y,z);
+
+        (* 28 x 9 x 25 *)
+        floor (xStart,yStart   ,zStart);
+        floor (xStart,yStart+ 16,zStart); 
+        floor (xStart,yStart+ 8,zStart);  (* don't forget to add semi colon. *)
+        floor (xStart,yStart+16,zStart);
+        floor (xStart,yStart+24,zStart);
+        floor (xStart,yStart+32,zStart);
+
+
+        roof (xStart,yStart+40,zStart)
+
+    end;
+
+
+(* ================================================================== *)
+build(100,60,100);
+
+(* dimensions = 40 x h x 40 *)
+pagoda (0,0,0);
+
+
+
+
+show "thing";

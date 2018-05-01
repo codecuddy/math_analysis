@@ -1,0 +1,31 @@
+open Level_5;
+build (10,10,10);
+put(10,1,10) WHITE (0,0,0);
+put(1,10,10) WHITE (0,0,0);
+put(10,10,1) WHITE (0,0,9);
+
+fun XBAR (x,y,z) = (
+    put(10,1,1) GRAY (x,y,z);
+0);
+fun YBAR (x,y,z) = (
+    put(1,10,1) GRAY (x,y,z);
+0);
+fun ZBAR (x,y,z) = (
+    put(1,1,10) GRAY (x,y,z);
+0);
+XBAR (0,0,0);
+XBAR (0,0,9);
+XBAR (0,9,0);
+XBAR (0,9,9);
+
+YBAR (0,0,0);
+YBAR (9,0,0);
+YBAR (0,0,9);
+YBAR (9,0,9);
+
+ZBAR (0,0,0);
+ZBAR (9,0,0);
+ZBAR (0,9,0);
+ZBAR (9,9,0);
+
+showSTL_ASCII "trickCUBE";

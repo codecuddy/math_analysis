@@ -1,0 +1,24 @@
+open Level_5;
+
+build(30,30,30);
+
+val dim = 20;
+fun box(x,y,z) = (
+    putHollow(dim,dim,dim) [BLUE, AQUA, BLACK] (x,y,z);
+    put (dim-2, dim-2, 1) RED (x+1,y+1,z);
+    put (dim-2, dim-2, 1) PINK (x+1,y+1,z+dim-1);
+    put (1, dim-2, dim-2) GREEN (x,y+1,z+1);
+    put (1, dim-2, dim-2) WHITE (x+dim-1,y+1,z+1)
+
+);
+
+(*show in LDraw*)
+(*showLDR "dice"*)
+
+(*show in LDD*)
+box(0,0,0);
+show "box"
+
+(*show as a .stl file for 3D printing*)
+(*note: change YELLOW to EMPTY before attempting to 3D print*)
+(*showSTL_ASCII "dice"*)

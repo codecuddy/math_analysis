@@ -1,0 +1,200 @@
+open Level_5;
+turnSafetyChecksOff();
+build(400,200,400);
+(*my hallway/right side*)
+val wallLength = 26;
+val wallLengthtwo =35;
+val wallHeight = 10;
+val wallWidth = 1;
+
+
+
+(*
+
+fun room(xStart, yStart, zStart) = (
+
+
+
+put (wallLength ,wallWidth, wallLengthtwo) WHITE (  xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (    xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth) WHITE (       xStart,zStart,yStart);
+put (wallLength-4,wallHeight,wallWidth) WHITE (       xStart,zStart,yStart+34);
+put (wallLength-21,wallHeight-7,wallWidth) TRANSPARENT (       xStart+22,zStart+7,yStart+34);
+put (wallLength+1,wallHeight,wallWidth) LIGHTBROWN (        xStart,zStart,yStart-1);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (xStart+26,zStart,yStart)
+
+);
+
+fun room2(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo) WHITE (  xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (    xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth) WHITE (       xStart,zStart,yStart);
+put (wallLength-5,wallHeight,wallWidth) WHITE (       xStart+5,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth) TRANSPARENT (       xStart+1,zStart+7,yStart+34);
+put (wallLength+1,wallHeight,wallWidth) LIGHTBROWN (        xStart,zStart,yStart-1);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (xStart+26,zStart,yStart)
+
+);
+
+fun room3(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo) WHITE (  xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (    xStart,zStart,yStart);
+put (wallLength-5,wallHeight,wallWidth) WHITE (       xStart+5,zStart,yStart);
+put (wallLength,wallHeight,wallWidth) WHITE (       xStart,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth) TRANSPARENT (       xStart+1,zStart+7,yStart);
+put (wallLength+1,wallHeight,wallWidth) LIGHTBROWN (        xStart,zStart,yStart+35);
+put (wallWidth,wallHeight,wallLengthtwo) WHITE (xStart+26,zStart,yStart)
+
+);
+
+
+fun room4(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo)    WHITE         (xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo)      WHITE         (xStart,zStart,yStart);
+put (wallLength-4,wallHeight,wallWidth)       WHITE         (xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth)         WHITE         (xStart,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth)    TRANSPARENT   (xStart+22,zStart+7,yStart);
+put (wallLength+1,wallHeight,wallWidth)       LIGHTBROWN    (xStart,zStart,yStart+35);
+put (wallWidth,wallHeight,wallLengthtwo)      WHITE         (xStart+26,zStart,yStart)
+
+);
+
+fun room5(xStart, yStart, zStart) = (
+
+put (wallLength-13 ,wallWidth, wallLengthtwo-6) WHITE       (xStart,zStart,yStart+6);
+put (wallWidth,wallHeight,wallLengthtwo-6)      WHITE       (xStart,zStart,yStart+6);
+put (wallLength-13,wallHeight,wallWidth)        WHITE       (xStart,zStart,yStart+6);
+put (wallLength-12,wallHeight,wallWidth)        WHITE       (xStart+5,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth)      TRANSPARENT (xStart+1,zStart+7,yStart+34);
+put (wallWidth,wallHeight,wallLengthtwo-6)      WHITE       (xStart+18,zStart,yStart+6)
+
+);
+
+fun firstFloorNorth(xStart,yStart,zStart)= (
+room4 (xStart+5,yStart+40,zStart+5);
+room3(xStart+31,yStart+40,zStart+5);
+room4(xStart+57,yStart+40,zStart+5);
+room3(xStart+83,yStart+40,zStart+5);
+room5(xStart+60,yStart+5,zStart+5);
+room5(xStart+32,yStart+5,zStart+5);
+room5(xStart+91,yStart+5,zStart+5);
+room5(xStart+5,yStart+5,zStart+5)
+
+);
+
+firstFloorNorth(0,100,0);
+firstFloorNorth(0,100,11);
+
+
+*)
+
+(*Nicole's hallway/left side*)
+
+fun room(xStart, yStart, zStart) = (
+
+
+
+put (wallLength ,wallWidth, wallLengthtwo)  WHITE           (xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth)       WHITE           (xStart,zStart,yStart);
+put (wallLength-4,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart+34);
+put (wallLength-21,wallHeight-7,wallWidth)  TRANSPARENT     (xStart+22,zStart+7,yStart+34);
+put (wallLength+1,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart-1);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart+26,zStart,yStart)
+
+);
+
+fun room2(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo)  WHITE           (xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth)       WHITE           (xStart,zStart,yStart);
+put (wallLength-5,wallHeight,wallWidth)     WHITE           (xStart+5,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth)  TRANSPARENT     (xStart+1,zStart+7,yStart+34);
+put (wallLength+1,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart-1);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart+26,zStart,yStart)
+
+);
+
+fun room3(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo)  WHITE           (xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart,zStart,yStart);
+put (wallLength-5,wallHeight,wallWidth)     WHITE           (xStart+5,zStart,yStart);
+put (wallLength,wallHeight,wallWidth)       WHITE           (xStart,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth)  TRANSPARENT     (xStart+1,zStart+7,yStart);
+put (wallLength+1,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart+35);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart+26,zStart,yStart)
+
+);
+
+
+fun room4(xStart, yStart, zStart) = (
+
+put (wallLength ,wallWidth, wallLengthtwo)  WHITE           (xStart,zStart,yStart);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart,zStart,yStart);
+put (wallLength-4,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart);
+put (wallLength,wallHeight,wallWidth)       WHITE           (xStart,zStart,yStart+34);
+put (wallLength-22,wallHeight-7,wallWidth)  TRANSPARENT     (xStart+22,zStart+7,yStart);
+put (wallLength+1,wallHeight,wallWidth)     WHITE           (xStart,zStart,yStart+35);
+put (wallWidth,wallHeight,wallLengthtwo)    WHITE           (xStart+26,zStart,yStart)
+
+);
+
+fun room5(xStart, yStart, zStart) = (
+
+put (wallLength-4,wallWidth, wallLengthtwo-6)   WHITE       (xStart-1,zStart,yStart+6);
+put (wallWidth,wallHeight,wallLengthtwo-6)      WHITE       (xStart-1,zStart,yStart+6);
+put (wallLength-13,wallHeight,wallWidth)        WHITE       (xStart,zStart,yStart+6);
+put (wallLength-11,wallHeight,wallWidth)        WHITE       (xStart+5,zStart,yStart+34);
+put (wallLength-21,wallHeight-7,wallWidth)      TRANSPARENT (xStart,zStart+7,yStart+34);
+put (wallWidth,wallHeight,wallLengthtwo-6)      WHITE       (xStart+20,zStart,yStart+6)
+
+);
+
+
+(* FIRST FLOOR ATTEMPT *)
+
+room (5,5,5);
+room2(31,5,5);
+room(57,5,5);
+room2(83,5,5);
+room5(58,34,5);
+room5(37,34,5);
+room5(89,34,5);
+room5(6,34,5);
+
+
+(* SECOND FLOOR ATTEMPT *)
+room (5,5,16);
+room2(31,5,16);
+room(57,5,16);
+room2(83,5,16);
+room5(58,34,16);
+room5(37,34,16);
+room5(89,34,16);
+room5(6,34,16);
+
+
+(* stair attempts, at the left end of the left set of hallway *)
+
+val stairHeight = 1
+val stairWidth = 2
+val stairLength = 10
+
+fun stairs (xStart,yStart,zStart) = (
+
+put (stairLength, stairHeight, stairWidth) WHITE (xStart, yStart, zStart);
+put (stairLength, stairHeight, stairWidth) BLUE  (xStart, yStart+3, zStart)
+
+);
+
+stairs (100,5,5);
+
+
+
+
+showLDR "thing";

@@ -1,0 +1,16 @@
+open Level_5;
+turnSafetyChecksOff();
+build(300,300,300);
+
+val rad = 100;
+hollowSphere rad 8 [BLACK, BLACK, BLACK, WHITE] (rad-1,rad-1,rad-1);
+
+(*show in LDraw*)
+(*showLDR "dice"*)
+
+(*show in LDD*)
+show "ball"
+
+(*show as a .stl file for 3D printing*)
+(*note: change YELLOW to EMPTY before attempting to 3D print*)
+(*showSTL_ASCII "dice"*)

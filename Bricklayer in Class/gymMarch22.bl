@@ -1,0 +1,123 @@
+open Level_5; 
+build (150,50,150);
+
+val gymWallLength    = 144;
+val gymWallLengthTwo = 114;
+val gymWallHeight    = 20;
+val gymWallWidth     = 1;
+
+
+fun gym (xStart, yStart, zStart) = (
+
+        put(gymWallLength, gymWallWidth,  gymWallLengthTwo) COOLYELLOW  (xStart, zStart, yStart);
+        
+        putHollow (gymWallLength, gymWallHeight, gymWallWidth)     [WHITE]   (xStart, yStart, zStart);
+
+        putHollow (gymWallWidth,  gymWallHeight, gymWallLengthTwo) [WHITE]    (xStart, yStart, zStart);
+
+        putHollow (gymWallWidth,  gymWallHeight, gymWallLengthTwo) [WHITE]  (xStart+gymWallLength, yStart, zStart);
+
+        putHollow (gymWallLength, gymWallHeight, gymWallWidth)    [WHITE]   (xStart,yStart,zStart+gymWallLengthTwo)
+
+       
+);
+
+
+
+val bleacherStartingHeight = 12;
+val bleacherHowFarFromOrigin = 7;
+val bleacherBottomHeight = 0 ;
+
+fun eBleachers (xStart, yStart, zStart) = (
+
+line (bleacherHowFarFromOrigin+xStart+0, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+0,     bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+1, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+1,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+2, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+2,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+3, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+3,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+4, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+4,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+5, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+5,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+6, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+6,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;                 
+line (bleacherHowFarFromOrigin+xStart+7, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+7,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+8, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+8,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+9, bleacherStartingHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+9,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+10, bleacherStartingHeight,  bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+10,   bleacherBottomHeight,   bleacherStartingHeight+zStart) LIGHTBROWN
+
+);
+
+fun wBleachers (xStart, yStart, zStart) = (
+
+line (bleacherHowFarFromOrigin+xStart+0, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+0,     bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+1, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+1,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+2, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+2,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+3, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+3,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+4, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+4,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+5, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+5,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+6, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+6,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;                 
+line (bleacherHowFarFromOrigin+xStart+7, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+7,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+8, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+8,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+9, bleacherBottomHeight,   bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+9,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN;
+line (bleacherHowFarFromOrigin+xStart+10, bleacherBottomHeight,  bleacherBottomHeight+zStart)      (bleacherHowFarFromOrigin+xStart+10,   bleacherStartingHeight,   bleacherStartingHeight+zStart) LIGHTBROWN
+
+);
+
+
+
+fun eastBleachers(xStart,yStart,zStart) = (
+    eBleachers (xStart,yStart,zStart);
+    eBleachers (xStart+10,yStart,zStart);
+    eBleachers (xStart+20,yStart,zStart);
+    eBleachers (xStart+30,yStart,zStart);
+    eBleachers (xStart+40,yStart,zStart);
+    eBleachers (xStart+50,yStart,zStart);
+    eBleachers (xStart+60,yStart,zStart);
+    eBleachers (xStart+70,yStart,zStart);
+    eBleachers (xStart+80,yStart,zStart);
+    eBleachers (xStart+90,yStart,zStart);
+    eBleachers (xStart+100,yStart,zStart);
+    eBleachers (xStart+110,yStart,zStart);
+    eBleachers (xStart+120,yStart,zStart)
+);
+
+fun westBleachers(xStart,yStart,zStart) = (
+    wBleachers (xStart,yStart,zStart);
+    wBleachers (xStart+10,yStart,zStart);
+    wBleachers (xStart+20,yStart,zStart);
+    wBleachers (xStart+30,yStart,zStart);
+    wBleachers (xStart+40,yStart,zStart);
+    wBleachers (xStart+50,yStart,zStart);
+    wBleachers (xStart+60,yStart,zStart);
+    wBleachers (xStart+70,yStart,zStart);
+    wBleachers (xStart+80,yStart,zStart);
+    wBleachers (xStart+90,yStart,zStart);
+    wBleachers (xStart+100,yStart,zStart);
+    wBleachers (xStart+110,yStart,zStart);
+    wBleachers (xStart+120,yStart,zStart)
+);
+
+gym (0,0,0);
+
+
+(* out of bounds *)
+put (126,1,2) GREEN (9,0,18);
+put (126,1,2) GREEN (9,0,94);
+put (2,1,76) GREEN (9,0,20);
+put (2,1,76) GREEN (133,0,20);
+
+eastBleachers(0,0,0);
+
+westBleachers(0,0,102);
+
+put (1,8,10) EMPTY (0,1,18);
+put (1,8,10) EMPTY (0,1,84);
+
+(*FLAG*)
+put (1,6,10) RED (0,12,86);
+line (0,12,86) (0,12,95) WHITEGLOW;
+line (0,14,86) (0,14,95) WHITEGLOW;
+line (0,16,86) (0,16,95) WHITEGLOW;
+put (1,2,3) BLUE (0,16,86);
+
+
+
+
+show "thing"; 

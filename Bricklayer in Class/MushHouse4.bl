@@ -1,0 +1,41 @@
+open Level_5;
+build(100,100,100);
+
+(*cap*)
+ringY 7 1 1 [NOUGAT] (15,13,15);
+ringY 6 7 1 [LIGHTBROWN] (15,13,15);
+ringY 6 8 1 [NOUGAT] (15,14,15);
+ringY 4 6 1 [NOUGAT] (15,15,15);
+
+(*Origin*)
+put (1,1,1) RED (0,0,0);
+(*X*)
+put (1,1,1) GREEN (1,0,0);
+(*Z*)
+put (1,1,1) BLUE (0,0,1);
+
+(*Deck*)
+ringY 3 4 1 [NOUGAT] (15,6,18);
+ringY 2 3 1 [NOUGAT] (15,5,18);
+put (5,1,2) EMPTY (13,5,16);
+put (3,1,1) EMPTY (14,5,18);
+(*stem*)
+ringY 3 1 12 [LIGHTBROWN,WHITE,WHITEGLOW,WHITE,WHITEGLOW,WHITEGLOW,WHITE,WHITE] (15,1,15);
+(*door*)
+put (1,2,1) EMPTY (15,1,12);
+(*DeckDoor*)
+put (1,2,1) EMPTY (15,7,18);
+(*windows*)
+put (1,1,1) EMPTY (18,2,15);
+put (1,1,1) EMPTY (18,8,15);
+put (1,1,1) EMPTY (15,2,18);
+put (1,1,1) EMPTY (12,2,15);
+put (1,1,1) EMPTY (12,8,15);
+put (1,1,1) EMPTY (15,8,12);
+(*2ndfloor*)
+ringY 3 4 1 [WHITE,WHITEGLOW,WHITEGLOW,LIGHTBROWN] (15,6,15);
+put (1,1,1) EMPTY (17,6,15);
+(*floor*)
+ringY 3 4 1 [WHITE,WHITEGLOW,WHITEGLOW,LIGHTBROWN] (15,0,15);
+
+show "thing";

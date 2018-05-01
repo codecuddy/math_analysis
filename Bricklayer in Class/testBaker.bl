@@ -1,0 +1,6 @@
+open Level_5;
+build(100,100,100);
+
+ringZ 10 4 20 [LightBlueGlass,ORANGEROUND] (20,10,20);
+
+showSTL_ASCII "thing";
