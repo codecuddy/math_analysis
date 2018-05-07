@@ -398,4 +398,4 @@ Watchtower (10,0,130);
 Watchtower (130,0,10);
 putMultibrick (200,0,200) [DARKGREEN,GREEN,OLIVE] (0,0,0);
 ringY 150 5 1 [GRAY] (0,0,3);
-showSTL_ASCII "Town";
+showLDR "Town";
