@@ -92,5 +92,5 @@ put(1,2,2) SILVER (50,0,57);
 
 NUMBERS (50,1,50);
 
-show "project";
+showSTL_ASCII "project";
 
