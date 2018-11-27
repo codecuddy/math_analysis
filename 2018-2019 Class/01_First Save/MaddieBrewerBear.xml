@@ -1,0 +1,144 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="openLevel3" x="101" y="-2082">
+    <value name="semi_or_epsilon">
+      <block type="bwhat"></block>
+    </value>
+    <next>
+      <block type="bbuild">
+        <field name="size">(32,32)</field>
+        <value name="semi_or_epsilon">
+          <block type="bwhat"></block>
+        </value>
+        <next>
+          <block type="circleXZ">
+            <field name="radius">9</field>
+            <field name="brick">#694027</field>
+            <field name="xArg">15</field>
+            <field name="zArg">15</field>
+            <value name="semi_or_epsilon">
+              <block type="bwhat"></block>
+            </value>
+            <next>
+              <block type="circleXZ">
+                <field name="radius">7</field>
+                <field name="brick">#694027</field>
+                <field name="xArg">15</field>
+                <field name="zArg">15</field>
+                <value name="semi_or_epsilon">
+                  <block type="bwhat"></block>
+                </value>
+                <next>
+                  <block type="circleXZ">
+                    <field name="radius">6</field>
+                    <field name="brick">#694027</field>
+                    <field name="xArg">15</field>
+                    <field name="zArg">15</field>
+                    <value name="semi_or_epsilon">
+                      <block type="bwhat"></block>
+                    </value>
+                    <next>
+                      <block type="circleXZ">
+                        <field name="radius">5</field>
+                        <field name="brick">#694027</field>
+                        <field name="xArg">15</field>
+                        <field name="zArg">15</field>
+                        <value name="semi_or_epsilon">
+                          <block type="bwhat"></block>
+                        </value>
+                        <next>
+                          <block type="circleXZ">
+                            <field name="radius">3</field>
+                            <field name="brick">#694027</field>
+                            <field name="xArg">7</field>
+                            <field name="zArg">22</field>
+                            <value name="semi_or_epsilon">
+                              <block type="bwhat"></block>
+                            </value>
+                            <next>
+                              <block type="circleXZ">
+                                <field name="radius">3</field>
+                                <field name="brick">#694027</field>
+                                <field name="xArg">23</field>
+                                <field name="zArg">22</field>
+                                <value name="semi_or_epsilon">
+                                  <block type="bwhat"></block>
+                                </value>
+                                <next>
+                                  <block type="circleXZ">
+                                    <field name="radius">1</field>
+                                    <field name="brick">#fdf38c</field>
+                                    <field name="xArg">7</field>
+                                    <field name="zArg">22</field>
+                                    <value name="semi_or_epsilon">
+                                      <block type="bwhat"></block>
+                                    </value>
+                                    <next>
+                                      <block type="circleXZ">
+                                        <field name="radius">1</field>
+                                        <field name="brick">#fdf38c</field>
+                                        <field name="xArg">23</field>
+                                        <field name="zArg">22</field>
+                                        <value name="semi_or_epsilon">
+                                          <block type="bwhat"></block>
+                                        </value>
+                                        <next>
+                                          <block type="circleXZ">
+                                            <field name="radius">1</field>
+                                            <field name="brick">#000000</field>
+                                            <field name="xArg">11</field>
+                                            <field name="zArg">19</field>
+                                            <value name="semi_or_epsilon">
+                                              <block type="bwhat"></block>
+                                            </value>
+                                            <next>
+                                              <block type="circleXZ">
+                                                <field name="radius">1</field>
+                                                <field name="brick">#000000</field>
+                                                <field name="xArg">19</field>
+                                                <field name="zArg">19</field>
+                                                <value name="semi_or_epsilon">
+                                                  <block type="bwhat"></block>
+                                                </value>
+                                                <next>
+                                                  <block type="circleXZ">
+                                                    <field name="radius">1</field>
+                                                    <field name="brick">#cd6298</field>
+                                                    <field name="xArg">15</field>
+                                                    <field name="zArg">15</field>
+                                                    <value name="semi_or_epsilon">
+                                                      <block type="bwhat"></block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="show">
+                                                        <field name="artifact">"thing"</field>
+                                                        <value name="semi_or_epsilon">
+                                                          <block type="bwhat"></block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

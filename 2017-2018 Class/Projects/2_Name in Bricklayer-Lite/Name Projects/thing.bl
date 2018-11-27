@@ -1,0 +1,25 @@
+(*& ====================================================
+    @source   bricklayerLite version 1.2
+    @author   your name
+    @class    class-id
+    @exercise exercise-id
+    @year     2016
+    ====================================================
+ &*)
+
+
+open Level_4;
+
+build (32,1,32);
+
+put2D (32,32) BLACK (0,0);
+ringXZ 16 1 LIGHTBLUE (15,15);
+ringXZ 14 1 LIGHTBLUE (15,15);
+ringXZ 12 1 LIGHTBLUE (15,15);
+ringXZ 10 1 LIGHTBLUE (15,15);
+ringXZ 8 1 LIGHTBLUE (15,15);
+ringXZ 6 1 LIGHTBLUE (15,15);
+ringXZ 4 1 LIGHTBLUE (15,15);
+ringXZ 2 1 LIGHTBLUE (15,15);
+
+show2D "thing";
