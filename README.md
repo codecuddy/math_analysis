@@ -5,7 +5,7 @@
 - 2nd Semester Folder
   - Day by Day PowerPoints for an under control pace
 
-* Note: Combine and/or eliminate days when needed. *
+* Note: Combine and/or eliminate days when needed. 
 
 - Images Folder
   - Around Bryan Pics
@@ -29,7 +29,7 @@
   - Projects
     - Contains project folders with code that was turned in... including midterm and final projects
 - 2018-2019 Class
- - Projects
+  - Projects
     - Contains project folders with code that was turned in... including midterm and final projects
 - Books 
   - Contains pdf copies of books that a couple students asked for, but not of any direct value to this class
