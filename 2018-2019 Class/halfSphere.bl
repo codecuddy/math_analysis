@@ -1,0 +1,56 @@
+(*open Level_5;
+
+val dim = 10;
+val max = dim - 1;
+
+fun isEven (x,y,z) = (x+y+z) mod 2 = 0;
+
+fun brickFn (x,y,z) = 
+     if isEven(x,y,z) then BLACK else WHITE;
+
+build (40,40,40);
+traverseWithin (0,0,0) (10,10,10) brickFn;
+
+show "checkered cube";*)
+
+
+open Level_5;
+
+val middle = 12;
+val space = middle*2;
+
+(*fun topSphere(x,y,z) = (
+    sphere middle [BLUE] (middle*2,middle*2,middle*2)
+)
+
+fun bottomSphere(x,y,z) = (
+    sphere middle [RED] (middle*2,middle*2,middle*2) 
+)*)
+
+fun isTop(x,y,z) = y > middle;
+
+fun makeSphere1 (x,y,z) = if isTop(x,y,z) then BLUE
+                           else PINK;
+
+fun makeSphere2 (x,y,z) = 
+    if access(x,y,z) = BLUE andalso y < middle 
+    then GREEN
+    else IDENTITY;
+
+
+build(space, space, space);
+(*sphere middle [RED] (middle,middle,middle);*)
+
+traverseWithin (0,0,0) (space,space,space) makeSphere1;
+traverseWithin (0,0,0) (space,space,space) makeSphere2;
+
+show "sphere";
+
+
+
+open Level_5;
+
+
+
+
+

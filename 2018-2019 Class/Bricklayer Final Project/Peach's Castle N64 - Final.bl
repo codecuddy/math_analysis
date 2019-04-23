@@ -1,0 +1,126 @@
+open Level_5;
+
+(* (0,0,0), ..., (39,39,39) *)
+turnSafetyChecksOff();
+build(200,200,200);
+
+(* Adjust How High the Triangle Goes *)
+val slopeHeight = 10;
+
+(* Adjust the Distance Between the Two Triangles *)
+val distanceBetween = 44;
+
+(* Adjust the Height from the Ground *)
+val heightFromGround = 100;
+
+(* Adjust the Starting and Ending Points *)
+val leftRightSlopeStart = 0;
+val rightLeftSlopeStart = 2*slopeHeight + distanceBetween;
+
+(* Use only if you want to cut the width in half*)
+val slopeWidth = slopeHeight div 2;
+
+(* right to left stairs up *) 
+fun diag (x,y,z) = (z + heightFromGround - y) = (slopeHeight + distanceBetween);
+fun colorDiag (x,y,z)=
+    if diag(x,y,z) then BLACK else GRAY;
+
+fun delAbove (x,y,z) =
+    if access(x,y,z) = GRAY andalso z + heightFromGround - y < slopeHeight + distanceBetween
+    then EMPTY
+    else IDENTITY;
+
+(* left to right stairs up *) 
+fun rdiag (x,y,z) = (z + y) = slopeHeight+heightFromGround;
+fun rcolorDiag (x,y,z) = 
+    if rdiag(x,y,z) then BLACK else GRAY;
+
+fun rdelAbove(x,y,z) = 
+    if access(x,y,z) = GRAY andalso (y + z) > slopeHeight+heightFromGround
+    then EMPTY
+    else IDENTITY;
+
+
+
+
+(*Pyramid Base*)
+val pyramidBase = 23
+val height = 3
+fun pyramid color (xStart,yStart,zStart) = 
+    (
+        put (pyramidBase, height ,pyramidBase) color  (xStart+0 ,yStart+0 , zStart+0 );
+        put (pyramidBase-2,height ,pyramidBase-2) color  (xStart+1 ,yStart+1 , zStart+1 );
+        put (pyramidBase-4,height ,pyramidBase-4) color  (xStart+2 ,yStart+2 , zStart+2 );
+        put ( 5,1 ,5 ) color  (xStart+3 ,yStart+3 , zStart+3 );
+        put ( 3,1 ,3 ) color  (xStart+4 ,yStart+4 , zStart+4 );
+        put ( 1,1 ,1 ) color  (xStart+5 ,yStart+5 , zStart+5 )
+
+    );
+
+    fun tower (x,y,z) = 
+  (
+        hollowCylinderY 4 20 [Cobblestone] (x+20,y+20,z+20);
+        put (3,3,4) Glass (x+22,y+33,z+18);
+        coneY    6 1 [RED] (x+20,y+40,z+20);
+        sphere 10 [Cobblestone] (x+20,y+20,z+19);
+        sphere 10 [EMPTY] (x+20,y+17,z+20);
+        sphere 10 [Cobblestone] (x+20,y+15,z+20);
+        sphere 10 [EMPTY] (x+20,y+10,z+20);
+        sphere 8 [BROWN] (x+20,y+18,z+20);
+        ringY 10 1 1 [GREEN] (x+20,y+19,z+20);  
+        ringY 10 1 1 [BROWN] (x+20,y+18,z+20); 
+        ringY 10 1 1 [GREEN] (x+20,y+17,z+20); 
+        ringY 10 1 1 [BROWN] (x+20,y+16,z+20);      
+        ringY 10 1 1 [GREEN] (x+20,y+15,z+20);
+        ringY 10 1 1 [BROWN] (x+20,y+20,z+20);
+        ringY 15 1 1 [LIGHTNOUGAT] (x+20,y+20,z+20);
+        ringY 14 1 1 [LIGHTNOUGAT] (x+20,y+21,z+20);
+        ringY 13 1 1 [LIGHTNOUGAT] (x+20,y+22,z+20);
+        ringY 12 1 1 [LIGHTNOUGAT] (x+20,y+22,z+20);
+        ringY 11 1 1 [LIGHTNOUGAT] (x+20,y+23,z+20);
+        ringY 10 1 1 [LIGHTNOUGAT] (x+20,y+24,z+20);
+        ringY 9 1 1 [LIGHTNOUGAT] (x+20,y+25,z+20);
+        ringY 8 1 1 [LIGHTNOUGAT] (x+20,y+26,z+20);
+        put (10,1,30) BLACK (x+15,y+15,z+0);
+        put (10,1,30) BLACK (x+15,y+15,z+10)
+       );
+(*Bridge Function *)
+   fun bridge (x,y,z) =
+       (
+       line (x+15,y+10,z+35) (x+15,y+10,z+0) BLACK
+       );
+
+fun castle(x,y,z) = (
+
+    tower (x+0,y+60,z+11);
+        (*Inside bridge part*)
+    bridge  (x+27,y+82,z+11);
+    bridge  (x+25,y+82,z+11);
+    bridge  (x+29,y+82,z+11);
+
+    bridge  (x+26,y+82,z+11);
+    bridge  (x+28,y+82,z+11);
+
+
+        (*left bridge*)
+    bridge(x+30,y+85,z+11);
+    bridge(x+24,y+85,z+11);
+        (*Bridge Function End*)
+    pyramid Cobblestone (x+10,y+69,z+20)
+); 
+
+castle(0,0,0);
+
+(* To Move the Triangle Floating Pieces Above the Castle, Adjust the Variables that are Parameters in the Traverse Function to Correspond with the Shift *)
+
+(*Triangle 1*)
+traverseWithin(leftRightSlopeStart,heightFromGround,slopeHeight) (slopeHeight,slopeHeight+heightFromGround,rightLeftSlopeStart) colorDiag;
+traverseWithin(leftRightSlopeStart,heightFromGround,slopeHeight) (slopeHeight,slopeHeight+heightFromGround,rightLeftSlopeStart) delAbove;  
+
+(*Triangle 2*)
+traverseWithin(leftRightSlopeStart,heightFromGround,leftRightSlopeStart) (slopeHeight,slopeHeight+heightFromGround,slopeHeight) rcolorDiag;
+traverseWithin(leftRightSlopeStart,heightFromGround,leftRightSlopeStart) (slopeHeight,slopeHeight+heightFromGround,slopeHeight) rdelAbove;
+
+
+
+show "sphere";

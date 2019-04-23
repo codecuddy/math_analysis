@@ -1,0 +1,244 @@
+open Level_4;
+
+fun A (x,y,z) =
+	(
+line (x+5,y+10,z+0) (x+0,y+0,z+0) RED;
+line (x+5,y+10,z+0) (x+10,y+0,z+0) RED;
+line (x+3,y+5,z+0) (x+7,y+5,z+0) RED
+	);
+
+
+fun B (x,y,z) =
+	(
+line (x+1,y+0,z+7) (x+1,y+0,z+8) RED;
+line (x+1,y+0,z+8) (x+1,y+10,z+8) RED;
+ringX 2 1 1 [RED] (x+1,y+8,z+6);
+ringX 3 1 1 [RED] (x+1,y+3,z+5)
+
+);
+fun C (x,y,z)=
+
+(
+put (6,1,0) LIGHTROYALBLUE (x+1,y+7,z);
+line (x+0,y+7,z+0) (x,y,z) LIGHTROYALBLUE;
+put (6,1,0) LIGHTROYALBLUE (x+1,y,z);
+put (1,1,0) LIGHTROYALBLUE (x+6,y+6,z);
+put (1,1,0) LIGHTROYALBLUE (x+6,y+1,z+1)
+);
+
+
+fun D (x,y,z) =
+	(
+line (x+0,y+0,z+7) (x+0,y+10,z+7) RED;
+line (x+0,y+10,z+5) (x+0,y+10,z+7) RED;
+line (x+0,y+10,z+5) (x+0,y+6,z+1) RED;
+line (x+0,y+6,z+1) (x+0,y+4,z+1) RED;
+line (x+0,y+4,z+1) (x+0,y+0,z+5) RED;
+line (x+0,y+0,z+7) (x+0,y+0,z+5) RED
+	);
+
+
+fun E (x,y,z) =
+
+(
+putMultibrick (1,10,1) [VIOLET,RED,BLUE] (x,y,z);
+putMultibrick (5,2,1) [VIOLET,RED,BLUE] (x,y,z);
+putMultibrick (5,2,1)[VIOLET,RED,BLUE] (x,y+5,z);
+putMultibrick (5,1,1) [VIOLET,RED,BLUE] (x,y+10,z)
+);
+
+fun F (x,y,z)=
+
+(
+
+put (1,8,0) RED (x+1,y+0,z);
+put (5,1,0) RED (x+2,y+7,z);
+put (5,1,0) RED (x+1,y+4,z)
+);
+
+
+fun G (x,y,z)=
+
+(
+line (x+1,y+0,z+0) (x+8,y,z) RED;
+put (1,3,0) RED (x+7,y+1,z);
+put (1,6,0) RED (x,y+1,z);
+line (x+4,y+3,z+0) (x+6,y+3,z) RED;
+put (6,1,0) RED (x+1,y+7,z)
+);
+
+fun H (x,y,z)=
+
+(
+
+put (1,8,0) RED (x+1,y+0,z);
+put (1,8,0) RED (x+6,y+0,z);
+put (5,1,0) RED (x+1,y+4,z)
+);
+
+fun I (x,y,z)=
+
+(
+putMultibrick (3,10,1) [YELLOW,WHITE,PINK] (x+16,y,z);
+putMultibrick (11,1,1) [YELLOW,WHITE,PINK] (x+12,y+10,z);
+putMultibrick (11,1,1) [YELLOW,WHITE,PINK] (x+12,y,z)
+);
+(*JK*)
+
+fun L (x,y,z)=
+
+(
+putMultibrick (2,10,1) [VIOLET,WHITE,BLUE] (x,y,z);
+putMultibrick (7,2,1) [VIOLET,WHITE,BLUE] (x,y,z)
+);
+
+
+fun M (x,y,z) =
+
+(
+
+put (1,8,0) RED (x,y,z);
+put (1,8,0) RED (x+8,y,z);
+line (x,y+6,z) (x+4,y,z) RED;
+line (x+4,y,z) (x+8,y+6,z) RED
+);
+
+fun N (x,y,z) =
+	(
+		line (x+2,y+9,z+1) (x+6,y+1,z+1) RED;
+		put (1,10,1) RED (x+1,y+1,z+1);
+		put (1,10,1) RED (x+6,y+1,z+1) 
+	);
+
+fun O (x,y,z)=
+
+(
+ringX 8 1 8 [BLUE,GREEN] (x,y+8,z+8)
+);
+
+fun P (x, y, z)=
+
+(
+putMultibrick (2,10,3) [VIOLET,WHITE,BLUE] (x+8,y,z);
+ringZ 2 1 3 [BLUE] (x+11,y+7,z)
+);
+
+fun Q (x,y,z) =
+    (
+        put (4,1,1) GREEN (x+13,y+1,z+1);
+        put (4,1,1) GREEN (x+13,y+9,z+1);
+        put (1,5,1) GREEN (x+11,y+3,z+1);
+        put (1,5,1) GREEN (x+18,y+3,z+1);
+        put (1,1,1) GREEN (x+12,y+2,z+1);
+        put (1,1,1) GREEN (x+12,y+8,z+1);
+        put (1,1,1) GREEN (x+17,y+2,z+1);
+        put (1,1,1) GREEN (x+17,y+8,z+1);
+        put (1,1,1) GREEN (x+18,y+1,z+1);
+        put (1,1,1) GREEN (x+16,y+3,z+1)
+    );
+
+fun R (x, y, z)=
+
+(
+putMultibrick (2,10,3) [VIOLET,WHITE,BLUE] (x+8,y,z);
+ringZ 2 1 3 [BLUE] (x+11,y+7,z);
+line (x+9,y+5,z) (x+14,y,z) BLUE;
+line (x+9,y+5,z+1) (x+14,y,z+1) BLUE;
+line (x+9,y+5,z+2) (x+14,y,z+2) BLUE
+);
+
+fun S (x,y,z)=
+
+(
+line (x+7,y+7,z+1) (x+0,y+7,z+1) RED;
+line (x+0,y+4,z+1) (x+0,y+6,z+1) RED;
+line (x+7,y+4,z+1) (x+0,y+4,z+1) RED;
+line (x+7,y+0,z+1) (x+7,y+3,z+1) RED;
+line (x+7,y+1,z+1) (x+0,y+1,z+1) RED
+);
+
+fun T (x,y,z)=
+(
+putMultibrick (1,4,1) [RED,WHITE,BLACK] (x+5,y+1,z+8);
+putMultibrick (5,1,1) [RED,WHITE,BLACK] (x+3,y+4,z+8)
+);
+
+fun U (x,y,z)=
+
+(
+
+put (1,8,0) RED (x+1,y+0,z);
+put (1,8,0) RED (x+6,y+0,z);
+put (5,1,0) RED (x+1,y+0,z)
+);
+
+fun V (x,y,z) =
+    (
+        line (x+21,y+10,z+1) (x+24,y+1,z+1) BLUE;
+        line (x+27,y+10,z+1) (x+24,y+1,z+1) BLUE
+    );
+
+fun W (x,y,z)=
+(
+
+line (x,y+7,z) (x,y,z) DARKLAVENDER;
+line (x+2,y+2,z) (x+1,y,z) DARKLAVENDER;
+line (x+6,y,z) (x+4,y+3,z) DARKLAVENDER;
+put (2,2,z) DARKLAVENDER (x+3,y+2,z);
+line (x+7,y+7,z) (x+7,y,z) DARKLAVENDER
+);
+
+fun X (x,y,z)=
+    ( 
+line (x+10,y+10,z+1) (x+1,y+1,z+1) RED;
+line (x+1,y+10,z+1) (x+10,y+1,z+1) RED
+    );
+
+fun Y (x, y, z)=
+
+(
+line (x+15,y+9,z) (x+19, y+6,z) BLUE;
+line (x+15,y+9,z+1) (x+19, y+6,z+1) BLUE;
+line (x+15,y+9,z+2) (x+19,y+6,z+2) BLUE;
+line (x+19,y+6,z) (x+23, y+9,z) BLUE;
+line (x+19,y+6,z+1) (x+23, y+9,z+1) BLUE;
+line (x+19,y+6,z+2) (x+23, y+9,z+2) BLUE;
+putMultibrick (1,6,3) [VIOLET,WHITE,BLUE] (x+19,y,z)
+);
+
+fun Z (x,y,z)=
+    ( 
+put (10,1,1) BLUE (x,y,z+10);
+put (10,1,1) BLUE (x,y+10,z+10);
+line (x+10,y+10,z+10) (x,y,z+10) BLUE
+    );
+
+
+build (220,220,220);
+
+A(0,0,0);
+B (10,0,0);
+C (20,0,0);
+D (20,1,0);
+E (30,0,0);
+F (40,0,0);
+G (50,0,0);
+H (60,0,0);
+I (55,0,0);
+M (80,0,0);
+N (90,0,0);
+O (100,0,0);
+P (110,0,0);
+Q (120,0,0);
+R (130,0,0);
+S (140,0,0);
+T (150,0,0);
+U (160,0,0);
+V (170,0,0);
+W (180,0,0);
+X (200,0,0);
+Y (205,0,0);
+Z (210,0,0);
+
+
+show "Texturing with brick_type lists";

@@ -1,6 +1,6 @@
 open Level_5;
 build(100,100,100);
-hollowSphere 25 12 [TRANSPARENT] (30,8,30);
+(*hollowSphere 25 12 [TRANSPARENT] (30,8,30);*)
 (*Big Mountain*)
 coneY 11 3 [ORANGE, ORANGE, BROWN] (20,1,20);
 coneY 7 3 [ORANGE, ORANGE, BROWN] (30,1,25); 

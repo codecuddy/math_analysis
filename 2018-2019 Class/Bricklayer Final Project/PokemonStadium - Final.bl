@@ -1,0 +1,97 @@
+open Level_5;
+
+            (*I need to put lighting on here somewhere.
+            Maybe place some torches and such underneath the basic and pokeball layers.
+            I am unsure how to place minecraft bricks..
+            Color Code for Minecraft Bricks:
+            Gray Bricks = Cobblestone
+            Black Bricks = Obsidian
+            Red Bricks = Redstone Block
+            White (also known as pink, from pokeball and top functions) bricks = Quartz
+            Green Bricks = Grass
+            Dark Green Bricks = Slime
+            Someone please show me the way ;-;*)
+fun base (xStart,yStart,zStart) = 
+    (
+        put (17,1 ,19) GRAY (xStart+0 ,yStart+0 , zStart+0);
+        put (15,1 ,17) BLACK (xStart+1 ,yStart+0 , zStart+1);
+        put (15,1 ,17) BLACK (xStart+1 ,yStart+0 , zStart+1)
+    );
+
+fun corners (x,y,z) =
+    (
+        put (3,1,3) GRAY (x,y,z);
+        put (1,1,1) BLACK (x+2,y,z+2);
+        put (1,1,1) BLACK (x+1,y,z+1);
+        put (3,1,3) GRAY (x+14,y,z);
+        put (1,1,1) BLACK (x+14,y,z+2);
+        put (1,1,1) BLACK (x+15,y,z+1);
+        put (3,1,3) GRAY (x,y,z+16);
+        put (1,1,1) BLACK (x+2,y,z+16);
+        put (1,1,1) BLACK (x+1,y,z+17);
+        put (3,1,3) GRAY (x+14,y,z+16);
+        put (1,1,1) BLACK (x+14,y,z+16);
+        put (1,1,1) BLACK (x+15,y,z+17)
+    );
+
+val yard = 1;
+fun underbase (xStart, yStart, zStart) =
+    (
+        put (yard*15,yard ,yard*15) BLACK (xStart+1 ,yStart+4, zStart+1 );
+        put (yard*13,yard ,yard*13) GRAY (xStart+2 ,yStart+3, zStart+2 );
+        put (yard*11,yard ,yard*11) GRAY (xStart+3 ,yStart+2, zStart+3 );
+        put (yard* 13,yard ,yard*13 ) GRAY (xStart+2 ,yStart+1 , zStart+2 );
+        put (yard* 5,yard ,yard*5 ) BLACK (xStart+6 ,yStart+0 , zStart+6 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-1 , zStart+7 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-2 , zStart+7 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-3, zStart+7 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-4, zStart+7 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-5, zStart+7 );
+        put (yard* 3,yard ,yard*3 ) GRAY (xStart+7 ,yStart-6, zStart+7 )
+    );
+
+fun basic (xStart, yStart, zStart) =
+    (
+        put (13,1 ,15) GREEN (xStart+1 ,yStart+0 , zStart+1);
+        line (13,10,4) (13,10,3) DARKGREEN;
+        line (13,10, 15) (13,10, 14) DARKGREEN
+    );
+
+fun pokeball2 (x,y,z) =
+    (
+        hollowCylinderX 3 1 (*always put thickness = to radius*) [RED] (x+3,x+3,x+3)
+    );
+
+val top = 3;
+fun lid (x,y,z) = 
+    (
+        hollowCylinderY top 1 (*always put thickness = to radius*) [PINK] (x+top,y,z+top)
+    );
+fun brickC (x,y,z) = 
+        if x > 12 then RED else WHITE;
+fun pbshape (x,y,z) =
+        if access(x,y,z) = PINK then brickC(x,y,z) else GREEN;
+val half = top + 2;
+val max = half * 2
+fun pokeball (x,y,z) = 
+    (
+        lid (x,y,z)
+    );
+        
+
+fun stadium (x,y,z) = (
+
+);
+
+build (100,100,100);
+
+
+base (5,10,0);
+underbase  (5,5,1);
+basic (6,10,1);
+pokeball (10,10,6);
+traverseWithin (10,10,5) (17,10,12) pbshape;
+line (13,10,12) (13,10,6) BLACK;
+corners (5,10,0);
+
+show "PokemonStadium";

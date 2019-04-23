@@ -1,0 +1,33 @@
+open Level_5;
+build(50,50,50);
+val startCube = 0;
+val cubeSize = 4;
+
+(* diag in the z direction *) 
+fun diag (x,y,z) = (z = y);
+fun colorDiag (x,y,z)=
+    if diag(x,y,z) then BLACK else GRAY;
+
+fun delAbove (x,y,z) =
+    if access(x,y,z) = GRAY andalso y > z
+    then EMPTY
+    else IDENTITY;
+
+(* diag in the reverse z direction *) 
+fun rdiag (x,y,z) = (z + y) = cubeSize;
+fun rcolorDiag (x,y,z) = 
+    if rdiag(x,y,z) then BLACK else GRAY;
+
+fun rdelAbove(x,y,z) = 
+    if access(x,y,z) = GRAY andalso (y + z) > cubeSize
+    then EMPTY
+    else IDENTITY;
+
+(*
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) colorDiag;
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) delAbove; *)
+
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) rcolorDiag;
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) rdelAbove;
+
+show "thing";

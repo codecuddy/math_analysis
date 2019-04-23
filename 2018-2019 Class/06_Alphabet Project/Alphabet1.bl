@@ -1,0 +1,221 @@
+open Level_4;
+
+val shiftRight = 8;
+val shiftUp = 9;
+
+fun F color (x,y,z) =
+	(
+		put (4,2,1) color (1+x,6+y,z);
+		put (2,2,1) color (x+2,y+3,z);
+		put (2,8,1) color (x,y,z) 
+	);
+fun C color (x,y,z) =
+	(
+		put (6,1,1) color (x+1,y+0,z+0);
+		put (1,6,1) color (x+0,y+1,z+0);
+		put (6,1,1) color (x+1,y+7,z+0) 
+	);
+fun D color (x,y,z) =
+	(
+		put (1,8,1) color (x,y,z);
+		line (1+x,y,z) (3+x,2+y,z) color;
+		put (1,4,z) color (3+x,2+y,z);
+		line (1+x,7+y,z) (3+x,5+y,z) color 
+	);
+fun T color (x,y,z) =
+	(
+		put (1,8,1) color (x+3,y+0,z+0);
+		put (7,1,1) color (x+0,y+7,z+0) 
+	);
+fun Q color (x,y,z) =
+	(
+		ringZ 3 1 1 [color] (x+4,y+4,z);
+		line (x+3,y+3,z) (x+0,y+0,z) color 
+	);
+fun K color(x,y,z) =
+	(
+		put (2,8,z) color (x,y,z);
+		line (1+x,3+y,z) (4+x,7+y,z) color;
+		line (2+x,4+y,z) (5+x,7+y,z) color;
+		line (1+x,4+y,z) (5+x,y,z) color; 
+		line (2+x,3+y,z) (6+x,y,z) color 
+	);
+fun J color(x,y,z) =
+	(
+		put (4,1,0) color (x+0,y+0,z+0);
+		put (1,6,0) color (x+3,y+1,z+0);
+		put (7,1,0) color (x+0,y+7,z+0) 
+	);
+fun N color (x,y,z) =
+	(
+		put (2,8,z) color (x+0,y+0,z+0);
+		put (2,8,z) color (x+7,y+0,z+0);
+		line (x+1,y+7,z) (x+6,y+1,z) color;
+		line (x+1,y+6,z) (x+6,y+0,z) color 
+	);
+fun U color (x,y,z) =
+	(
+		put (1,7,1) color (x+0,y+1,z+0);
+		put (6,1,1) color (x+1,y+1,z+0);
+		put (1,7,1) color (x+7,y+1,z+0) 
+	);
+fun O color (x,y,z) =
+	(
+		put (1,4,0) color (x+0,y+2,z+0);
+		put (4,1,0) color (x+2,y+0,z+0);
+		put (1,4,0) color (x+7,y+2,z+0);
+		put (4,1,0) color (x+2,y+7,z+0);
+		put (1,1,0) color (x+6,y+6,z+0);
+		put (1,1,0) color (x+1,y+6,z+0);
+		put (1,1,0) color (x+6,y+1,z+0);
+		put (1,1,0) color (x+1,y+1,z+0) 
+	);
+fun P color (x,y,z) =
+	(
+		put (1,8,0) color (x+2,y+0,z+0);
+		ringZ 1 1 1 [color] (x+3,y+6,z+0) 
+	);
+fun V color (x,y,z) =
+	(
+		line (x+0,y+7,z+0) (x+3,y+0,z+0) color;
+		line (x+6,y+7,z+0) (x+3,y+0,z+0) color 
+	);
+
+fun X color (x,y,z) =
+	(
+		line (x+0,y+0,z+0) (x+7,y+7,z+0) color;
+		line (x+0,y+7,z+0) (x+7,y+0,z+0) color;
+		line (x+1,y+7,z+0) (x+3,y+5,z+0) color;
+		line (x+6,y+0,z+0) (x+4,y+2,z+0) color;
+		line (x+0,y+1,z+0) (x+2,y+3,z+0) color;
+		line (x+7,y+6,z+0) (x+5,y+4,z+0) color 
+	);
+fun Z color(x,y,z) =
+	(
+		line (x+0,y+0,z+0) (x+6,y+0,z+0) color;
+		line (x+0,y+7,z+0) (x+6,y+7,z+0) color;
+		line (x+0,y+1,z+0) (x+5,y+6,z+0) color;
+		line (x+1,y+1,z+0) (x+6,y+6,z+0) color 
+	);
+
+fun H color (x,y,z) =
+(
+put (1,8,1) color   (x,y,z);
+put (1,8,1) color   (4+x,y,z);
+put (5,1,1) color   (x,4+y,z)
+);
+
+fun W color(x,y,z) =
+	(
+		line (x+0,y+7,z+0) (x+2,y+0,z+0) color;
+		line (x+2,y+0,z+0) (x+4,y+4,z+0) color;
+		line (x+4,y+4,z+0) (x+6,y+0,z+0) color;
+		line (x+6,y+0,z+0) (x+8,y+7,z+0) color 
+	);
+
+fun S color (x,y,z) =
+	(
+		put (1,1,1) color (2+x,y,z); 
+		put (1,1,1) color (x,y+1,z);
+		put (1,1,1) color (1+x,y,z); 
+		put (2,1,1) color (3+x,y,z); 
+		put (1,2,1) color (4+x,1+y,z); 
+		put (3,1,1) color (1+x,3+y,z); 
+		put (1,2,1) color (x,4+y,z); 
+		put (3,1,1) color (1+x,6+y,z);
+        put (1,1,1) color (4+x,5+y,z)
+	);
+
+fun G color(x,y,z) =
+	(
+		line (x+0,y+1,z) (x+0,y+6,z) color;
+		line (x+1,y+7,z) (x+6,y+7,z) color;
+		line (x+1,y+0,z) (x+5,y+0,z) color;
+		line (x+6,y+1,z) (x+6,y+3,z) color;
+		line (x+5,y+4,z) (x+3,y+4,z) color 
+	);
+
+fun M color(x,y,z) =
+	(
+		put  (1,8,0) color (x+7,y+0,z+0);
+		put (1,8,0) color (x+0,y+0,z+0);
+		line (x+0,y+8,z+0) (x+3,y+4,z+0) color;
+		line (x+6,y+7,z+0) (x+4,y+4,z+0) color 
+	);
+
+fun Y color (x,y,z) =
+	(
+		put (2,4,1) color (3+x,y,z);
+		line (x,7+y,z) (3+x,4+y,z) color;
+		line (x,6+y,z) (3+x,3+y,z) color;
+		line (4+x,4+y,z) (7+x,7+y,z) color;
+		line (4+x,3+y,z) (7+x,6+y,z) color 
+	);
+
+fun E color (x,y,z) =
+	(
+		put (2,8,0) color (x+0,y+0,z+0);
+		put (6,2,0) color (x+0,y+0,z+0);
+		put (5,2,0) color (x+0,y+3,z+0);
+		put (6,2,0) color (x+0,y+6,z+0) 
+	);
+
+fun R color (x,y,z) =
+	(
+		put (1,8,0) color (x+0,y+0,z+0);
+		ringZ 2 1 1 [color] (x+2,y+5,z+0);
+		line (x+1,y+2,z+0) (x+4,y+0,z+0) color 
+	);
+
+fun L color (x,y,z) =
+	(
+		line (x+0,y+0,z) (x+0,y+7,z) color;
+        line (x+1,y+0,z) (x+1,y+7,z) color;
+        line (x+2,y+1,z) (x+5,y+1,z) color;
+		line (x+2,y+0,z) (x+5,y+0,z) color 
+	);
+
+fun I color (x,y,z) =
+	(
+		put (6,2,1) color (1+x,6+y,z);
+		put (2,6,1) color (3+x,1+y,z);
+		put (6,2,1) color (1+x,y,z) 
+	);
+
+fun A color (x,y,z) =
+(
+		put (2,5,z) color (x+0,y,z);
+		put (2,5,z) color (x+5,y,z);
+		line (x+1,y+5,z) (x+3,y+7,z) color;
+        line (x,y+5,z) (x+2,y+7,z) color;
+		line (x+5,y+5,z) (x+3,y+7,z) color;
+        line (x+6,y+5,z) (x+3,y+8,z) color;
+		put (3,1,z) color (x+2,y+2,z) 
+	);
+
+fun B color (x,y,z) =
+	(
+		line (x+0,y+0,z+0) (x+0,y+7,z+0) color;
+		line (x+0,y+7,z+0) (x+2,y+7,z+0) color;
+		put (1,2,1) color (x+3,y+5,z+0);
+		put (2,1,1) color (x+1,y+4,z+0);
+		put (2,1,1) color (x+1,y+3,z+0);
+		put (1,2,1) color (x+3,y+1,z+0);
+		put (2,1,1) color (x+1,y+0,z+0) 
+	);
+
+build(80,80,80);
+
+A RED (0,shiftUp,0);
+A BLUE (shiftRight,shiftUp,0);
+A CLEARROUND (2*shiftRight,shiftUp,0);
+(*D WHITE (3*shiftRight,shiftUp,0);
+E CLEARGREENNOSECONE (4*shiftRight,shiftUp,0);
+F WHITE (5*shiftRight,shiftUp,0);
+G WHITE (0,0,0);
+H WHITE (shiftRight,0,0);
+I CLEARROUND (2*shiftRight,0,0);
+J WHITE (3*shiftRight,0,0);
+K CLEARGREENNOSECONE (4*shiftRight,0,0);
+L WHITE (5*shiftRight,0,0);*)
+show "thing";

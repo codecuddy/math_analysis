@@ -1,0 +1,69 @@
+open Level_5;
+build(100,50,100);
+
+(*
+**** ONLY ADJUST THE FIRST 3 VARIABLES ****
+TO CHANGE THE SIZE (slopeHeight), 
+THE SPACE BETWEEN (distanceBetween), 
+AND/OR THE POSITION IN THE SKY (heightFromGround) 
+*)
+
+(* Adjust How High the Triangle Goes *)
+val slopeHeight = 18;
+
+(* Adjust the Distance Between the Two Triangles *)
+val distanceBetween = 14;
+
+(* Adjust the Height from the Ground *)
+val heightFromGround = 2;
+
+
+
+
+
+(* Adjust the Starting and Ending Points *)
+val leftRightSlopeStart = 0;
+val rightLeftSlopeStart = 2*slopeHeight + distanceBetween;
+
+(* Use only if you want to cut the width in half*)
+val slopeWidth = slopeHeight div 2;
+
+(* right to left stairs up *) 
+fun diag (x,y,z) = (z + heightFromGround - y) = (slopeHeight + distanceBetween);
+fun colorDiag (x,y,z)=
+    if diag(x,y,z) then BLACK else GRAY;
+
+fun delAbove (x,y,z) =
+    if access(x,y,z) = GRAY andalso z + heightFromGround - y < slopeHeight + distanceBetween
+    then EMPTY
+    else IDENTITY;
+
+(* left to right stairs up *) 
+fun rdiag (x,y,z) = (z + y) = slopeHeight+heightFromGround;
+fun rcolorDiag (x,y,z) = 
+    if rdiag(x,y,z) then GREEN else RED;
+
+fun rdelAbove(x,y,z) = 
+    if access(x,y,z) = RED andalso (y + z) > slopeHeight+heightFromGround
+    then EMPTY
+    else IDENTITY;
+
+(* use these two functions only if you want to cut the width of the stairs in half *)
+fun halfStair (x,y,z) = 
+    if access(x,y,z) = GRAY andalso x > slopeWidth
+    then EMPTY
+    else IDENTITY;
+
+fun bhalfStair (x,y,z) = 
+    if access(x,y,z) = BLACK andalso x > slopeWidth
+    then EMPTY
+    else IDENTITY;
+
+
+traverseWithin(leftRightSlopeStart,heightFromGround,slopeHeight) (slopeHeight,slopeHeight+heightFromGround,rightLeftSlopeStart) colorDiag;
+traverseWithin(leftRightSlopeStart,heightFromGround,slopeHeight) (slopeHeight,slopeHeight+heightFromGround,rightLeftSlopeStart) delAbove;  
+
+traverseWithin(leftRightSlopeStart,heightFromGround,leftRightSlopeStart) (slopeHeight,slopeHeight+heightFromGround,slopeHeight) rcolorDiag;
+traverseWithin(leftRightSlopeStart,heightFromGround,leftRightSlopeStart) (slopeHeight,slopeHeight+heightFromGround,slopeHeight) rdelAbove;
+
+show "thing";

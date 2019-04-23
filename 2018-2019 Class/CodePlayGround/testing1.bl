@@ -1,0 +1,21 @@
+open Level_5;
+build(100,80,20);
+
+val bigCube = 20;
+val smallCube = bigCube - bigCube div 5;
+val cubeSpace = bigCube + 1;
+
+fun pic color1 color2(x,y,z) = (
+    put(bigCube,bigCube,bigCube) color1 (x,y,z);
+    put (smallCube,smallCube,smallCube) color2 (x,y,z)
+);
+
+fun bigPic color1 color2 color3 color4 (x,y,z) = (
+    pic color1 color2 (x,y,z);
+    pic color3 color4 (x+cubeSpace,y,z)
+);
+
+bigPic GREEN YELLOW BLUE VIOLET (0,0,0);
+bigPic WHITE BLACK PINK ORANGE (0,cubeSpace,0);
+
+show "thing";

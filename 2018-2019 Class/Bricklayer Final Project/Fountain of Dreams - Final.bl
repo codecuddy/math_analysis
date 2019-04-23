@@ -1,0 +1,99 @@
+open Level_5;
+
+(*  list of mincraft blocks:
+https://bricklayer.org/apps/BricklayerWeb/blocks/legend_Minecraft.html
+ *)
+
+
+
+fun sparkles (x,y,z) = (
+ringY 16 8 1 [LightBlueWool, PurpleWool, BlueWool, MagentaWool, PinkWool, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY] (x,y+1,z+4);
+ringY 15 6 2 [LightBlueWool, PurpleWool, BlueWool, MagentaWool, PinkWool, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY] (x,y+1,z+4);
+ringY 14 4 3 [LightBlueWool, PurpleWool, BlueWool, MagentaWool, PinkWool, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY] (x,y+1,z+4);
+ringY 13 2 4 [LightBlueWool, PurpleWool, BlueWool, MagentaWool, PinkWool, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY] (x,y+1,z+4); 
+put (40,10,20) EMPTY (x-23,y+1,z-16);
+put (40,3,1) EMPTY (x-23,y+2,z+4);
+put (40,2,1) EMPTY (x-23,y+3,z+5);
+put (40,1,1) EMPTY (x-23,y+4,z+6)
+);
+
+fun tower (x,y,z) =(
+hollowCylinderY 2 8 [Quartz] (x+8,y+1,z+15);
+hollowCylinderY 3 4 [Quartz] (x+8,y+9,z+15)
+)
+fun towerTop (x,y,z) =(
+sphere 4 [VIOLET] (x,y,z);
+put (12,5,12) EMPTY (x-6,y-2,z-6);
+hollowCylinderY 4 5 [VIOLET] (x,y-2,z);
+put (5,1,5) EMPTY (x-2,y-4,z-2)
+);
+fun tower2 (x,y,z) =(
+hollowCylinderY 2 5 [Quartz] (x-11,y+1,z+14);
+hollowCylinderY 3 2 [Quartz] (x-11,y+5,z+15)
+);
+fun towers (x,y,z) =(
+towerTop (x+10,y+16,z+13);
+tower (x+2,y,z-2);
+towerTop (x-11,y+10,z+14);
+tower2 (x,y,z-1)
+);
+
+fun grass (x,y,z) = (
+sphere 17 [LimeWool] (x,y,z+1);
+put (37,18,17) EMPTY (x-18,y-18,z-18);
+put (37,37,37) EMPTY (x-18,y,z-18)
+);
+
+fun grass2 (x,y,z) = (
+put (24,1,5) LimeWool (x-12,y,z+12);
+put (8,1,5) LimeWool (x-16,y,z+6); 
+put (8,1,5) LimeWool (x+9,y,z+6);
+put (8,1,6) LimeWool (x-13,y,z+9);
+put (8,1,6) LimeWool (x+6,y,z+9);
+put (4,1,4) LimeWool (x-16,y,z+2);
+put (4,1,4) LimeWool (x+13,y,z+2)
+);
+
+fun base (x,y,z)=(
+grass (x,y+1,z+3);
+hollowSphere 16 10 [Quartz] (x,y,z);  
+hollowCylinderY 5 30 [Quartz] (x,y-30,z);
+sphere 14 [Water] (x,y,z);
+put (50,20,50) EMPTY (x-17,y+1,z-17);
+ringY 14 17 1 [(*Light*)BlueGlass] (x,y,z);
+grass2 (x,y,z)
+ ); 
+
+fun fount (x,y,z)=(
+ringY 2 3 1 [Quartz] (x,y,z);
+put (3,2,3) Quartz (x-1,y+1,z-1);
+ringY 2 1 2 [Quartz] (x,y+2,z); 
+ringY 3 4 2 [Water] (x,y+3,z);  
+put (3,1,3) Water (x-1,y+3,z-1);
+ringY 3 1 1 [Quartz] (x,y+3,z);
+ringY 4 1 1 [Quartz] (x,y+4,z)
+
+ );
+
+fun plat (x,y,z)=(
+put (7,1,7) QuartzSlab (x,y,z) );
+
+fun triplat (x,y,z)=(
+plat (x-3,y+10,z);
+plat (x-11,y+5,z);
+plat (x+5,y+5,z) );
+
+
+fun fountain (x,y,z)=(
+base (x,y,z);
+sparkles (x,y,z);
+fount (x,y+1,z+6);
+triplat (x,y,z-2);
+towers (x,y,z)
+);
+
+build (100,100,100);
+
+fountain (50,50,50);
+
+show "fountain";

@@ -1,0 +1,22 @@
+open Level_4;
+
+build (32,32,32);
+
+line (1,6,0) (2,7,0) GREEN;
+line (3,7,0) (4,6,0) GREEN;
+line (4,5,0) (1,2,0) GREEN;
+line (1,2,0) (4,2,0) GREEN;
+line (6,3,0) (6,6,0) YELLOW;
+line (7,2,0) (9,2,0) YELLOW;
+line (10,3,0) (10,6,0) YELLOW;
+line (7,7,0) (9,7,0) YELLOW;
+line (12,5,0) (14,7,0) GREEN;
+line (14,6,0) (14,2,0) GREEN;
+line (12,2,0) (16,2,0) GREEN;
+line (12,2,0) (16,2,0) GREEN;
+line (20,2,0) (20,7,0) YELLOW;
+line (19,7,0) (17,6,0) YELLOW;
+line (19,4,0) (18,4,0) YELLOW;
+line (17,5,0) (17,5,0) YELLOW;
+
+show "thing";

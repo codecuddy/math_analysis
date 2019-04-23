@@ -1,0 +1,15 @@
+open Level_5;
+
+val d   = 32;
+val max = d - 1;
+
+val myBlue = rgb(0,0,255);
+
+
+fun colorFn (x,y,z) = rgb (8*x,8*y,8*z);
+
+build (d,d,d);
+
+traverseWithin (0,0,0) (max,max,max) colorFn;
+
+show "cube";

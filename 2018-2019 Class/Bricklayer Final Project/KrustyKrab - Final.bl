@@ -1,0 +1,112 @@
+open Level_4;
+
+fun Roof (x,y,z) =
+    (
+ringX 13 1 44 [DarkOakPlank] (x+1,y+5,z+14);
+put (52,7,50) EMPTY (x+0,y+0,z+0)
+    );
+
+fun Sidewall (x,y,z) =
+    (
+put (1,2,25) DarkOakPlank (x+1,y+7,z+2);
+put (1,2,23) DarkOakPlank (x+1,y+9,z+3);
+put (1,2,21) DarkOakPlank (x+1,y+11,z+4);
+put (1,2,19) DarkOakPlank (x+1,y+13,z+5);
+put (1,1,17) DarkOakPlank (x+1,y+15,z+6);
+put (1,1,14) DarkOakPlank (x+1,y+16,z+7);
+put (1,1,11) DarkOakPlank (x+1,y+17,z+8)
+    );
+
+fun Table (x,y,z) =
+    (
+put (5,1,5) RedWool(x+4,y+2,z+6); 
+put (1,1,1) SeaLantern (x+6,y+2,z+8); 
+line (x+5,y+2,z+7) (x+7,y+2,z+7) YellowWool; 
+line (x+5,y+2,z+7) (x+5,y+2,z+9) YellowWool; 
+line (x+5,y+2,z+9) (x+7,y+2,z+9) YellowWool; 
+line (x+7,y+2,z+9) (x+7,y+2,z+7) YellowWool; 
+put (1,1,1) DarkOak (x+6,y+1,z+8); 
+put (1,1,1) EMPTY (x+4,y+2,z+6); 
+put (1,1,1) EMPTY (x+4,y+2,z+10); 
+put (1,1,1) EMPTY (x+8,y+2,z+6); 
+put(1,1,1) EMPTY (x+8,y+2,z+10); 
+put (1,1,1) BROWNROUND (x+6,y+1,z+5); 
+put (1,1,1) BROWNROUND (x+6,y+1,z+11)
+    );
+
+fun KrustyKrab (x,y,z) = (
+    Roof (x+0,y+0,z+0);
+    Sidewall (x+0,y+0,z+0);
+    Sidewall (x+43,y+0,z+0);
+    Table (x+0,y+0,z+0);
+    Table (x+8,y+0,z+4);
+    Table (x+24,y+0,z+0);
+    Table (x+33,y+0,z+4);
+
+    put (46,1,28) GREEN (x+0,y+0,z+0);
+    put (20,2,2) DarkOakPlank (x+0,y+0,z+0);
+    put (20,2,2) DarkOakPlank (x+26,y+0,z+0);
+    put (2,2,28) DarkOakPlank (x+0,y+0,z+0);
+    put (2,2,28) DarkOakPlank (x+44,y+0,z+0);
+    put (46,2,2) DarkOakPlank (x+0,y+0,z+27);
+    put (4,2,1) DarkOakPlank (x+21,y+5,z+1);
+    line (x+25,y+0,z+1) (x+25,y+6,z+1) DarkOakPlank;
+    line (x+20,y+0,z+1) (x+20,y+6,z+1) DarkOakPlank;
+    line (x+1,y+0,z+1) (x+1,y+6,z+1) DarkOakPlank;
+    line (x+44,y+0,z+1) (x+44,y+6,z+1) DarkOakPlank;
+    line (x+1,y+0,z+27) (x+1,y+6,z+27) DarkOakPlank;
+    line (x+44,y+0,z+27) (x+44,y+6,z+27) DarkOakPlank;
+
+    put (1,2,25) DarkOakPlank (x+44,y+7,z+2);
+    put (1,2,23) DarkOakPlank (x+44,y+9,z+3);
+    put (1,2,21) DarkOakPlank (x+44,y+11,z+4);
+    put (1,2,19) DarkOakPlank (x+44,y+13,z+5);
+    put (1,1,17) DarkOakPlank (x+44,y+15,z+6);
+    put (1,1,14) DarkOakPlank (x+44,y+16,z+7);
+    put (1,1,11) DarkOakPlank (x+44,y+17,z+8);
+
+    put (18,5,1) CLEARLIGHTBLUE (x+26,y+2,z+1);
+    put (18,5,1) CLEARLIGHTBLUE (x+2,y+2,z+1);
+    put (1,5,25) CLEARLIGHTBLUE (x+1,y+2,z+2);
+    put (1,5,25) CLEARLIGHTBLUE (x+44,y+2,z+2);
+    put (2,4,1) CLEARLIGHTBLUE (x+21,y+1,z+1);
+    put (1,4,2) CLEARLIGHTBLUE (x+24,y+1,z+0);
+
+    put (42,5,1) Iron (x+2,y+2,z+27);
+     
+    put (42,7,1) Iron (x+2,y+0,z+18); 
+        
+    put (2,3,2) EMPTY (x+6,y+1,z+18); 
+    put (2,2,1) EMPTY (x+22,y+3,z+18); 
+    line (x+21,y+1,z+17) (x+21,y+1,z+14) OakPlank; 
+    line (x+24,y+1,z+17) (x+24,y+1,z+14) OakPlank; 
+    put  (1,1,1) OakPlank (x+22,y+1,z+13); 
+    put (1,1,1) OakPlank (x+23,y+1,z+13); 
+    line (x+22,y+0,z+17) (x+22,y+0,z+14) OakPlank; 
+    line (x+23,y+0,z+17) (x+23,y+0,z+14) OakPlank; 
+    put  (1,7,9)  Iron (x+17,y+0,z+18); 
+    put (1,7,9) Iron (x+43,y+0,z+18); 
+    put (1,7,9) Iron (x+32,y+0,z+18); 
+    put (2,3,2) EMPTY (x+28,y+1,z+18); 
+    put (2,3,2) EMPTY (x+37,y+1,z+18); 
+    put (42,6,0) Iron (x+2,y+1,z+27); 
+    put (2,1,1) TITANIUM (x+22,y+1,z+19); 
+    put (1,2,1) Iron (x+18,y+1,z+21); 
+    put (1,2,1) Iron (x+18,y+1,z+22); 
+    put (1,1,1) BLACK (x+22,y+1,z+26); 
+    put (1,1,1) BLACK (x+23,y+1,z+26); 
+    put (1,1,1) GRAY (x+20,y+1,z+26); 
+    put (1,1,1) GRAY (x+19,y+1,z+26); 
+    put (4,4,1) Iron (x+33,y+1,z+22); 
+    put (1,4,4) Iron (x+36,y+1,z+23)
+
+
+);
+
+build (100,100,100);
+
+(* Comment out roof in KrustyKrab function to see inside *)
+
+KrustyKrab(30,0,0);
+
+show "KrustyKrab";
