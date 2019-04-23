@@ -1,0 +1,92 @@
+open Level_5;
+
+val cubeSize = 15;
+val dotSize = 1;
+
+fun cube diceColor (x,y,z) = 
+    (
+        put (cubeSize,cubeSize,cubeSize) diceColor (x, y, z);
+        put ( dotSize, dotSize, dotSize) RED  (x, y, z)
+    );
+
+fun one dotColor (x,y,z) = 
+    (
+        put ( 3*dotSize, 2*dotSize, 3*dotSize) dotColor(x+6, y+13, z+6)
+    );
+
+fun two dotColor(x,y,z) = 
+    (
+        put ( 2, 3, 3) dotColor (x, y+ 2, z+ 2);
+        put ( 2, 3, 3) dotColor (x, y+10, z+10)
+    );
+
+fun three dotColor (x,y,z) = 
+    (
+        put ( 3, 3, 2) dotColor (x+10,y+ 2,z+13);
+        put ( 3, 3, 2) dotColor (x+ 6,y+ 6,z+13);
+        put ( 3, 3, 2) dotColor (x+ 2,y+10,z+13)
+    );
+
+fun four dotColor (x,y,z) = 
+    (
+        put ( 3, 3, 2) dotColor (x+ 2,y+10,z);
+        put ( 3, 3, 2) dotColor (x+10,y+10,z);
+        put ( 3, 3, 2) dotColor (x+ 2,y+ 2,z);
+        put ( 3, 3, 2) dotColor (x+10,y+ 2,z)
+    );
+
+fun five dotColor (x,y,z) = 
+    (
+        put ( 2, 3, 3) dotColor (x+13,y+ 2,z+ 2);
+        put ( 2, 3, 3) dotColor (x+13,y+10,z+ 2);
+        put ( 2, 3, 3) dotColor (x+13,y+ 6,z+ 6);
+        put ( 2, 3, 3) dotColor (x+13,y+ 2,z+10);
+        put ( 2, 3, 3) dotColor (x+13,y+10,z+10)
+    );
+
+fun six dotColor (x,y,z) = 
+    (
+        put ( 3, 2, 3) dotColor (x+ 2,y,z+ 2);
+        put ( 3, 2, 3) dotColor (x+10,y,z+ 2);
+        put ( 3, 2, 3) dotColor (x+ 2,y,z+ 6);
+        put ( 3, 2, 3) dotColor (x+10,y,z+ 6);
+        put ( 3, 2, 3) dotColor (x+ 2,y,z+10);
+        put ( 3, 2, 3) dotColor (x+10,y,z+10)
+
+    );
+
+fun dice color1 color2 (x,y,z) =
+    (
+        cube  color1 (x,y,z);
+        one   color2 (x,y,z);
+        two   color2 (x,y,z);
+        three color2 (x,y,z);
+        four  color2 (x,y,z);
+        five  color2 (x,y,z);
+        six   color2 (x,y,z)
+    );
+
+build(60,30,30);
+
+dice TRANSPARENT VIOLET (cubeSize+10,0,0);
+(*
+dice DARKRED WHITE (0,0,0);
+dice PINK VIOLET (2*cubeSize,0,0);
+dice BLUE YELLOW (cubeSize + 1,0,0);
+dice BLACK WHITE (cubeSize + 1,0,cubeSize + 1);
+dice ORANGE VIOLET (0,0,cubeSize + 1);
+dice SILVER BLACK (0, cubeSize + 1, 0);
+dice VIOLET PINK (cubeSize + 1, cubeSize + 1, 0);
+dice TITANIUM REDDISHVIOLET (0, cubeSize + 1, cubeSize + 1);
+dice LIGHTNOUGAT RED (cubeSize + 1, cubeSize + 1, cubeSize + 1);
+*)
+
+(*show in LDraw*)
+(*showLDR "dice"*)
+
+(*show in LDD*)
+show "dice"
+
+(*show as a .stl file for 3D printing*)
+(*note: change dotColor to EMPTY before attempting to 3D print*)
+(*showSTL_ASCII "dice"*)

@@ -1,0 +1,13 @@
+open Level_5;
+
+fun vert_cross(x,y,z) = 
+    (
+        put (1,7,1)  BLUE    (x+2,  y, z  );
+        put (5,1, 1)  BLUE  (x,  y+4, z)
+    );
+
+build(32,32,32);
+
+vert_cross(0,0,0);
+
+show "cross";

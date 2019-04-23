@@ -1,0 +1,41 @@
+open Level_5;
+
+val yard = 1;
+
+fun pyramid color color1 (xStart,yStart,zStart) = 
+    (
+        put (yard*11,yard ,yard*11) color1 (xStart+0 ,yStart+0 , zStart+0 );
+        put (yard* 9,yard ,yard*9 ) color (xStart+1 ,yStart+1 , zStart+1 );
+        put (yard* 7,yard ,yard*7 ) color1 (xStart+2 ,yStart+2 , zStart+2 );
+        put (yard* 5,yard ,yard*5 ) color (xStart+3 ,yStart+3 , zStart+3 );
+        put (yard* 3,yard ,yard*3 ) color1 (xStart+4 ,yStart+4 , zStart+4 );
+        put (yard* 1,yard ,yard*1 ) color (xStart+5 ,yStart+5 , zStart+5 );
+
+        put (yard*11,yard ,yard*11) color1 (xStart+0 ,yStart+11, zStart+0 );
+        put (yard* 9,yard ,yard*9 ) color (xStart+1 ,yStart+10 , zStart+1 );
+        put (yard* 7,yard ,yard*7 ) color1 (xStart+2 ,yStart+9 , zStart+2 );
+        put (yard* 5,yard ,yard*5 ) color (xStart+3 ,yStart+8 , zStart+3 );
+        put (yard* 3,yard ,yard*3 ) color1 (xStart+4 ,yStart+7 , zStart+4 );
+        put (yard* 1,yard ,yard*1 ) color (xStart+5 ,yStart+6 , zStart+5 )
+
+    );
+
+fun repeatHourGlass (x,y,z) = (
+        pyramid BLUE PINK (x,y,z);
+        pyramid YELLOW GREEN (x+11,y,z);
+        pyramid RED BLACK (x,y,z+11);
+        pyramid WHITE VIOLET (x+11,y,z+11)
+
+);
+
+build(100,100,100);
+repeatHourGlass(0,0,0);
+repeatHourGlass(33,0,0);
+repeatHourGlass(0,0,33);
+repeatHourGlass(33,0,33);
+repeatHourGlass(0,11,0);
+repeatHourGlass(33,11,0);
+repeatHourGlass(0,11,33);
+repeatHourGlass(33,11,33);
+
+show "pyramid";

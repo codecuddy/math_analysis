@@ -1,0 +1,182 @@
+open Level_5;
+
+val d   = 100;
+val max = d - 1;
+
+val side = 5;
+
+fun cube b (x,y,z) =
+    (
+        put (side,side,side) b (x,y,z)
+    );
+
+(* https://www.rapidtables.com/web/color/RGB_Color.html *)
+    
+val purple = rgb (255,0,255);
+val yellow = rgb (255,255,0);
+
+val blue1 = rgb(204,204,255);
+val blue2 = rgb(153,153,255);
+val blue3 = rgb(102,102,255);
+val blue4 = rgb( 51, 51,255);
+val blue5 = rgb(  0,  0,255);
+val blue6 = rgb(  0,  0,204);
+val blue7 = rgb(  0,  0,153);
+val blue8 = rgb(  0,  0,102);
+val blue9 = rgb(  0,  0, 51);
+
+val aqua1 = rgb(204,255,255);
+val aqua2 = rgb(153,255,255);
+val aqua3 = rgb(102,255,255);
+val aqua4 = rgb( 51,255,255);
+val aqua5 = rgb(  0,255,255);
+val aqua6 = rgb(  0,204,204);
+val aqua7 = rgb(  0,153,153);
+val aqua8 = rgb(  0,102,102);
+val aqua9 = rgb(  0, 51, 51);
+
+val purple1 = rgb(255,204,255);
+val purple2 = rgb(255,153,255);
+val purple3 = rgb(255,102,255);
+val purple4 = rgb(255, 51,255);
+val purple5 = rgb(255,  0,255);
+val purple6 = rgb(204,  0,204);
+val purple7 = rgb(153,  0,153);
+val purple8 = rgb(102,  0,102);
+val purple9 = rgb( 51,  0, 51);
+
+val green1 = rgb(204,255,229);
+val green2 = rgb(153,255,204);
+val green3 = rgb(102,255,178);
+val green4 = rgb( 51,255,153);
+val green5 = rgb(  0,255,128);
+val green6 = rgb(  0,204,102);
+val green7 = rgb(  0,153, 76);
+val green8 = rgb(  0,102, 51);
+val green9 = rgb(  0, 51, 25);
+
+val yellow1 = rgb(255,255,204);
+val yellow2 = rgb(255,255,153);
+val yellow3 = rgb(255,255,102);
+val yellow4 = rgb(255,255, 51);
+val yellow5 = rgb(255,255,  0);
+val yellow6 = rgb(204,204,  0);
+val yellow7 = rgb(153,153,  0);
+val yellow8 = rgb(102,102,  0);
+val yellow9 = rgb( 51, 51,  0);
+
+val red1 = rgb(255,204,204);
+val red2 = rgb(255,153,153);
+val red3 = rgb(255,102,102);
+val red4 = rgb(255, 51, 51);
+val red5 = rgb(255,  0,  0);
+val red6 = rgb(204,  0,  0);
+val red7 = rgb(153,  0,  0);
+val red8 = rgb(102,  0,  0);
+val red9 = rgb( 51,  0,  0);
+
+val gray1 = rgb(255,255,255);
+val gray2 = rgb(224,224,224);
+val gray3 = rgb(192,192,192);
+val gray4 = rgb(160,160,160);
+val gray5 = rgb(128,128,128);
+val gray6 = rgb( 96, 96, 96);
+val gray7 = rgb( 64, 64, 64);
+val gray8 = rgb( 32, 32, 32);
+val gray9 = rgb(  0,  0,  0);
+
+
+val orange1 = rgb(255,229,204);
+val orange2 = rgb(255,204,153);
+val orange3 = rgb(255,178,102);
+val orange4 = rgb(255,153, 51);
+val orange5 = rgb(255,128,  0);
+val orange6 = rgb(204,102,  0);
+val orange7 = rgb(153, 76,  0);
+val orange8 = rgb(102, 51,  0);
+val orange9 = rgb( 51, 25,  0);
+
+
+build (d,d,d);
+
+cube blue1 ( 0,0,0);
+cube blue2 ( 5,0,0);
+cube blue3 (10,0,0);
+cube blue4 (15,0,0);
+cube blue5 (20,0,0);
+cube blue6 (25,0,0);
+cube blue7 (30,0,0);
+cube blue8 (35,0,0);
+cube blue9 (40,0,0);
+
+cube aqua1 ( 0,0,10);
+cube aqua2 ( 5,0,10);
+cube aqua3 (10,0,10);
+cube aqua4 (15,0,10);
+cube aqua5 (20,0,10);
+cube aqua6 (25,0,10);
+cube aqua7 (30,0,10);
+cube aqua8 (35,0,10);
+cube aqua9 (40,0,10);
+
+cube purple1 ( 0,0,20);
+cube purple2 ( 5,0,20);
+cube purple3 (10,0,20);
+cube purple4 (15,0,20);
+cube purple5 (20,0,20);
+cube purple6 (25,0,20);
+cube purple7 (30,0,20);
+cube purple8 (35,0,20);
+cube purple9 (40,0,20);
+
+cube green1 ( 0,0,30);
+cube green2 ( 5,0,30);
+cube green3 (10,0,30);
+cube green4 (15,0,30);
+cube green5 (20,0,30);
+cube green6 (25,0,30);
+cube green7 (30,0,30);
+cube green8 (35,0,30);
+cube green9 (40,0,30);
+
+cube yellow1 ( 0,0,40);
+cube yellow2 ( 5,0,40);
+cube yellow3 (10,0,40);
+cube yellow4 (15,0,40);
+cube yellow5 (20,0,40);
+cube yellow6 (25,0,40);
+cube yellow7 (30,0,40);
+cube yellow8 (35,0,40);
+cube yellow9 (40,0,40);
+
+cube red1 ( 0,0,50);
+cube red2 ( 5,0,50);
+cube red3 (10,0,50);
+cube red4 (15,0,50);
+cube red5 (20,0,50);
+cube red6 (25,0,50);
+cube red7 (30,0,50);
+cube red8 (35,0,50);
+cube red9 (40,0,50);
+
+cube gray1 ( 0,0,60);
+cube gray2 ( 5,0,60);
+cube gray3 (10,0,60);
+cube gray4 (15,0,60);
+cube gray5 (20,0,60);
+cube gray6 (25,0,60);
+cube gray7 (30,0,60);
+cube gray8 (35,0,60);
+cube gray9 (40,0,60);
+
+cube orange1 ( 0,0,70);
+cube orange2 ( 5,0,70);
+cube orange3 (10,0,70);
+cube orange4 (15,0,70);
+cube orange5 (20,0,70);
+cube orange6 (25,0,70);
+cube orange7 (30,0,70);
+cube orange8 (35,0,70);
+cube orange9 (40,0,70);
+
+show "3D";

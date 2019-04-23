@@ -1,0 +1,23 @@
+open Level_5;
+
+val pyramidBase = 11
+val height = 1
+fun pyramid color (xStart,yStart,zStart) = 
+    (
+        put (pyramidBase, height ,pyramidBase) color  (xStart+0 ,yStart+0 , zStart+0 );
+        put (pyramidBase-2,height ,pyramidBase-2) color  (xStart+1 ,yStart+1 , zStart+1 );
+        put (pyramidBase-4,height ,pyramidBase-4) color  (xStart+2 ,yStart+2 , zStart+2 );
+        put ( 5,1 ,5 ) color  (xStart+3 ,yStart+3 , zStart+3 );
+        put ( 3,1 ,3 ) color  (xStart+4 ,yStart+4 , zStart+4 );
+        put ( 1,1 ,1 ) color  (xStart+5 ,yStart+5 , zStart+5 )
+
+    );
+
+
+build(100,100,100);
+pyramid RED (0,0,0);
+pyramid GREEN (pyramidBase,0,0);
+pyramid BLUE (pyramidBase,0,pyramidBase);
+pyramid WHITE (0,0,pyramidBase);
+
+show "pyramid";

@@ -1,0 +1,29 @@
+open Level_5;
+
+fun pyr colorABC colorDEF value (x,y,z) = (
+
+    put (11,1,11) colorABC (x,y,z);
+    put ( 9,1, 9) colorDEF (x+1,y+1,z+1);
+    put (7,1,  7) colorABC (x+2,y+2,z+2);
+    put (5,1,  5) colorDEF (x+3,y+3,z+3);
+    put (value+2,1,  3) colorABC (x+4,y+4,z+4);
+    put (value,1,value) colorDEF (x+5,y+5,z+5)
+
+);
+
+fun fourPyr color1 color2 color3 color4 (x,y,z) = (
+    pyr color1 color4 4 (x,y,z);
+    pyr color2 color3 2(x+11,y,z);
+    pyr color3 color2 9 (x,y,z+11);
+    pyr color4 color1 5 (x+11,y,z+11)
+
+);
+
+build(50,20,50);
+fourPyr BLACK WHITE VIOLET GREEN (0,0,0);
+fourPyr PINK YELLOW BLUE ORANGE (22,0,0);
+fourPyr BLACK WHITE VIOLET GREEN (22,0,22);
+fourPyr PINK YELLOW BLUE ORANGE (0,0,22);
+
+
+show "thing";

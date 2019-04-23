@@ -1,0 +1,9 @@
+open Level_4;
+
+(* (0,0,0), ..., (39,39,39) *)
+build(40,40,40);  
+
+hollowSphere 20 4 [CLEAR] (20,20,20);
+put (3,3,3) BLACK (19,19,19);
+
+show "hollow sphere";

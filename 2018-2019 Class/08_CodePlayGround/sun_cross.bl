@@ -1,0 +1,21 @@
+open Level_5;
+
+fun vert_cross(x,y,z) = 
+    (
+        put (1,7,1)  BLUE  (x+2,  y, z  );
+        put (5,1, 1) BLUE  (x,  y+4, z)
+    );
+
+fun shadow(x,y,z) = 
+    (
+        put (1,1,13)  GRAY  (x+6,  y, z);
+        put (5,1, 1) GRAY  (x+4,  y, z+3)
+    );
+
+build(32,32,32);
+
+sphere 4 [YELLOW,YELLOW,YELLOW,YELLOW,RED,ORANGE] (4,16,20);
+vert_cross(4,0,12);
+shadow(0,0,0);
+
+show "cross";

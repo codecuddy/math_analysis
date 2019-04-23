@@ -1,0 +1,26 @@
+open Level_5;
+
+build(50,50,50);
+
+val startCube = 0;
+val cubeSize = 4;
+val new = 20;
+fun diag (x,y,z) = (x = y);
+
+fun colorDiag (x,y,z) = 
+    if diag(x,y,z) then BLACK else GRAY;
+
+fun delAbove (x,y,z) = 
+    if access(x,y,z) = GRAY andalso y < x
+    then EMPTY
+    else IDENTITY;
+
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) colorDiag;
+traverseWithin(startCube,startCube,startCube) (cubeSize,cubeSize,cubeSize) delAbove;
+
+traverseWithin(startCube+new,startCube,startCube) (cubeSize+new,cubeSize,cubeSize) colorDiag;
+traverseWithin(startCube+new,startCube,startCube) (cubeSize+new,cubeSize,cubeSize) delAbove;
+
+
+
+show "angle";

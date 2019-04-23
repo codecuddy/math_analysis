@@ -1,0 +1,30 @@
+open Level_5;
+
+val yard = 1;
+
+fun pyramidsOnEastTowers color color1 (xStart,yStart,zStart) = 
+    (
+        put (yard*11,yard ,yard*11) color (xStart+0 ,yStart+0 , zStart+0 );
+        put (yard* 9,yard ,yard*9 ) color (xStart+1 ,yStart+1 , zStart+1 );
+        put (yard* 7,yard ,yard*7 ) color (xStart+2 ,yStart+2 , zStart+2 );
+        put (yard* 5,yard ,yard*5 ) color (xStart+3 ,yStart+3 , zStart+3 );
+        put (yard* 3,yard ,yard*3 ) color (xStart+4 ,yStart+4 , zStart+4 );
+        put (yard* 1,yard ,yard*1 ) color (xStart+5 ,yStart+5 , zStart+5 );
+
+        put (yard*11,yard ,yard*11) color1 (xStart+0 ,yStart+11, zStart+0 );
+        put (yard* 9,yard ,yard*9 ) color1 (xStart+1 ,yStart+10 , zStart+1 );
+        put (yard* 7,yard ,yard*7 ) color1 (xStart+2 ,yStart+9 , zStart+2 );
+        put (yard* 5,yard ,yard*5 ) color1 (xStart+3 ,yStart+8 , zStart+3 );
+        put (yard* 3,yard ,yard*3 ) color1 (xStart+4 ,yStart+7 , zStart+4 );
+        put (yard* 1,yard ,yard*1 ) color1 (xStart+5 ,yStart+6 , zStart+5 )
+
+    );
+
+
+build(50,15,50);
+pyramidsOnEastTowers BLUE PINK (0,0,0);
+pyramidsOnEastTowers YELLOW GREEN (11,0,0);
+pyramidsOnEastTowers RED BLACK (0,0,11);
+pyramidsOnEastTowers WHITE VIOLET (11,0,11);
+
+show "pyramid";

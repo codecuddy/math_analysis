@@ -1,0 +1,22 @@
+open Level_5;
+
+fun cross(x,y,z) = 
+    (
+        put (11,1,11) YELLOW (x,  y, z  );
+        put (4,1,11)  GREEN  (x+3,y, z  );
+        put (11,1,4)  GREEN  (x,  y, z+3)
+    );
+
+fun hover(x,y,z) = 
+    (
+        put (4,1,11)  GREEN    (x+3,y+8, z  );
+        put (11,1,4)  GREEN  (x,  y+8, z+3)
+
+    );
+
+build(32,32,32);
+
+cross(0,0,0);
+hover(0,0,0);
+
+show "cross";
